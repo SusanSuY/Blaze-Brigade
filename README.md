@@ -3,7 +3,7 @@
 A tactical, grid-based, two-player combat game featuring a combat system and several unique units to engage with against your opponent. The game is coded in C# using XNA Game Studio, and is a group project for SFWR ENG 3XA3: Software Project Management at McMaster University. Much more detailed documentation and instructions on the game can be found in the Documentation folder. Instructions can also be found within the game itself.
 
 ## Team
-Developers of the game are Jeremy Klotz, Asad Mansoor, Thien Trandinh, Susan Yuen.
+Developers of the game are Jeremy Klotz, Asad Mansoor, Thien Trandinh, and Susan Yuen. More information on developer roles are contained within the project documentation.
 
 ## Repository Navigation Guide
 The folders and files for this project are as follows:
