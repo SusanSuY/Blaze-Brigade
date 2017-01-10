@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blaze_Brigade", "Blaze-Brigade\Blaze_Brigade\Blaze_Brigade.csproj", "{F014B39A-8ECB-496E-950A-97D5286D4651}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blaze_BrigadeContent", "Blaze-Brigade\Blaze_BrigadeContent\Blaze_BrigadeContent.contentproj", "{B867170A-1ADD-4151-BFDA-06E292F28986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazeBrigadeTest", "BlazeBrigadeTest\BlazeBrigadeTest.csproj", "{CCF54A1F-3850-4A2B-9161-C862259852A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Debug|x86.ActiveCfg = Debug|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Debug|x86.Build.0 = Debug|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Debug|Xbox 360.Build.0 = Debug|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Release|Any CPU.ActiveCfg = Release|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Release|x86.ActiveCfg = Release|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Release|x86.Build.0 = Release|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Release|Xbox 360.ActiveCfg = Release|x86
+		{F014B39A-8ECB-496E-950A-97D5286D4651}.Release|Xbox 360.Build.0 = Release|x86
+		{B867170A-1ADD-4151-BFDA-06E292F28986}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B867170A-1ADD-4151-BFDA-06E292F28986}.Debug|x86.ActiveCfg = Debug|x86
+		{B867170A-1ADD-4151-BFDA-06E292F28986}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{B867170A-1ADD-4151-BFDA-06E292F28986}.Release|Any CPU.ActiveCfg = Release|x86
+		{B867170A-1ADD-4151-BFDA-06E292F28986}.Release|x86.ActiveCfg = Release|x86
+		{B867170A-1ADD-4151-BFDA-06E292F28986}.Release|Xbox 360.ActiveCfg = Release|x86
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Debug|Any CPU.Build.0 = Debug|x86
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Debug|x86.Build.0 = Debug|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Debug|Xbox 360.ActiveCfg = Debug|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Debug|Xbox 360.Build.0 = Debug|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Release|x86.ActiveCfg = Release|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Release|x86.Build.0 = Release|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Release|Xbox 360.ActiveCfg = Release|Any CPU
+		{CCF54A1F-3850-4A2B-9161-C862259852A9}.Release|Xbox 360.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

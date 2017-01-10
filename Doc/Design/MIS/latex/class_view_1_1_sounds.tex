@@ -1,0 +1,73 @@
+\hypertarget{class_view_1_1_sounds}{}\section{View.\+Sounds Class Reference}
+\label{class_view_1_1_sounds}\index{View.\+Sounds@{View.\+Sounds}}
+
+
+Sound class containing methods to play all different sounds to be used in the game  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_view_1_1_sounds_a4d37e8e53cdd408544b924d1d8343ad7}{attack\+Sound} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static void \hyperlink{class_view_1_1_sounds_aa798fd781b805d8497ff19819fe97088}{walking\+Sound} ()
+\item 
+static void \hyperlink{class_view_1_1_sounds_a375e38c529895c398a8b96bd358bcabc}{play\+Menu\+Song} (bool play)
+\item 
+static void \hyperlink{class_view_1_1_sounds_a00111a18d755859f6c1e7e619cedd636}{play\+Map\+Song} (bool play)
+\item 
+static void \hyperlink{class_view_1_1_sounds_ada712efeff25692ef207a76d1833dad1}{play\+Game\+Over\+Song} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sound class containing methods to play all different sounds to be used in the game 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_view_1_1_sounds_a4d37e8e53cdd408544b924d1d8343ad7}{}\label{class_view_1_1_sounds_a4d37e8e53cdd408544b924d1d8343ad7} 
+\index{View\+::\+Sounds@{View\+::\+Sounds}!attack\+Sound@{attack\+Sound}}
+\index{attack\+Sound@{attack\+Sound}!View\+::\+Sounds@{View\+::\+Sounds}}
+\subsubsection{\texorpdfstring{attack\+Sound()}{attackSound()}}
+{\footnotesize\ttfamily static void View.\+Sounds.\+attack\+Sound (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method takes in a unit, and plays an attacking sound corresponding to the unit\textquotesingle{}s weapon. The weapon sounds include Sword, Bow, and Magic. /param unit The unit who\textquotesingle{}s weapon sound will be played. \hypertarget{class_view_1_1_sounds_ada712efeff25692ef207a76d1833dad1}{}\label{class_view_1_1_sounds_ada712efeff25692ef207a76d1833dad1} 
+\index{View\+::\+Sounds@{View\+::\+Sounds}!play\+Game\+Over\+Song@{play\+Game\+Over\+Song}}
+\index{play\+Game\+Over\+Song@{play\+Game\+Over\+Song}!View\+::\+Sounds@{View\+::\+Sounds}}
+\subsubsection{\texorpdfstring{play\+Game\+Over\+Song()}{playGameOverSong()}}
+{\footnotesize\ttfamily static void View.\+Sounds.\+play\+Game\+Over\+Song (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method plays the Game Over Song. \hypertarget{class_view_1_1_sounds_a00111a18d755859f6c1e7e619cedd636}{}\label{class_view_1_1_sounds_a00111a18d755859f6c1e7e619cedd636} 
+\index{View\+::\+Sounds@{View\+::\+Sounds}!play\+Map\+Song@{play\+Map\+Song}}
+\index{play\+Map\+Song@{play\+Map\+Song}!View\+::\+Sounds@{View\+::\+Sounds}}
+\subsubsection{\texorpdfstring{play\+Map\+Song()}{playMapSong()}}
+{\footnotesize\ttfamily static void View.\+Sounds.\+play\+Map\+Song (\begin{DoxyParamCaption}\item[{bool}]{play }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method takes in the bool play, and either plays the instance of Main Map Song if true, or stops it from playing if false. 
+\begin{DoxyParams}{Parameters}
+{\em play} & The Boolean determining if music should be played or stopped. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_sounds_a375e38c529895c398a8b96bd358bcabc}{}\label{class_view_1_1_sounds_a375e38c529895c398a8b96bd358bcabc} 
+\index{View\+::\+Sounds@{View\+::\+Sounds}!play\+Menu\+Song@{play\+Menu\+Song}}
+\index{play\+Menu\+Song@{play\+Menu\+Song}!View\+::\+Sounds@{View\+::\+Sounds}}
+\subsubsection{\texorpdfstring{play\+Menu\+Song()}{playMenuSong()}}
+{\footnotesize\ttfamily static void View.\+Sounds.\+play\+Menu\+Song (\begin{DoxyParamCaption}\item[{bool}]{play }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method takes in the bool play, and either plays the instance of Menu song if true, or stops it from playing if false. 
+\begin{DoxyParams}{Parameters}
+{\em play} & The Boolean determining if music should be played or stopped. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_sounds_aa798fd781b805d8497ff19819fe97088}{}\label{class_view_1_1_sounds_aa798fd781b805d8497ff19819fe97088} 
+\index{View\+::\+Sounds@{View\+::\+Sounds}!walking\+Sound@{walking\+Sound}}
+\index{walking\+Sound@{walking\+Sound}!View\+::\+Sounds@{View\+::\+Sounds}}
+\subsubsection{\texorpdfstring{walking\+Sound()}{walkingSound()}}
+{\footnotesize\ttfamily static void View.\+Sounds.\+walking\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method plays a single walking step sound. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sounds.\+cs\end{DoxyCompactItemize}

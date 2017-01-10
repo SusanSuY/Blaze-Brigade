@@ -1,0 +1,231 @@
+\hypertarget{class_view_1_1_draw_class}{}\section{View.\+Draw\+Class Class Reference}
+\label{class_view_1_1_draw_class}\index{View.\+Draw\+Class@{View.\+Draw\+Class}}
+
+
+Draw Class containing all the different draw methods  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a5b4e02d7c968fe293c2b42b26a3b2945}{Draw\+Unit} (Sprite\+Batch sprite\+Batch, \hyperlink{class_model_1_1_player}{Player} player)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a15ffcf74c22681b0867d6214dab77c94}{Draw\+Player\+Turn} (Sprite\+Batch sprite\+Batch, int player, Texture2D player\+Turn)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_ae99bdbd081b2d201780307a233bfd9d3}{draw\+Damage\+Popup} (Sprite\+Batch sprite\+Batch, Sprite\+Font font)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a4f65b2590cbc2d54776fb2e6e8446337}{draw\+Highlight\+Nodes} (Sprite\+Batch sprite\+Batch, \hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, Texture2D moveable\+Node, Texture2D attackable\+Node)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_ae75363224d26c1de36820c77c00bab4b}{draw\+Drop\+Down\+Menu} (Sprite\+Batch sprite\+Batch)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a66b9b84b3e7e82180fe747a5d0ac6af4}{draw\+Inventory\+Menu} (Sprite\+Batch sprite\+Batch, Sprite\+Font font)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a69c3edf89c9b736bb8a9921e2e489e1a}{draw\+Units\+At\+Game\+Over} (Sprite\+Batch sprite\+Batch)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_aadfde5664a486e1dc9581628ce98b0b6}{draw\+End\+Turn\+Button} (Sprite\+Batch sprite\+Batch, Texture2D end\+Turn\+Button)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a92a20fce6da929b25cd19c68f37cee03}{draw\+Attack\+Confirm} (Sprite\+Batch sprite\+Batch, Sprite\+Font font, Sprite\+Font large\+Font, Sprite\+Font largest\+Font, \hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a02cb24dbfed917cc4f9eb2bc9309664e}{draw\+Info\+Screen} (Sprite\+Batch sprite\+Batch, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit, Sprite\+Font font, Sprite\+Font large\+Font)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a58026b4efa17fe7b88500b5d58009e41}{draw\+Game\+Over\+Menu} (Sprite\+Batch sprite\+Batch, Texture2D game\+Over, Texture2D back\+Ground, Sprite\+Font largest\+Font)
+\item 
+static void \hyperlink{class_view_1_1_draw_class_a93919267e711f68a3ebc1087246fbcbe}{draw\+Turn\+Transition} (Sprite\+Batch sprite\+Batch, Texture2D player1\+Transition, Texture2D player2\+Transition)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Draw Class containing all the different draw methods 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_view_1_1_draw_class_a92a20fce6da929b25cd19c68f37cee03}{}\label{class_view_1_1_draw_class_a92a20fce6da929b25cd19c68f37cee03} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Attack\+Confirm@{draw\+Attack\+Confirm}}
+\index{draw\+Attack\+Confirm@{draw\+Attack\+Confirm}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Attack\+Confirm()}{drawAttackConfirm()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Attack\+Confirm (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{Sprite\+Font}]{font,  }\item[{Sprite\+Font}]{large\+Font,  }\item[{Sprite\+Font}]{largest\+Font,  }\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws the attack confirmation screen. All the damage calculations, 1 set each for each player\+: Attack\+Type, damage\+Dealt, hit\+C\+Ount, hit\+Rate, crit\+Rate, HP and equipped weapons are all printed to the screen. To make sure the damage numbers are properly displayed for which player\textquotesingle{}s unit is attacking, and which is defending, the method will check for whose player\textquotesingle{}s turn it currently is. The method will also draw the attack confirm button. Negative numbers for stats are handled in Damage\+Class. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em font} & The small font to be used. \\
+\hline
+{\em large\+Font} & The larger font to be used. \\
+\hline
+{\em largest\+Font} & The largest font to be used. \\
+\hline
+{\em graph} & The current game graph. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_ae99bdbd081b2d201780307a233bfd9d3}{}\label{class_view_1_1_draw_class_ae99bdbd081b2d201780307a233bfd9d3} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Damage\+Popup@{draw\+Damage\+Popup}}
+\index{draw\+Damage\+Popup@{draw\+Damage\+Popup}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Damage\+Popup()}{drawDamagePopup()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Damage\+Popup (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{Sprite\+Font}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws the Damage pop up numbers from attacking. If Game\+State current\+Player\+Damage\+Popup is true, draw the damage dealt by attacking player on top of the enemy unit. If Game\+State enemy\+Player\+Damage\+Popup is true, draw the damage received by defender on top of the recipient. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item This function assumes that the last time damage calculation was calculated and stored corresponds to the last attacking and defending unit 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em font} & the font to be used. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_view_1_1_draw_class_ae75363224d26c1de36820c77c00bab4b}{}\label{class_view_1_1_draw_class_ae75363224d26c1de36820c77c00bab4b} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Drop\+Down\+Menu@{draw\+Drop\+Down\+Menu}}
+\index{draw\+Drop\+Down\+Menu@{draw\+Drop\+Down\+Menu}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Drop\+Down\+Menu()}{drawDropDownMenu()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Drop\+Down\+Menu (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws all active buttons for the currently selected unit. The 4 possible active button is Attack, Move, Item and Wait. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_aadfde5664a486e1dc9581628ce98b0b6}{}\label{class_view_1_1_draw_class_aadfde5664a486e1dc9581628ce98b0b6} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+End\+Turn\+Button@{draw\+End\+Turn\+Button}}
+\index{draw\+End\+Turn\+Button@{draw\+End\+Turn\+Button}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+End\+Turn\+Button()}{drawEndTurnButton()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+End\+Turn\+Button (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{Texture2D}]{end\+Turn\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws end turn button. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em end\+Turn\+Button} & End turn button texture2D. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_a58026b4efa17fe7b88500b5d58009e41}{}\label{class_view_1_1_draw_class_a58026b4efa17fe7b88500b5d58009e41} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Game\+Over\+Menu@{draw\+Game\+Over\+Menu}}
+\index{draw\+Game\+Over\+Menu@{draw\+Game\+Over\+Menu}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Game\+Over\+Menu()}{drawGameOverMenu()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Game\+Over\+Menu (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{Texture2D}]{game\+Over,  }\item[{Texture2D}]{back\+Ground,  }\item[{Sprite\+Font}]{largest\+Font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draw the Game over menu. A game over button texture, the string \char`\"{}\+Game Over\char`\"{}, which player won, and a darkened background is drawn to screen. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em game\+Over} & The game over button Texture2D. \\
+\hline
+{\em background} & The background Texture2D. \\
+\hline
+{\em largest\+Font} & The largest font to be used. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_a4f65b2590cbc2d54776fb2e6e8446337}{}\label{class_view_1_1_draw_class_a4f65b2590cbc2d54776fb2e6e8446337} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Highlight\+Nodes@{draw\+Highlight\+Nodes}}
+\index{draw\+Highlight\+Nodes@{draw\+Highlight\+Nodes}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Highlight\+Nodes()}{drawHighlightNodes()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Highlight\+Nodes (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{Texture2D}]{moveable\+Node,  }\item[{Texture2D}]{attackable\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws the highlighted nodes. If a unit has yet to move, and unit is selected, all moveable nodes are highlighted blue, with the max attack range nodes highlighted red. Otherwise if a unit is selected, and has finished moving, only display the attackable nodes from the unit\textquotesingle{}s current position. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item If a unit has no moveable nodes, no squares will be highlighted blue 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em graph} & The current game graph. \\
+\hline
+{\em moveable\+Node} & The texture for moveable\+Node. \\
+\hline
+{\em attackable\+Node} & The texture for attackable\+Node. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_view_1_1_draw_class_a02cb24dbfed917cc4f9eb2bc9309664e}{}\label{class_view_1_1_draw_class_a02cb24dbfed917cc4f9eb2bc9309664e} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Info\+Screen@{draw\+Info\+Screen}}
+\index{draw\+Info\+Screen@{draw\+Info\+Screen}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Info\+Screen()}{drawInfoScreen()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Info\+Screen (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit,  }\item[{Sprite\+Font}]{font,  }\item[{Sprite\+Font}]{large\+Font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws character information popup. If it is player 1\textquotesingle{}s turn, the popup will be on the bottom left screen. Otherwise it will show up on right side of the screen. The stats Level, Strength, Int, Skill, Speed, Defense, Resistance, HP and char\+Info\+Background texture are all drawn to screen. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em unit} & The unit to print information of. \\
+\hline
+{\em font} & The small font to be used. \\
+\hline
+{\em large\+Font} & The larger font to be used. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_a66b9b84b3e7e82180fe747a5d0ac6af4}{}\label{class_view_1_1_draw_class_a66b9b84b3e7e82180fe747a5d0ac6af4} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Inventory\+Menu@{draw\+Inventory\+Menu}}
+\index{draw\+Inventory\+Menu@{draw\+Inventory\+Menu}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Inventory\+Menu()}{drawInventoryMenu()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Inventory\+Menu (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{Sprite\+Font}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws the Inventory Menu for the selected unit. This method will loop through all possible inventory slots, and display them if the slot if the button for that slot is both active, and has an item. The name of the item is drawn to screen along with the button. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em font} & The font used to draw the text. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_a15ffcf74c22681b0867d6214dab77c94}{}\label{class_view_1_1_draw_class_a15ffcf74c22681b0867d6214dab77c94} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!Draw\+Player\+Turn@{Draw\+Player\+Turn}}
+\index{Draw\+Player\+Turn@{Draw\+Player\+Turn}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{Draw\+Player\+Turn()}{DrawPlayerTurn()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+Draw\+Player\+Turn (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{int}]{player,  }\item[{Texture2D}]{player\+Turn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method draws who\textquotesingle{}s player turn it currently is. The method takes in the texture containing that info, sprite\+Batch and the int for the player\textquotesingle{}s whose turn it is. The method will print the texture for player 1 on left side of screen if it is currently player 1\textquotesingle{}s turn, otherwise it will print it on right side. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em player} & The current player. \\
+\hline
+{\em turn\+Info} & The Texture2D containing the text on which player\textquotesingle{}s turn it currently is. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_a93919267e711f68a3ebc1087246fbcbe}{}\label{class_view_1_1_draw_class_a93919267e711f68a3ebc1087246fbcbe} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Turn\+Transition@{draw\+Turn\+Transition}}
+\index{draw\+Turn\+Transition@{draw\+Turn\+Transition}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Turn\+Transition()}{drawTurnTransition()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Turn\+Transition (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{Texture2D}]{player1\+Transition,  }\item[{Texture2D}]{player2\+Transition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Draws a turn transition image to screen. player1\+Transition is if Game\+State is player1, otherwise player2\+Transition is drawn. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em player1\+Transition} & The player 1 transition texture2D. \\
+\hline
+{\em player2\+Transition} & The player 2 transition texture2D. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_a5b4e02d7c968fe293c2b42b26a3b2945}{}\label{class_view_1_1_draw_class_a5b4e02d7c968fe293c2b42b26a3b2945} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!Draw\+Unit@{Draw\+Unit}}
+\index{Draw\+Unit@{Draw\+Unit}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{Draw\+Unit()}{DrawUnit()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+Draw\+Unit (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch,  }\item[{\hyperlink{class_model_1_1_player}{Player}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method draws the unit sprites, by taking in sprite\+Batch, and the Player who\textquotesingle{}s units are to be drawn along with their healthbar. All the player\textquotesingle{}s units will then be looped through, and drawn to screen if such unit is alive. The healthbar location is directly above the character x coord of unit +1. The healthbar will be 30 pixels wide, and be scaled in accordance with the unit\textquotesingle{}s current HP by using a rectangle. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+{\em player} & The player\textquotesingle{}s unit to draw. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_view_1_1_draw_class_a69c3edf89c9b736bb8a9921e2e489e1a}{}\label{class_view_1_1_draw_class_a69c3edf89c9b736bb8a9921e2e489e1a} 
+\index{View\+::\+Draw\+Class@{View\+::\+Draw\+Class}!draw\+Units\+At\+Game\+Over@{draw\+Units\+At\+Game\+Over}}
+\index{draw\+Units\+At\+Game\+Over@{draw\+Units\+At\+Game\+Over}!View\+::\+Draw\+Class@{View\+::\+Draw\+Class}}
+\subsubsection{\texorpdfstring{draw\+Units\+At\+Game\+Over()}{drawUnitsAtGameOver()}}
+{\footnotesize\ttfamily static void View.\+Draw\+Class.\+draw\+Units\+At\+Game\+Over (\begin{DoxyParamCaption}\item[{Sprite\+Batch}]{sprite\+Batch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Redraws units for game over state. This method loops through all of player 1 and 2\textquotesingle{}s units, and redraws them with a darker shade to match the darker game over screen. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Batch} & The spitebatch used to draw 2D bitmap to screen. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Class.\+cs\end{DoxyCompactItemize}

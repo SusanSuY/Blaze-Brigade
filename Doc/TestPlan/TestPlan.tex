@@ -1,0 +1,664 @@
+\documentclass{article}
+
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{mdframed}
+\usepackage{tabto}
+\usepackage{keyval}
+\usepackage{verbatimbox}
+\usepackage{hyperref}
+
+% ============= Requirements Table =============
+
+\makeatletter
+
+\define@key{test}{type}{\def\test@type{#1}}
+\define@key{test}{name}{\def\test@name{#1}}
+\define@key{test}{execution}{\def\test@execution{#1}}
+\define@key{test}{initialState}{\def\test@initialState{#1}}
+\define@key{test}{input}{\def\test@input{#1}}
+\define@key{test}{output}{\def\test@output{#1}}
+
+\newcounter{testNum}
+\newcommand{\requirements}[1] {
+    \setkeys{test}{#1}
+    \stepcounter{testNum}
+    
+    \noindent \begin{tabularx}{\textwidth}{|lX|}
+        \hline
+        \textbf {Test \arabic{testNum}:} & \textbf{\test@name} \\
+        \textbf{Type:} & \test@type \\
+        \textbf{Test execution: } & \test@execution \\
+        \textbf{Initial state: } & \test@initialState \\
+        \textbf{Input: } & \test@input \\
+        \textbf{Output: } & \test@output \\
+        \hline
+    \end{tabularx}
+}
+
+\makeatother
+
+% ================ Title ===============
+
+\title{
+    \vspace{40mm}
+	\textbf {
+	\Huge {\color[rgb]{0.9,0,0}Blaze} Brigade \\
+	\large - Test Plan -}}
+
+\date{\today}
+
+\author{SFWR ENG 3XA3 - Section L02 \\
+	007 (Group 7) \\ \\
+	Jeremy Klotz - klotzjj \\
+	Asad Mansoor - mansoa2 \\
+	Thien Trandinh - trandit \\
+	Susan Yuen - yuens2}
+	
+% =============== Document ===============
+	
+\begin{document}
+
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\begin{table}[bp]
+\caption{\bf Revision History}
+\begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
+\toprule {\bf Date} & {\bf Version} & {\bf Notes} \\
+\midrule
+October 30, 2016 & 1.0 & Completed Test Plan Rev 0 \\
+December 6, 2016 & 1.1 & Revision 1 of Test Plan - Fixed a mistake within a test case, relabelled all test cases with a test name and reviewed test execution and expected output for all test cases.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\section{General Information}
+
+\subsection{Purpose}
+
+The purpose of this project is to recreate a tactical, turn based game similar to Tactics Heroes. The game shall test the strategical skills of the user by presenting a large quantity of information to process in order to determine the best course of action for the player's turn. The game will progress based on user inputs and decisions. However, such software will involve a wide variety of test cases to ensure proper functionality. A specific category of testing includes automated unit testing, which will follow the Visual Studio Unit Testing Framework. This document will provide a complete overview of test cases the software will follow, and more specifically, provide information on the unit testing framework.
+
+\subsection{Scope}
+
+Software such as what Blaze Brigade aims to recreate has a complex interaction with the user, giving the user many options for each decision they make. As such, each one of these options such as moving, attacking, or equipping a different weapon and more, must function properly. Each action requires a proper test case in order to ensure their proper functionality. Other test cases based on functional requirements include unit properties, menu navigation, structural properties of the game, and handling user input. The non-functional requirements of this software project are based on usability, performance and security. Proper test cases will be orchestrated to fulfil these requirements as well.
+
+\subsection{Acronyms, Abbreviations, and Symbols}
+
+\begin{table}[h]
+\caption{\textbf{Table of Abbreviations}}
+\begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{Abbreviation} & \textbf{Definition} \\
+    \midrule
+    HP & Health points \\
+    Str & Strength \\
+    Int & Intelligence \\
+    Def & Defense \\
+    Res & Resistance \\
+    GUI & Graphical user interface \\
+    \bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\caption{\textbf{Table of Definitions}}
+\begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{Term} & \textbf{Definition} \\
+    \midrule
+    Unit & A movable character that the user will manipulate to defeat the opponent's army. \\
+    Class & A category of unit type. Different classes have different strengths, weaknesses, and attributes. \\
+    Stat & A numerical value that belongs to a unit. There are a variety of stats that make each class unique. \\
+    Health Points & A stat determining how much damage a unit can take before it dies. \\
+    Strength &  A stat used in calculating physical damage dealt to opposing units. \\
+    Intelligence & A stat used in calculating magical damage dealt to opposing units. \\
+    Defense & A stat that lessens the amount of physical damage the unit takes. \\
+    Resistance & A stat that lessens the amount of magic damage the unit takes. \\
+    Skill & A stat that determines how skillful a unit is on the battlefield. Used to determine hit rate and critical hit rate. \\
+    Speed & A stat that determines how many times a unit will get to attack in combat. \\
+    Graphical User Interface & A system that interacts with the user through visual representation. \\
+    Hit Rate & The percent chance that unit A will successfully hit unit B. \\
+    Critical Hit & Multiplies the damage of a unit's attack by a numerical factor. \\
+    Critical Hit Rate & The percent chance that unit A will perform a critical hit on unit B. \\
+    \bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Overview of Document}
+
+This document will explain in depth the plans for testing of the project, Blaze Brigade, and will provide a comparison to the existing implementation, Tactics Heroes. In this document, a description for each test case is provided along with the expected input and output for each case. This document will be referenced by the team of the project when conducting tests on developer code. This document also provides a brief description of what automated testing is, and the group's chosen framework to simulate such automated tests.
+\newpage
+
+\section{Plan}
+
+\subsection{Software Description}
+
+The software component of the project is governed by various actions such as inputs required, outputs to be shown to the user, and certain task computation to fulfill the desired set of requirements. To test the overall system of the project and produce a stable build for the user to interact with, a set of software descriptions need to be covered in this test plan to discuss the main functionality and how they can be tested as outlined below.
+
+\begin{itemize}
+    \item \textbf{Mouse input:} This is the primary interaction between the user and software to carry out actions within the gameplay. Such action include starting the game, moving the units, and giving commands such as to attack the opponent. A test will need to be devised to ensure all mouse clicks are read and their accuracy of the position to ensure that the resulting trigger is correct.
+    \item \textbf{Gameplay window:} The map will be created in the gameplay window, in which all of the mouse trigger events would happen to provide interaction with the game. The window would need to be tested on all the sub tasks it holds, such making best use of all the space allocated to it, and the ability to close and minimize the window application.
+    \item \textbf{Menu option:} The menu is the first screen the users will see to select an option to start a new game, learn how to play or exit the game. Each selection will be tested to ensure that it directs the user to the correct use case.
+    \item \textbf{Map creation:} When the terrain is constructed, it will display a field which includes movable positions and obstacles such as a tree, which dictate positions that a unit may step on. Further testing will need to be conducted on these obstacle nodes to ensure that an unit does not accidentally take an illegal position, or that an unit may take a legal position.
+    \item \textbf{Movement of units:} After a unit has been selected, there shall be a limited amount of highlighted positions that it can move onto. The constraints within the path finding mechanism would need to be simulated as a test case to ensure that the highlighted grid shows the correct layout and the move onto a position is valid to abstain from any invalid operation.
+    \item \textbf{Attack mechanism:} During an attack, the affected unit's stats and health are taken into consideration to determine who shall be victorious in killing the opponent's unit.
+    The test case will further breakdown the attack mechanism to ensure that the correct drop of health is calculated and presents a fair attack opportunity for both sides.
+    \item \textbf{Turn based selection:} Both players will alternate turns upon completing their set of actions. A checker would need to be in place to determine that a turn has successfully been completed and shifted to the correct player.
+\end{itemize}
+
+\subsection{Test Team}
+
+The test team includes all of the members from the development team to encourage that testing takes places at all stages of the development process to meet the central objectives of the project. This requires the involvement of all team members in regular code inspection, producing unit test cases, and the design for suitable user interaction.
+
+\begin{table}[h]
+\caption{\textbf{Description of the Test Team}}
+\begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{Team Member} & \textbf{Testing Type} \\
+    \midrule
+    Thien Trandinh & Structural Testing, Functional Testing \\
+    Susan Yuen & Structural Testing, Automated Testing \\
+    Jeremy Klotz & Dynamic Testing, Functional Testing \\
+    Asad Mansoor & Manual Testing, Functional Testing \\
+    \bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Automated Testing Approach}
+
+An automated testing approach will be introduced in the development process of the project to ensure a new feature or code change does not affect the stability of the master build. Additionally, it would allow better use of resource allocation to move the manual testers to work other aspects of the code or documentation. As the project grows, the automated testing approach would further educate the team in producing more reliable code as well as minimizing the time of manual testing. \\
+
+\noindent
+Testing tools like Visual Studio Unit Testing Framework will play a big role in the creation of the unit test cases, reflecting on the functions that impact the logic behind the game. With reference to the functions, we can test for desired output with the anticipated inputs and further elaborate the testing scheme by checking for robustness by providing invalid inputs or extreme test cases. Since automation can cover a large range of testing over a short period of time, it would be feasible to conduct stress testing of the game and to run the automated unit tests repeatedly over a long period of time. Furthermore, the unit test cases are initially set to test features within each class, but a set of these automated test scripts would eventually cover the system data flow to better understand how the software is interacting with other pieces of code and whether a more efficient design approach is needed in the next development stage. \\
+
+\noindent
+With the aid of automated testing, there will be less reliance on the team members to constantly check whether a certain feature is correctly implemented for a large magnitude of inputs. The best practice of this technology would be to constantly develop new test cases in parallel to ongoing development process and to run all test scripts multiple times before pushing the source code onto GitLab. Since the nature of a game cannot be fully taken over by automated testing approach, manual testing will still play a part to ensure that the game behaves as it should and feels natural to the user.
+
+\subsection{Testing Tools}
+
+Visual Studio Unit Testing Framework will be the testing tool required to automate the unit test cases throughout each development phase and will cover a wide range of functional and system analysis.
+
+\subsection{Testing Schedule}
+
+The following test schedule has been derived from the development plan to ensure that the product is functioning correctly as it continues to evolve. In that regard, the schedule can be broken down into the test deliverable and test cases schedule. The test deliverable schedule outlines the required test plans and test reports to be made available for the team members and stakeholders. In contrast, the test case schedule focuses on the internal dynamic of the software, outlining the testing period of each of the major development phases. \\
+
+\noindent
+For additional detail, please consult the \href{https://gitlab.cas.mcmaster.ca/yuens2/Blaze-Brigade/tree/master/Doc/DevelopmentPlan}{Gantt Chart} (link provided).
+
+\begin{table}[h]
+\caption{\textbf{Test Deliverable Schedule}}
+\begin{tabularx}{\textwidth}{llX}
+    \toprule
+    \textbf{Deliverable ID} &\textbf{Test Deliverable} & \textbf{Due Date}\\
+    \midrule
+    TP-0 & Test Plan Revision 0 & October 31 \\
+    TP-1 & Test Plan Revision 1 & November 14\\
+    TP-2 & Final Documentation - Test Plan & December 7\\
+    TR-0 & Final Documentation - Test Report & December 7 \\
+    \bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\caption{\textbf{Test Cases Schedule}}
+\begin{tabularx}{\textwidth}{lllX}
+    \toprule
+    \textbf{Sprint \#} & \textbf{Due Date} & \textbf{Task} & \textbf{Test Case} \\
+    \midrule
+    0 & Oct 19 & Proof of Concept & Initial testing to ensure proof of concept demonstration works as planned. \\
+    1 & Oct 31 & Menu creation & Main menu re-direct to correct page. Sub menu of each unit to show available commands. \\
+    1 & Oct 31 & Unit highlight & Highlight state is active when an unit is selected. \\
+    1 & Oct 31 & Unit movement & Unit movement works as designed. \\
+    1 & Oct 31 & Unit animation & Unit animation is visible upon movement. \\
+    1 & Oct 31 & Full-scope testing & Testing of Sprint 1 to ensure the overall system is correct. \\
+    2 & Nov 11 & Add units & Check to see which unit is selected on which team. \\
+    2 & Nov 11 & Combat system & Combat attributes work as designed. \\
+    2 & Nov 11 & Unit collision &  Unit collision logic works as designed. \\
+    2 & Nov 11 & Full-scope testing & Testing of Sprint 2 to ensure the overall system is correct. \\
+    3 & Nov 16 & Terrain obstacles & Position with obstacles should not be valid moves for units. \\
+    3 & Nov 16 & Full army & Check the state of the unit with full army specification on which team. \\
+    3 & Nov 16 & Full-scope testing & Testing of Sprint 3 to ensure the overall system is correct. \\
+    3 & Nov 16 & Extensive testing & Stress testing of the game as a whole system. \\
+    \bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\section{System Test Description}
+	
+\subsection{Tests for Functional Requirements}
+
+\subsubsection{GUI}
+
+{\renewcommand{\arraystretch}{1.5}
+
+% Use \mbox{,} when you want use a comma
+\requirements {
+    name = [FR-GI1] - GUI is controlled by the mouse.,
+    type = Structural Dynamic Manual Testing,
+    execution = The user clicks on any available game options that will produce a result which changes the GUI.,
+    initialState = Game is opened.,
+    input = User clicks on an action.,
+    output = The game behaves as expected according to the correct behaviour triggered by the user's mouse input.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GI2] - Game will contain a main menu on screen upon launch.,
+    type = Structural Dynamic Manual Testing,
+    execution = Program will be executed and the main menu will be displayed\mbox{,} which will be checked by the test case upon launch.,
+    initialState = Game is not opened.,
+    input = Game executable is opened.,
+    output = Game menu pops up upon launch.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GI3] - Select New Game from the main menu.,
+    type = Structural Dynamic Manual Testing,
+    execution = New game button will be available to be selected and a new game instance is formed.,
+    initialState = Game is currently on main menu.,
+    input = New game is selected.,
+    output = New game is started.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GI4] - Select Load Game from the main menu.,
+    type = Structural Dynamic Manual Testing,
+    execution = Load game will be selected and checked if the pre-existing game state is loaded.,
+    initialState = Game is currently on main menu.,
+    input = Load Game is selected.,
+    output = Previous saved game state is executed.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GI5] - Select How-To-Play from the main menu.,
+    type = Structural Dynamic Manual Testing,
+    execution = How-To-Play will be selected which will show How-To-Play instructions and checked if the How-To-Play menu displays as expected.,
+    initialState = Game is currently on main menu.,
+    input = How-To-Play is selected.,
+    output = How-To-Play is selected.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GI6] - Select Exit Game from the main menu.,
+    type = Structural Dynamic Manual Testing,
+    execution = Exit is selected which closes the program and checked that the game is closed.,
+    initialState = Game is currently on main menu.,
+    input = Exit Game is selected.,
+    output = Game is closed.
+}
+
+\subsubsection{Game Structure}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GS1] - The game is turn-based\mbox{,} and units are only able to move and attack once per player’s turn.,
+    type = Structural Dynamic Automated Testing,
+    execution = A user will click on a unit and have it perform its available actions. Immediately after\mbox{,} it will be checked that the same unit is unable to perform any additional actions.,
+    initialState = Unit X has not performed their action.,
+    input = Unit X performs their action.,
+    output = Unit X is no longer able to perform their action.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GS2] - A player's turn ends once all their units have performed all available actions.,
+    type = Structural Dynamic Automated Testing,
+    execution = The available actions of all of Player 1's units will be set to none. Then\mbox{,} it will be checked that Player 1's turn has ended and it is now currently Player 2's turn.,
+    initialState = Currently is Player 1's turn.,
+    input = Set all actions of units belonging to Player 1 to none.,
+    output = Player 1's turn ends\mbox{,} and it is now Player 2's turn.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GS3] - During a unit's turn\mbox{,} clicking a unit will give a drop down menu with available actions of the unit.,
+    type = Structural Dynamic Manual Testing,
+    execution = A unit\mbox{,} which has not already performed an action\mbox{,} will be right-clicked and checked that a drop down menu appears with expected actions of that unit.,
+    initialState = The unit is alive and has available actions., 
+    input = The unit is selected.,
+    output = A drop down menu with expected actions pops up.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-GS4] - One side is victorious when the other side has no playable units left., 
+    type = Structural Dynamic Automatic Testing,
+    execution = The status of all live units belonging to Player 2 is set to deceased. It is then checked that the game is over and Player 1 is victorious.,
+    initialState = Player 1 and Player 2 both have live units.,
+    input = All live units belonging to Player 2 are killed., 
+    output = Player 1 is victorious and the game is over.
+}
+
+\addvbuffer
+
+\subsubsection{Unit Movement}
+
+\requirements {
+    name = [FR-UM1] - Player can select move after selecting a unit that has yet to perform its action and opening the drop down menu., 
+    type = Structural Dynamic Manual Testing, 
+    execution = The unit that has yet to move and is able to move is selected\mbox{,} and it is observed that a pop-up menu containing the "move" action appears., 
+    initialState = The unit has not yet performed an action\mbox{,} and is available to move if required., 
+    input = The unit is selected and the drop down menu is opened, 
+    output = Drop down menu containing the option "move" is visible.
+} 
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UM2] - Units are only able to move within their move range.,
+    type = Functional Dynamic Manual testing ,
+    execution = Attempt to move a unit to a tile outside of its move range. ,
+    initialState = The unit is alive and able to move.,
+    input = The unit is asked to move to a different tile outside of its range.,
+    output = Nothing happens since the requested move is not within the unit's move range.,
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UM3] - Units are not be able to pass through obstacles.,
+    type = Functional Dynamic Manual Testing, 
+    execution = Attempt to ask the unit to move to an area blocked off by an obstacle.,
+    initialState = The unit is within range of an area blocked off by an impassable obstacle.,
+    input = Ask unit to move to the area past the obstacle.,
+    output = Unit is unable to move to the requested area.
+}
+
+\addvbuffer
+
+\subsubsection{Unit Attacking}
+
+\requirements {
+    name = [FR-UA1] - Player can select attack as an available option after selecting a player-owned unit that has not attacked and an enemy unit is within attack range.,
+    type = Structural Dynamic Manual Testing,
+    execution = The owned unit that has yet to attack is selected\mbox{,} and it is observed that a pop-up menu containing the "attack" action appears., 
+    initialState = The player's unit has not yet performed an attack\mbox{,} and an enemy unit is within its attack range.,
+    input = The unit is selected and the drop down menu is opened.,
+    output = Drop down menu containing the option "attack" is visible.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UA2] - Unit may only attack an opposing unit within its attack range.,
+    type = Functional Dynamic Automatic Testing,
+    execution = An automated test attempts to ask the program to make a unit attack an enemy unit outside of its attack range.,
+    initialState = The unit that is available to attack and its enemy unit are not within attack range of each other., 
+    input = The unit available to attack will attempt to attack the enemy unit.,
+    output = Nothing will happen\mbox{,} as the attempted attack is not valid due to the fact that the enemy unit is out of range.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UA3] - All playable units can attack enemy units.,
+    type = Functional Dynamic Automatic Testing,
+    execution = Automated tests check that all units have required states and functions that allow it to attack enemy units.,
+    initialState = Units are initialized.,
+    input = Units are initialized.,
+    output = All units have the required states and functions that allow them to attack enemy units.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UA4] - Units are unable to move after attacking.,
+    type = Structural Dynamic Manual Testing,
+    execution = Attempt to activate the drop down menu to move the unit upon an owned unit that has already acted within the turn.,
+    initialState = The unit has already completed an action for the current turn.,
+    input = A player attempts to activate the drop down menu to move a character after attacking.,
+    output = Drop down menu will not appear.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UA5] - Units will lose HP according to damage calculations.,
+    type = Functional Dynamic Automatic Testing,
+    execution = Automated tests will check that damage modifying the character HP\mbox{,} calculated through the damage calculation class consisting of a calculation which takes enemy's stats into consideration\mbox{,} is consistent with the expected value.,
+    initialState = The unit is alive and able to take damage.,
+    input = The unit takes damage.,
+    output = The value of the HP is reduced and is within range of the damage calculation consisting of enemy's attack stats.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UA6] - Units that are deceased are no longer active in the current battle.,
+    type = Functional Dynamic Automatic Testing,
+    execution = Automated test modifies a unit's HP to 0.,
+    initialState = The unit has more then 1 HP and is valid in battle.,
+    input = The unit's HP is set to 0.,
+    output = The unit's state will no longer be valid in the battle and cannot be used in the game.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-UA7] - Player can select which weapon each unit uses to perform an attack.,
+    type = Structural Dynamic Manual Testing,
+    execution = Attempt to change weapons by selecting weapons from the unit drop down menu on a playable unit that has yet to move\mbox{,} select a different weapon \mbox{,} and observe if attack stats has changed in accordance to the newly selected weapon.,
+    initialState = A unit is available to perform an action.,
+    input = Attempt to change the unit's weapon,
+    output = The unit changes weapons and gains different stat modifiers in accordance to the new weapon.
+}
+
+\addvbuffer
+
+\subsubsection{Unit Structure}
+
+\requirements {
+    name = [FR-US1] - All units shall have a corresponding unit class.,
+    type = Functional Static Automatic Testing,
+    execution = Automated tests check that units have a corresponding unit type class that is viable in the game.,
+    initialState = All units are instantiated.,
+    input = All units are instantiated.,
+    output = All classes correspond to a viable unit type class that has already been pre-defined.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-US2] - All units have stat values corresponding to their class.,
+    type = Functional Static Automatic Testing,
+    execution = Automated tests check that a unit's stat correctly corresponds to the pre-determined stats of the specific unit class.,
+    initialState = All units are instantiated.,
+    input = All units are instantiated.,
+    output = All units have stats that correspond to their class that has already been pre-defined.
+} 
+
+\addvbuffer
+
+\requirements {
+    name = [FR-US3] - Classes include warrior\mbox{,} mage\mbox{,} and archer.,
+    type = Functional Static Automatic Testing,
+    execution = Automated tests check for the existence of all three classes in the program by instantiating units for all three classes.,
+    initialState = All three classes are existent in the game.,
+    input = Units of all three classes are instantiated.,
+    output = Units of all three classes exist and are of the corresponding class that has been pre-defined.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [FR-US4] - The stats of the game include Str\mbox{,} Int\mbox{,} Def\mbox{,} Res\mbox{,} Skill\mbox{,} Speed\mbox{,} and HP.,
+    type = Functional Static Automatic Testing,
+    execution = Automated tests check that a unit has all of the listed stats.,
+    initialState = A unit is instantiated.,
+    input = A unit is instantiated.,
+    output = The unit owns all listed stats and only reflect that unit according to their action.
+}
+
+\subsection{Tests for Nonfunctional Requirements}
+
+\subsubsection{Usability}
+
+\requirements {
+    name = [NFR-UB1] - Game runs on the operating systems specified in the requirements.,
+    type = Structural Static Manual Testing,
+    execution = The program is executed on the specified operating systems to check whether it launches successfully with the expected behaviour outlined.,
+    initialState = Game is not yet executed.,
+    input = Program is launched.,
+    output = The game launches and functions as expected.
+}
+
+\addvbuffer
+
+\subsection{Performance Requirements}
+
+\requirements {
+    name = [NFR-PF1] - Program Response Time,
+    type = Structural Dynamic Manual Testing,
+    execution = User clicks on option that produces a response from the game.,
+    initialState = Game is open.,
+    input = Attempt to click on an option that should produce a response.,
+    output = The program responds to the user input in near instant time.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [NFR-PF2] - Changes in statistics are accurately reflected on the screen.,
+    type = Structural Dynamic Manual Testing,
+    execution = User successfully attacks an enemy unit with a playable unit.,
+    initialState = An enemy unit is in range of a playable unit.,
+    input = User attacks the enemy unit with the playable unit.,
+    output = The enemy unit's hit points decrease.
+}
+
+\addvbuffer
+
+\subsection{Security Requirements}
+
+\requirements {
+    name = [NFR-SC1] - Invalid user input,
+    type = Structural Dynamic Manual Testing,
+    execution = Attempt to give invalid input to the game\mbox{,} such as keyboard input or clicking on invalid targets.,
+    initialState = Game is initialized.,
+    input = Attempt to give the game keyboard input and clicks on invalid targets.,
+    output = The game state does not change.
+}
+
+\newpage
+
+\section{Tests for Proof of Concept}
+
+\subsection{GUI}
+
+\requirements {
+    name = [PC-GI1] - Terrain grid with an unit is constructed onto the GUI window.,
+    type = Structural Dynamic Manual Testing,
+    execution = Attempt to launch the game by the user\mbox{,} will prompt a window in which a terrain shall be initialized for the gameplay interactions.,
+    initialState = Game is not yet opened.,
+    input = Program is launched.,
+    output = The game functions as expected and a gameplay window is prompted for user interaction.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [PC-GI2] - The game will remain in its current state when the application is minimized.,
+    type = Structural Dynamic Manual Testing,
+    execution = Attempt to minimize the game during the gameplay and shortly after reopen the game to continue from the same game state.,
+    initialState = Game is initialized and showing the terrain grid.,
+    input = Attempt to minimize the application by clicking on the minimize button on the top-right corner of the window.,
+    output = The game minimizes as expected and displays the same game state when reopened.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [PC-GI3] - The game and its operation will be closed when the application is closed.,
+    type = Structural Dynamic Manual Testing,
+    execution = Attempt to close the gameplay window to end the game and its operations.,
+    initialState = Game is initialized and showing the terrain grid.,
+    input = Attempt to close the application by clicking on the close button on the top-right corner of the window.,
+    output = The game ends all operations and closes the gameplay window as expected.
+}
+
+\addvbuffer
+
+\subsection{Unit Movement}
+
+\requirements {
+    name = [PC-UM1] - Unit can be selected and deselected when clicked.,
+    type = Functional Static Automatic Testing,
+    execution = Attempt to trigger selection and deselection mode on an unit when it is being clicked on from the user.,
+    initialState = The game is opened and initialized.,
+    input = The unit is clicked on for selection and then clicked again for deselection.,
+    output = The unit stays in the same position waiting to be selected to be moved as expected.
+}
+
+\addvbuffer
+
+\requirements {
+    name = [PC-UM2] - Units are able to move onto any grid position when selected.,
+    type = Functional Static Automatic Testing,
+    execution = Attempt to move units anywhere on the grid only when they are selected by being clicked on from the user.,
+    initialState = The game is opened and initialized.,
+    input = The unit is clicked on by the user who then selects any available grid position placed on the terrain.,
+    output = The unit will take the new position and the old position will be empty as expected.
+}
+}
+
+\newpage
+	
+\section{Comparison to Existing Implementation}
+
+Blaze Brigade is based on the strategical, tactical, grid based RPG called Tactics Heroes. All the functional requirements were derived from this existing implementation, and can be categorized into 5 categories: GUI, game structure, unit movement and unit attacking. The comparison between Tactics Heroes and Blaze Brigade for each category are listed below:
+
+\subsection{GUI}
+The GUI structure is almost identical to Tactics Heroes, such as the interface, and navigation menu. However, all the graphical assets used is original and either obtained from open sources, or original assets made by the team.
+
+\subsection{Game Structure}
+The game structure involves players taking turns moving their units, and trying to kill off all the opposing enemy units. This game structure is identical between both the existing implementation and Blaze Brigade.
+
+\subsection{Unit Movement}
+Unit movement is done by selecting a unit, then clicking another tile within the unit's move range to move it to that location. This way of moving is consistent between both versions.
+
+\subsection{Unit Attacking}
+Unit attacking is done by clicking on a unit, and selecting an enemy unit within range to perform an attack. Both implementations are similar in this aspect, however there is one major difference. In Blaze Brigade, after a unit performs an attack, they receive a counterattack from the enemy should the enemy survive the initial hit. In Tactic's Heroes, no counter attacks are performed.
+
+\subsection{Unit Structure}
+The unit types are different between the two games. In Tactics Heroes, the units are melee and ranged, with all damages only doing physical damage. In Blaze Brigade, there are 3 units - Melee, Ranger (physical ranged), and mage (magical ranged). The stat allocation in Blaze Brigade are also more intricate. The stats that are the same are HP, where a unit dies when their HP falls under 0, Strength which determines their physical attack, and Defense which determines their physical defense. Tactics Heroes only has one more stat - Dodge, which affects dodge rates for attack. In Blaze Brigade, this calculation is calculated from the difference in skill between the two units. Furthermore, there are 3 more additional stats. Firstly is Intelligence and Resistance, which is used for magical damage calculation. The last is Speed which determines if a unit performs consecutive attacks.
+
+\section{Unit Testing Plan}
+
+The Visual Studio Unit Testing Framework shall be used to write and execute the game's automated unit tests in C\#.
+
+\subsection{Unit testing of internal functions}
+
+The automated unit tests will test internal functions of the program by passing controlled input(s) into a function in order to ensure correct behaviour or output of that single function. Each testable function in the program shall have corresponding unit tests for each possible type of input, to ensure expected behaviour and/or output of that function under possible edge, regular or abnormal cases. Functions that return a value will have their output tested for the expected output, and void functions shall be tested for correct behaviour, such as changes to the model and its state variables. As such, the unit tests will provide thorough whitebox testing of the game's code. Test coverage tools, which are integrated in Visual Studio 2015, will be used as a metric to determine the degree of unit testing code coverage. The goal of the team is to achieve a minimum of 80\% code coverage to ensure that the majority of the code has undergone white box testing, thus  resulting in fewer errors regarding incorrect coding implementation of the functional requirements.
+
+\subsection{Unit testing of output files}
+
+The only output file of the game are a collection of windows which comprises the visual representation and graphical aspects of the game. This includes the Main Menu, the How-To-Play, and Game window. To completely ensure proper function of the output file, manual testing must also be taken into consideration to test the expected behaviour of the game. In addition, the game engine XNA Game Studio handles the majority of the rendition from code to output. Our task does not involve testing proper functionality of the game studio, however unit testing of the team's code still plays a key role in ensuring proper output and results. Unit tests for functions that call on the view, as well as unit tests written for the view are necessary to ensuring proper output of the game's visual representation. The unit tests will additionally verify that proper method calls to game studio methods are being executed, most likely with the use of mock objects to simulate the actual game visuals, and to verify that these mock objects are being called upon.
+
+\end{document}

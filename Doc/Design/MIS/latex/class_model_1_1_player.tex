@@ -1,0 +1,89 @@
+\hypertarget{class_model_1_1_player}{}\section{Model.\+Player Class Reference}
+\label{class_model_1_1_player}\index{Model.\+Player@{Model.\+Player}}
+
+
+Represents a \hyperlink{class_model_1_1_player}{Player} in the game.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_player_a7d58b47184f288c3e9edffbbe1580170}{Player} ()
+\item 
+Linked\+List$<$ \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} $>$ \hyperlink{class_model_1_1_player_a3c61df9a7f3755ed7355e4a3cd4e685a}{get\+Units} ()
+\item 
+int \hyperlink{class_model_1_1_player_ad128636680b101f6c4462d6630368a56}{get\+Num\+Of\+Units} ()
+\item 
+bool \hyperlink{class_model_1_1_player_a13d973c52472d7f54e4a3451ae16236e}{owns\+Unit} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+void \hyperlink{class_model_1_1_player_a6eb0891c6c56bc41c87b3ebd4bbe3cb0}{add\+Unit} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+void \hyperlink{class_model_1_1_player_a3f76bd1d64c2e53f7d70842140a703b3}{remove\+Unit} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a \hyperlink{class_model_1_1_player}{Player} in the game. 
+
+Holds information pertaining to a \hyperlink{class_model_1_1_player}{Player} in the game. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_player_a7d58b47184f288c3e9edffbbe1580170}{}\label{class_model_1_1_player_a7d58b47184f288c3e9edffbbe1580170} 
+\index{Model\+::\+Player@{Model\+::\+Player}!Player@{Player}}
+\index{Player@{Player}!Model\+::\+Player@{Model\+::\+Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Model.\+Player.\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a player. Initializes a list of player owned units. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_player_a6eb0891c6c56bc41c87b3ebd4bbe3cb0}{}\label{class_model_1_1_player_a6eb0891c6c56bc41c87b3ebd4bbe3cb0} 
+\index{Model\+::\+Player@{Model\+::\+Player}!add\+Unit@{add\+Unit}}
+\index{add\+Unit@{add\+Unit}!Model\+::\+Player@{Model\+::\+Player}}
+\subsubsection{\texorpdfstring{add\+Unit()}{addUnit()}}
+{\footnotesize\ttfamily void Model.\+Player.\+add\+Unit (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds the specified unit to the player\textquotesingle{}s units. 
+\begin{DoxyParams}{Parameters}
+{\em unit} & Unit to be added. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_player_ad128636680b101f6c4462d6630368a56}{}\label{class_model_1_1_player_ad128636680b101f6c4462d6630368a56} 
+\index{Model\+::\+Player@{Model\+::\+Player}!get\+Num\+Of\+Units@{get\+Num\+Of\+Units}}
+\index{get\+Num\+Of\+Units@{get\+Num\+Of\+Units}!Model\+::\+Player@{Model\+::\+Player}}
+\subsubsection{\texorpdfstring{get\+Num\+Of\+Units()}{getNumOfUnits()}}
+{\footnotesize\ttfamily int Model.\+Player.\+get\+Num\+Of\+Units (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the total number of player owned units. \hypertarget{class_model_1_1_player_a3c61df9a7f3755ed7355e4a3cd4e685a}{}\label{class_model_1_1_player_a3c61df9a7f3755ed7355e4a3cd4e685a} 
+\index{Model\+::\+Player@{Model\+::\+Player}!get\+Units@{get\+Units}}
+\index{get\+Units@{get\+Units}!Model\+::\+Player@{Model\+::\+Player}}
+\subsubsection{\texorpdfstring{get\+Units()}{getUnits()}}
+{\footnotesize\ttfamily Linked\+List$<$\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}$>$ Model.\+Player.\+get\+Units (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns all player owned units. \hypertarget{class_model_1_1_player_a13d973c52472d7f54e4a3451ae16236e}{}\label{class_model_1_1_player_a13d973c52472d7f54e4a3451ae16236e} 
+\index{Model\+::\+Player@{Model\+::\+Player}!owns\+Unit@{owns\+Unit}}
+\index{owns\+Unit@{owns\+Unit}!Model\+::\+Player@{Model\+::\+Player}}
+\subsubsection{\texorpdfstring{owns\+Unit()}{ownsUnit()}}
+{\footnotesize\ttfamily bool Model.\+Player.\+owns\+Unit (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Indicates whether the player owns the specified unit. 
+\begin{DoxyParams}{Parameters}
+{\em unit} & Specified unit. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_player_a3f76bd1d64c2e53f7d70842140a703b3}{}\label{class_model_1_1_player_a3f76bd1d64c2e53f7d70842140a703b3} 
+\index{Model\+::\+Player@{Model\+::\+Player}!remove\+Unit@{remove\+Unit}}
+\index{remove\+Unit@{remove\+Unit}!Model\+::\+Player@{Model\+::\+Player}}
+\subsubsection{\texorpdfstring{remove\+Unit()}{removeUnit()}}
+{\footnotesize\ttfamily void Model.\+Player.\+remove\+Unit (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the specified unit from the player\textquotesingle{}s units. 
+\begin{DoxyParams}{Parameters}
+{\em unit} & Unit to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Player.\+cs\end{DoxyCompactItemize}

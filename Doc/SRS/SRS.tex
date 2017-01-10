@@ -1,0 +1,491 @@
+\documentclass{article}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage {graphicx}
+\usepackage {tabularx}
+\usepackage{enumitem}
+\usepackage{float}
+
+% ================ Title ===============
+
+\title{
+    \vspace{40mm}
+	\textbf {
+	\Huge {\color[rgb]{0.9,0,0}Blaze} Brigade \\
+	\large - Software Requirements Specification -}}
+
+\date{\today}
+
+\author{SFWR ENG 3XA3 - Section L02 \\
+	007 (Group 7) \\ \\
+	Jeremy Klotz - klotzjj \\
+	Asad Mansoor - mansoa2 \\
+	Thien Trandinh - trandit \\
+	Susan Yuen - yuens2}
+
+
+% =============== Document ===============
+
+\begin{document}
+
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\begin{table}[bp]
+\caption{\bf Revision History}
+\begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
+    \toprule {\bf Date} & {\bf Author} & {\bf Notes} \\
+    \midrule
+    October 10, 2016 & All & Revision 0 of Requirements Document \\
+    October 21, 2016 & Thien Trandinh & Added changes to functional and Non-functional  requirements \\
+    December 3, 2016 & Thien Trandinh & Added section 5 symbolic parameters and revised document for current project focusing on Functional and Non-Functional Requirements \\
+    December 7, 2016 & Susan Yuen & Updated functional requirements, fixed dates in 4.4.1 Project Planning, and wrote Section 4.5. \\
+    \bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\section{Project Drivers}
+
+\subsection{The Purpose of the Project}
+
+Blaze Brigade serves as a tribute and adaptation of a popular genre: tactical simulation role-playing games. The game aims to provide a form of entertainment to the general public, presenting a fun strategical challenge to its players. The purpose of the project is to recreate an already existing tactical role-playing game, Tactics Heroes, and to ultimately further improve on the overall user experience by implementing additional features not already included in Tactics Heroes.
+
+\subsection{The Stakeholders}
+
+\subsubsection{The Client}
+The client of the project is Dr. Spencer Smith in the Computing and Software Department at McMaster University.
+
+\subsubsection{The Customers}
+The customers of the game include members of the general public who are interested in the tactical role-playing game genre and are willing to play the game.
+
+\subsubsection{Other Stakeholders}
+Other stakeholders of the project include:
+\begin{itemize}
+    \item The Blaze Brigade team
+    \item[] The project will serve as a means of entertainment and project development experience to its developers.
+    \item Tactics Heroes developers
+    \item[] The game may serve as a guideline to the original developers of Tactics Heroes to further improve their game by incorporating our project’s additional add-on features, as well as modern software development tools and concepts.
+\end{itemize}
+
+\subsection{Mandated Constraints}
+
+\subsubsection{Solution Constraints}
+\textbf{Description:} The game shall support Windows OS. \\
+\textbf{Rationale:} The client will access the game using a device running Windows. \\
+\textbf{Fit Criterion:} The game shall be developed to support Windows operating systems, and testing will ensure that the game runs smoothly on any  version of Windows OS newer and including Windows XP.
+
+\subsubsection{Off-the-Shelf Software}
+The product will be utilizing XNA Game Studio for game development, Adobe Photoshop for graphic editing, and Audacity and FL Studio for music and sound editing. A device that is able to run Visual Studio with XNA Game Studio is also required for project development. Customers must be in possession of a Windows machine to be able to play the game, and a pointing device to be able to select items on the screen.
+
+\subsubsection{Schedule Constraints}
+Full development of the game does not have any applicable schedule constraints. However, the basic functions of the game must be fully completed by December 2016.
+
+\subsubsection{Budget Constraints}
+The budget for the project is \$0 as all software required for development is provided for free. In addition, all hardware required is already owned by the project's respective developers.
+
+\subsection{Naming Conventions and Terminology}
+
+\begin{table}[H]
+{\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{lX}
+    \toprule
+	\textbf{Term} & \textbf{Definition} \\
+	\midrule
+    \textbf{RPG} & Role-playing game, in which the player plays the game as a character. \\
+    \textbf{AI} & Artificial Intelligence. \\
+    \textbf{Unit} & A single character in the game. \\
+    \textbf{Enemy} & Units that are hostile to the player's units and may attack the player's units when in range. \\
+    \textbf{Critical hit} & Causes the user to deal more damage than expected from a normal hit. \\
+    \textbf{HP} & Health points; the amount of damage a unit may take before being defeated. \\
+    \textbf{STR} & Strength; Used in calculating physical damage dealt by the unit. \\
+    \textbf{INT} & Intelligence; Used in calculating magical damage dealt by the unit. \\
+    \textbf{SKILL} & Used to calculate unit's hit rate and critical hit rate. \\
+    \textbf{SPEED} & Used to calculate a unit's number of hits on the enemy. \\
+    \textbf{DEFENSE} & Used to calculate the melee damage dealt to the unit. \\
+    \textbf{RESISTANCE} & Used to calculate the magic damage dealt to the unit. \\
+	\bottomrule
+\end{tabularx}
+}
+\caption{Naming Conventions and Terminology}
+\end{table}
+
+\subsection{Relevant Facts and Assumptions}
+
+\subsubsection{Relevant Facts}
+The game that Blaze Brigade will re-implement, Tactics Heroes, was initially named Fire Emblem Factory. The game is heavily influenced from a Japanese game series called Fire Emblem, which was released in 1990 by Intelligent Systems and Nintendo. Fire Emblem revolutionized the genre by incorporating RPG elements, and as such, the success of the genre in modern day can largely be attributed to this series. In addition, Tactics Heroes is still in alpha stage, and only basic gameplay have been fully implemented. Future content for additional features in Tactics Heroes is still under works by its developers.
+
+\subsubsection{Assumptions}
+It is assumed that upon project launch, the host site for the game's download will be free. It is also assumed that members of the general public will not use any aspect of the project or its source code for malicious intent or for resale for monetary value.
+
+\section{Functional Requirements}
+
+\subsection{The Scope of the Work and the Product}
+Video games are a popular source of entertainment in our society, and tactical RPGs can be traced back to the classics in 1980s. Therefore Blaze Brigade will be a new entertaining game with a throwback on nostalgia. The objective of Blaze Brigade is to move and order your units to defeat all of the enemy player's controllable units. The game will incorporate common tactical RPG features such as path finding, RNG, animations, sound effects, and unique weapons and unit types. 
+
+\subsubsection{The Context of the Work}
+The game will be available to play on all desktop and laptop capable of running Windows (or Windows VM), and will be packaged and deployed through Visual Studio. The developers will first develop a working game, and will then allow others to use and evaluate the prototype. Afterwards, the developers will use the feedback to refine the code further and repeat the evaluation process. These evaluation stages are crucial for developing software that meets the customers' preferences, as the game should be fun and entertaining for those who play it.
+
+\subsubsection{Work Partitioning}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{lllX}
+    \toprule
+    Event \# & Event Name & Input & Output \\
+    \midrule
+    1 & Mapping System & Developer Code & Executable File \\
+    2 & Mechanics & Developer Code & Executable File \\
+    3 & Units & Developer Code &  Executable File \\
+    4 & Terrain Types & Developer Code & Executable File \\
+    5 & Sprites & Developer Code/Graphics & Executable File \\
+    6 & Map Creation & Developer Code &  Executable File \\
+    7 & Audio   & Microphone & Audio Output Device \\
+    8 & Deployment   & Developer Code &  Executable File \\
+    \bottomrule
+\end{tabularx}
+\caption{Input and Output of Events}
+\end{table}
+
+\bigskip
+
+\noindent
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{llll}
+    \toprule
+    Event \# & Summary of BUC \\
+    \midrule
+    1 & A grid system that simulates the playing board. \\
+    2 & Built-in combat system. \\
+    3 & A class that all playable units are modelled by. \\
+    4 & Properties of terrain types. \\
+    5 & A collection of sprites used for terrain types, and playable units. \\
+    6 & A playing board with all sprites added. \\
+    7 & Sound effects and background music. \\
+    8 & To make Blaze Brigade playable on all operating systems. \\
+    \bottomrule
+\end{tabularx}
+\caption{Description of Events}
+\end{table}
+
+\subsubsection{Individual Product Use Cases}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{lX}
+    \toprule
+    Product Use Case & Description of Use Case \\
+    \midrule
+    Playing the Game & The user plays the game and has a sense of enjoyment. \\
+    Stimulating the Brain & The user thinks about the game at a deeper level. This causes the player to exercise and train their brain. \\
+    \bottomrule
+\end{tabularx}
+\caption{Individual Product Use Cases}
+\end{table}
+
+\subsection{Functional Requirements}
+
+The following contains the functional requirements of the project:
+
+\subsubsection{GUI} \label{GUI}
+
+\begin{enumerate}
+    \item All interaction with the game will be through mouse input interacting with the GUI.
+    \item The game will contain a main menu on screen allowing users to play the game, read the instructions, or exit upon launch.
+    \item "New Game" shall be selectable from the main menu, allowing the user to play the game.
+    \item "How-to-Play" shall be selectable from the main menu, allowing users to read the instructions.
+    \item "Exit Game" shall be selectable from the main menu, allowing users to exit the game.
+    \item Selection of playable units, navigation of the unit drop down menu, and confirmation of action buttons will constitute the actions of game play.
+    \item A unit can be selected by clicking on the desired unit on screen.
+\end{enumerate}
+
+\subsubsection{Game Structure} \label{gameStructure}
+
+\begin{enumerate}[resume]
+    \item The game shall be turn-based.
+    \item The game shall consist of two players, the blue team and the red team.
+    \item The game shall alternate turns between the two players, starting with the blue team.
+    \item Each player will receive the same amount and type of units upon the start of the game, and will be unable to gain anymore within the single instance of the game.
+    \item The game shall be grid-based, with each tile on the grid representing a position on the map.
+    \item The game shall have obstacles which occupy tiles of their position, and will be impassable by any unit.
+    \item Clicking a unit owned by the player of the current turn will present a drop down menu on screen with available actions.
+    \item A unit will be able to perform each of the following 4 actions available from drop down menu once per turn:
+    \begin{enumerate}
+        \item Move: The unit will be able to move to a new position on the grid.
+        \item Attack: The unit will be able to perform an attack on an enemy unit.
+        \item Item: The unit will be able to equip any weapon from the item drop down sub-menu (representing the unit's inventory), so long as the weapon is equippable by the unit.
+        \item Wait: The unit's turn will end and shall no longer be able to perform actions until the next turn of the unit's player.
+    \end{enumerate}
+    \item A unit shall only be able to move and attack once per turn.
+    \item One side will be victorious when the other side has no playable units left.
+\end{enumerate}
+
+\subsubsection{Unit Movement} \label{Movement}
+*Refer to Section \ref{Actions} in the Appendix for further details on Movement.
+
+\begin{enumerate}[resume]
+    \item The player will be able to select 'Move' as an available option after selecting an owned unit that has yet to perform this action, 'Attack', or 'Wait'.
+    \item Units will only be able to move within their move range as indicated on screen by blue highlighted tiles, representable movable tiles.
+    \item Clicking on a movable tile will result in a unit moving from their present tile to the clicked tile.
+    \item Units shall not be able to pass through obstacles.
+\end{enumerate}
+
+\subsubsection{Unit Attacking} \label{Attacking}
+*Refer to Section \ref{Actions} in the Appendix for details on Attack.
+
+\begin{enumerate}[resume]
+    \item The player will be able select 'Attack' as an available option after selecting an owned unit that has not yet attacked during the current turn, or has not yet performed the 'Wait' action.
+    \item A unit will only be able to attack an enemy unit within its attack range  (these tiles are highlighted in red).
+    \item Attack information displaying damage, hit rate, and critical rate will be displayed to the screen upon clicking on an enemy unit within range after selecting 'Attack'. *Refer to Section \ref{Combat} in the Appendix for details on how damage is calculated.
+    \item An attack confirmation button will be displayed along with attack information. Clicking on the attack confirmation button will result in the attack action be executed.
+    \item Enemy units will counterattack upon receiving an attack as long as they are still alive and the unit initiating the attack is within attack range.
+    \item Units will lose HP according to damage calculation.
+    \item Units that fall below the minimum HP will be deceased and will no longer be able to be used in the current battle.
+    \item The player shall be able to select which weapon each unit uses to perform an attack.
+    \item Units will be unable to perform further actions within the current turn after attacking.
+\end{enumerate}
+
+\subsubsection{Unit Structure} \label{unitStructure}
+
+\begin{enumerate}[resume]
+    \item All units shall have a corresponding Unit type class. 
+    \item Classes shall include:
+    \begin{enumerate}
+        \item Warriors, which will be physical oriented units with a focus on Strength and Defense.
+        \item Archers, which will be a ranged physical oriented unit with a focus on Strength, Skill, and Speed.
+        \item Mages, which will be a magic oriented unit with a focus on Magic and Resistance.
+    \end{enumerate}
+    *Refer to Section \ref{UnitType} in the Appendix for more details on each class.
+    \item The stats of the game shall include:
+    \begin{enumerate}
+        \item Strength stat will be used to calculate physical damage.
+        \item Intelligence stat will be used to calculate magical damage.
+        \item Defense stat will be used to calculate physical defense.
+        \item Resistance stat will be used to calculate magical defense.
+        \item Skill stat will be used to calculate hit, miss, and critical rates.
+        \item Speed stat will be used to calculate if a unit can attack twice.
+        \item Health stat will be used to measure how much damage a unit can take before dying.
+    \end{enumerate}
+    \item All units will have a unique corresponding HP bar.
+\end{enumerate}
+
+\section{Non-functional Requirements}
+
+\subsection{Look and Feel Requirements}
+
+\subsubsection{Appearance Requirements}
+ The main menu page will consist of a ``nature-like'' background offering a soothing and melodic feel. The in-game map will be a wilderness theme with rocks, trees and rocks as obstacles.. The characters to be controlled will be drawn and coloured in such a way that they do not blend into the background. The resolution of the game will be preset and unchangeable from a 960x640 resolution.
+
+\subsubsection{Style Requirements}
+The style of the game will be a pixelated tactical RPG, similar to classics like Fire Emblem, and will have a nostalgic appeal to those whom are familiar with this genre of old school RPGs.
+
+\subsection{Usability and Humanity Requirements}
+
+\subsubsection{Ease of Use Requirements}
+The game shall be playable by persons who are capable of thought and are able to operate a pointing device (ie. mouse or touchpad).
+
+\subsubsection{Learning Requirements}
+The user shall be able to operate a computer or pointing device.
+
+\subsubsection{Understandability and Politeness Requirements}
+The user shall be able to operate a computer or pointing device.
+
+\subsubsection{Accessibility}
+The game shall be playable on Computers running Windows, with a screen size greater than 960x640.
+
+\subsection{Performance Requirements}
+
+\subsubsection{Speed and Latency Requirements}
+The response between the game and user input should be near instant.
+
+\subsubsection{Safety-Critical Requirements}
+The game will not contain content that causes harm to the user, including traumatizing experiences. The game will also not allow player input to modify or change the code in any way or form.
+
+\subsubsection{Precision Critical Requirements}
+The gameplay combat statistics shall accurately reflect what is displayed on the screen. Changes in these statistics shall also be accurately reflected upon proper user input.
+
+\subsubsection{Reliability and Availability Requirements}
+The game shall be available for as long as the user has access to a Windows machine.
+
+\subsubsection{Robustness or Fault-Tolerance Requirements}
+The game shall run for as long as the machine is on, or until the user exits the game.
+
+\subsubsection{Capacity Requirements}
+The game shall be able to support gameplay exactly 2 players.
+
+\subsubsection{Longevity Requirements}
+The game shall be playable for as long as Windows OS supports running executable.
+
+\subsection{Operational and Environmental Requirements}
+
+\subsubsection{Expected Technological Environment}
+The user shall be able to access and navigate the game from a computer running Windows.
+
+\subsubsection{Productization Requirements}
+Before the product is playable, it must be deployed through Visual Studio 2015 and XNA Game Studio.
+
+\subsubsection{Installability Requirement}
+The game will run without requiring any installations upon clicking the game executable (.exe).
+
+\subsection{Maintainability and Support Requirements}
+
+\subsubsection{Maintainability}
+The game should be ready for launch without need for further maintenance.
+
+\subsection{Security Requirements}
+
+\subsubsection{Access Requirements}
+The game shall be made available to the general public through GitHub. The public shall be able to access the game given that they have previously acquired Internet access as well as access to a machine capable of running the game.
+
+\subsubsection{Integrity Requirements}
+The game shall not accept invalid user input, nor have the source code modified by any persons or apparatus who are not permitted to do so.
+
+\subsection{Cultural Requirements}
+
+The game shall not contain any form of content that may be found offensive to any religious or ethnic group. The game shall state that any resemblance in game to real people or events is purely coincidental.
+
+\subsection{Legal Requirements}
+
+The game shall comply with the law.
+
+\subsection{Health and Safety Requirement}
+
+The patterns of lights from the game screen can result in epilepsy seizures and/or blackouts to a very small percentage of individuals. This may occur in individuals with no past history of seizures of blackout.
+
+\section{Project Issues}
+
+\subsection{Open Issues}
+The developers of Blaze Brigade must become familiarized with the C++ programming language and investigate how to efficiently adapt to the specific coding standard and testing methodologies. With the use of new technologies, such as a XNA Game Studio, additional time would need to be allocated to learn this tool in depth. In addition, a feasibility study is yet to be completed to indicate whether a mouse-only control would be a feasible for all the possible scenarios present throughout the game play.
+
+\subsection{Off-the-Shelf Solutions}
+Blaze Brigade makes use of Tactics Heroes, an open source program that motivates the creation of a tactical simulation role-playing game. The engine streamlines the process of implementing the framework, and the developers of Blaze Brigade would simply need to implement maps, units, characters and the storyline. In addition, the open-source program presents a software license agreement and encourages developers to contribute to the program by getting involved within the forums.
+
+\subsection{New Problems}
+No new problems are tracked at this stage of the project.
+
+\subsection{Tasks}
+\subsubsection{Project Planning}
+The game shall be completed using the prospective timeline:
+
+\noindent
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{llX}
+    \toprule
+    Task & Resource & Start Date \\
+    \midrule
+    Problem Statement & Developers  & Sept 20 \\
+    Development Plan & Developers  & Sept 26 \\
+    Requirements Document - Revision 0 & Developers & Oct 4 \\
+    Test Plan - Revision 0 & Developers  & Oct 21 \\
+    Design Document - Revision 0 & Developers & Oct 26 \\
+    Development of Blaze Brigade & Developers & Oct 26\\
+    Testing of Game & Developers & Nov 11\\
+    Debugging of Game & Developers & Nov 21 \\
+    Survey Round 1 & Client & Nov 22 \\
+    Implement changes from survey feedback & Developers & Nov 23 \\
+    Implement final changes from survey feedback & Developers & Nov 28 \\
+    \bottomrule
+\end{tabularx}
+\caption{Project Planning Timeline}
+\end{table}
+
+\subsubsection{Planning of the Development Phases}
+
+The tasks listed in the table above will serve as the main guide for the developers to ensure that deliverable are completed in correct succession. In that regard, the output will serve the purpose to ensure that all of the requirements have been met before starting the next iteration of development phase. In addition to the development phases, documents such as Problem Statement, Development Plan, Software Requirements Specification, Design Document, and Test Plan would need to be created and updated concurrently for the stakeholders as the project proceeds.
+
+\subsection{Migration to the New Product}
+The project will be made available to the general public through GitHub, and serves as an improvement to the original product. Thus, migration to the new product heavily depends on its users' choice to migrate to Blaze Brigade by downloading a copy of the game from GitHub.
+
+\subsection{Risks}
+The risk associated with the project comes with the nature of developing a game. For instance, accommodating testing into the game play would be a time-consuming and trivial task. Hence, the investigation on how to proceed with a specific testing standard and whether to introduce an automated testing framework is still underway at this stage of the project. In relation to the design aspect, a feasibility study is yet to be completed to indicate whether a mouse-only control would be feasible throughout all the scene of the game play. Another risk is that while the code structure for each module has been designed to add future additions seamlessly, there is a slight chance newer additions might conflict with existing implementations. In addition, extra time would need to be allocated in the process of learning and adapting to new technologies to ensure all of the objectives are met in the constrained time frame.
+
+\subsection{Costs}
+There is no cost associated in the development of the product. The developers of Blaze Brigade will make best use of their personal computers for the main development environment, with the addition of already-owned tools such as XNA Game Studio and Adobe Photoshop.
+
+\subsection{User Documentation and Training}
+
+\subsubsection{Training Requirements}
+Readable instructions will be available to the player at the beginning of the game, and will carefully instruct the user on how to play Blaze Brigade. 
+
+\subsection{Waiting Room}
+There are a few extra features that would increase the entertainment value of the game but have yet to be implemented. One major addition would be an AI that a player can face, instead of the game always requiring 2 players. Another would be another game mode called "Capture the Flag", where you would attempt to capture objective flags on the map, and bring it back to your base without that unit dying and losing the flag. Unit level increasing is also another feature that will be implemented in the future, as well as a larger variety of unit types. An additional feature to be implemented will be more weapon types as well as weapon animation during attacking. A further feature would be adding different tile weights, such as costing two movement to walk through a water tile. The last extra feature would be a playable tutorial upon starting the game replacing the screen of instructions on how to play.
+
+\subsection{Ideas for Solutions}
+The path finding algorithm used for unit moving and attacking currently is breadth-first search. However, this would only work since we do not yet account for weighted tiles (costing more then 1 movement to go through a tile). This would turn it into a weighted graph, and we would need to instead switch to Dijkstra's algorithm for path finding.
+
+\section{Appendix}
+
+\subsection{Symbolic Parameters} \label{Actions}
+
+\subsubsection{Moving}
+Moving refers to selecting 'Move" from a selected unit, then clicking to one of the blue highlighted nodes to move the unit from its previous location to the location newly clicked.
+
+\subsubsection{Equip Weapon}
+Equip weapon refers to selecting a different weapon from the Item drop down menu, which in turn changes the unit's stats for damage calculations.
+
+\subsubsection{Attack}
+Attack refers to selecting attack from the character drop down menu, and clicking on an enemy unit positioned on a red highlighted node. The unit will then deal damage to the enemy unit based on damage calculation then be counterattacked by that same unit should it survive.
+
+\subsubsection{Killing a Unit}
+Killing a unit refers to a unit getting attacked and having its health being reduced to under 0. That unit is then "killed" and no longer playable or seen in the current game.
+
+\subsection{Unit Terminology} \label{UnitType}
+
+For unit structure, refer to Section \ref{unitStructure} in the functional requirements.
+
+\subsubsection{Warrior}
+Warriors are a front-line physical bruiser and tank. They can equip swords, move quickly, and attack units within adjacent range. Their high attack and defense allows them to kill archers and mage easily once in range, but can fall prey to mages due to their lower resistance.
+
+\subsubsection{Archer}
+Archers are a back-line ranged physical attacker. They can equip bows giving them an attack range of 2 or 3. Their long range is compensated by the fact that they cannot counterattack against adjacent units. Their high attack and skill allows them to accurately land high physical attacks with a potent critical rate. This makes them the ideal unit for killing off mages, although they struggle against warriors.
+
+\subsubsection{Mage}
+Mages are a back-line ranged magical attacker. They can equip different spell tomes giving them an attack range of 1-2. Although their mobility is limited, their extremely dangerous magical attacks allows them to easily kill off warriors, despite struggling against archers.
+
+\subsection{Combat Terminology} \label{Combat}
+For attacking with units, refer to Section \ref{Attacking} in the functional requirements. \\ \\
+For unit x = attacking unit, and unit y = defending unit where:
+\begin{itemize}
+    \item unit.skill gets the unit's skill.
+    \item unit.str gets the unit's strength.
+    \item unit.int gets the unit's int.
+    \item unit.def gets the unit's defense.
+    \item unit.res gets the unit's resistance.
+    \item unit.spd gets the unit's speed.
+\end{itemize}
+
+\subsubsection{Hit Rate}
+The percentage chance that a unit will land an attack. \\
+hitRate calculation= [(x.skill/10 - y.skill/10)+1]*0.8 *100, \\
+where hitRate is 80\% if both players have the same skill, and adds or subtracts 8\% to hitRate in favour of the unit with the higher skill stat.
+
+\subsubsection{Critical Rate}
+The percentage chance that a unit will perform a critical attack (attack that deals x2 damage). \\
+critRate=[(x.skill/3 - y.skill/3)+1]*0.81*100, \\
+where critRate is 10 if both players have the same skill, and adds or subtracts 3.33\% to critRate in favour of the unit with the higher skill stat.
+
+\subsubsection{Physical Damage}
+The amount of damage a physical unit deals should an attack hit before modifiers. \\
+physicalDamage = x.strength - y.defense, \\
+where physical damage is the damage calculated from a physical attack.
+
+\subsubsection{Magical Damage}
+The amount of damage a magical unit deals should an attack hit before modifiers. \\
+magicalDamage = x.int - y.res, \\
+where physical damage is the damage calculated from a magical attack.
+
+\subsubsection{Number of Hits}
+The number of attacks a unit will perform when attacking. \\
+numHits = 2 if x.spd is greater than y.spd+4, else numHits = 1.
+
+\subsubsection{Damage Dealt}
+The amount of damage actually inflicted on an enemy unit when a unit performs an attack. \\
+damageDealt = (physicalDamage or magicalDamage) * numHits * (hitRate, which will be 1 if the attack hits or 0 if the attack misses) * (1.5 if it is a critical hit or 1 if it is not a critical hit).
+
+\end{document}

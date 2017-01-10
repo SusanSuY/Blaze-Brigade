@@ -1,0 +1,402 @@
+\hypertarget{class_model_1_1_unit_module_1_1_warrior}{}\section{Model.\+Unit\+Module.\+Warrior Class Reference}
+\label{class_model_1_1_unit_module_1_1_warrior}\index{Model.\+Unit\+Module.\+Warrior@{Model.\+Unit\+Module.\+Warrior}}
+
+
+The \hyperlink{class_model_1_1_unit_module_1_1_warrior}{Warrior} model class, extends \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}. This unit excels in dealing melee physical damage, with a high defense, but suffers from lack of any magical attack or resistance.  
+
+
+Inheritance diagram for Model.\+Unit\+Module.\+Warrior\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_model_1_1_unit_module_1_1_warrior}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_unit_module_1_1_warrior_ade02c516e012f06440b011ea0b62dbc4}{Warrior} (Texture2D sprite\+Image, \hyperlink{class_model_1_1_button}{Button}\mbox{[}$\,$\mbox{]} unit\+Buttons, Texture2D char\+Info, Texture2D char\+Attack\+Info, Vector2 coordinates, Texture2D health\+Bar)
+\item 
+void \hyperlink{class_model_1_1_unit_module_1_1_warrior_a3a55c013bad5ebd5f6e4402fc8b1f887}{set\+Initial\+Stats} ()
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a2c9d4bae73598731bd6378add6a377e7}{get\+Movability} ()
+\item 
+int \mbox{[}$\,$\mbox{]} \hyperlink{class_model_1_1_unit_module_1_1_warrior_ad058a6586b28d7d23075e557a99712aa}{get\+Stats} ()
+\item 
+\hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} \mbox{[}$\,$\mbox{]} \hyperlink{class_model_1_1_unit_module_1_1_warrior_a881ad4fa5437c4353abd62a56d0ab37d}{get\+Equipable\+Weapons} ()
+\item 
+\hyperlink{namespace_model_1_1_unit_module_aba9769f408747bf38d0d8adca8f68c98}{Unit\+Type} \hyperlink{class_model_1_1_unit_module_1_1_warrior_ad075c71e62a88cc0cd5f93c9600ac952}{get\+Class} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_warrior_afb4b568eb1d84ec9adca68e8ca8c79b4}{get\+Sprite\+Image} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_warrior_a57f0ec7afa2f99e178b63fa0e4f455d5}{get\+Button\+Image} (\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type} button\+Type)
+\item 
+bool \hyperlink{class_model_1_1_unit_module_1_1_warrior_a6727d75c6005f0d8e72d64ad302e4fec}{is\+Button\+Active} (\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type} button\+Type)
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_warrior_a4b5e10506a23aff7acb02896e4762da7}{get\+Char\+Info} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_warrior_a6774680a84b9fea3ac5e95f0fc8ad9a7}{get\+Char\+Attack\+Info} ()
+\item 
+\hyperlink{class_model_1_1_button}{Button} \mbox{[}$\,$\mbox{]} \hyperlink{class_model_1_1_unit_module_1_1_warrior_af234ef405cb908c373946d012bac57be}{get\+Buttons} ()
+\item 
+\hyperlink{class_model_1_1_button}{Button} \hyperlink{class_model_1_1_unit_module_1_1_warrior_ab0bfca3f6dc3b86e966afb7e9ef8cead}{get\+Button\+Type} (\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type} button\+Type)
+\item 
+void \hyperlink{class_model_1_1_unit_module_1_1_warrior_ac988bd449f7f88fd8108278107cdba77}{set\+Button\+Coordinates} (Vector2 pixel\+Coordinates)
+\item 
+Rectangle \hyperlink{class_model_1_1_unit_module_1_1_warrior_ab6a358a386cb1a55b619b8517b084ef7}{get\+Current\+Frame} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_warrior_a4a2706ae17e29c3c22c30b057786e63f}{get\+Health\+Bar} ()
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a1f8dded5d374af5e7e2f68a6977a19c3}{get\+Max\+Hp} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_model_1_1_unit_module_1_1_warrior_a3529dbe19047ce3959f02aa28a9aa578}{Alive}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a3ed930a9ff5f32dfd418d5e5a9744dd1}{Speed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a497f0b65d1e1159a57636f4ae279fa86}{Def}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_ab785b88f81227bef086caa537e725887}{Res}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a178c1a9edf70bbea02f655ef5bae6c2a}{Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} \hyperlink{class_model_1_1_unit_module_1_1_warrior_aa99d785534eabc453977f56cd207aea6}{equipped\+Weapon}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a3f55509bf1b16090b81dce4b3be23f05}{current\+Frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a61bcdb9427a17cd9bab664d8001b45a6}{Str}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_ae739f9a2f57a2c8788337c55677b778c}{Int}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_a4a3abc882f238c8e781b4cd61cdf7452}{Skill}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_warrior_af8c7aa90b8bbd046bea9d400d9f479d2}{Hp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Tuple$<$ int, int $>$ \hyperlink{class_model_1_1_unit_module_1_1_warrior_ad740dd04bc1b284e66e0f01a9597bb83}{Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Vector2 \hyperlink{class_model_1_1_unit_module_1_1_warrior_a98c38047e2e0c9cca83d36d06d61da83}{Pixel\+Coordinates}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_model_1_1_unit_module_1_1_warrior}{Warrior} model class, extends \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}. This unit excels in dealing melee physical damage, with a high defense, but suffers from lack of any magical attack or resistance. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_ade02c516e012f06440b011ea0b62dbc4}{}\label{class_model_1_1_unit_module_1_1_warrior_ade02c516e012f06440b011ea0b62dbc4} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Warrior@{Warrior}}
+\index{Warrior@{Warrior}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Warrior()}{Warrior()}}
+{\footnotesize\ttfamily Model.\+Unit\+Module.\+Warrior.\+Warrior (\begin{DoxyParamCaption}\item[{Texture2D}]{sprite\+Image,  }\item[{\hyperlink{class_model_1_1_button}{Button} \mbox{[}$\,$\mbox{]}}]{unit\+Buttons,  }\item[{Texture2D}]{char\+Info,  }\item[{Texture2D}]{char\+Attack\+Info,  }\item[{Vector2}]{coordinates,  }\item[{Texture2D}]{health\+Bar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The constructor for \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_unit_module_1_1_warrior}{Warrior}. Stores all relevent data in model. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Image} & The character sprite texture. \\
+\hline
+{\em unit\+Buttons} & The Texture2D Array containing all the different textures for each button. \\
+\hline
+{\em char\+Info} & The character info popup texture. \\
+\hline
+{\em char\+Attack\+Info} & The character attack menu popup texture. \\
+\hline
+{\em coordinates} & The unit\textquotesingle{}s current vector coordinate on screen. \\
+\hline
+{\em player} & The player of which the unit belongs to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a57f0ec7afa2f99e178b63fa0e4f455d5}{}\label{class_model_1_1_unit_module_1_1_warrior_a57f0ec7afa2f99e178b63fa0e4f455d5} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Button\+Image@{get\+Button\+Image}}
+\index{get\+Button\+Image@{get\+Button\+Image}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Button\+Image()}{getButtonImage()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Warrior.\+get\+Button\+Image (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type}}]{button\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method returns the texture associated with the buntton\+Type passed in, by going through a switch case and matching it. 
+\begin{DoxyParams}{Parameters}
+{\em button\+Type} & The buttontype that was clicked. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_ac8e47a3f8d13fe8a719f962a3ee9ee46}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_af234ef405cb908c373946d012bac57be}{}\label{class_model_1_1_unit_module_1_1_warrior_af234ef405cb908c373946d012bac57be} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Buttons@{get\+Buttons}}
+\index{get\+Buttons@{get\+Buttons}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Buttons()}{getButtons()}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_button}{Button} \mbox{[}$\,$\mbox{]} Model.\+Unit\+Module.\+Warrior.\+get\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the dropdown menu buttons of the unit. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a5256d2141e9c59e0454e47ac65246bda}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_ab0bfca3f6dc3b86e966afb7e9ef8cead}{}\label{class_model_1_1_unit_module_1_1_warrior_ab0bfca3f6dc3b86e966afb7e9ef8cead} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Button\+Type@{get\+Button\+Type}}
+\index{get\+Button\+Type@{get\+Button\+Type}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Button\+Type()}{getButtonType()}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_button}{Button} Model.\+Unit\+Module.\+Warrior.\+get\+Button\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type}}]{button\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method takes in the button\+Type enum, then returns the object associated with that enum. 
+\begin{DoxyParams}{Parameters}
+{\em button\+Type} & The button to return (Move, Attack, Item, Wait, and attack confirm). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a6e9528d09bca7702fe99cc95135ede36}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a6774680a84b9fea3ac5e95f0fc8ad9a7}{}\label{class_model_1_1_unit_module_1_1_warrior_a6774680a84b9fea3ac5e95f0fc8ad9a7} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Char\+Attack\+Info@{get\+Char\+Attack\+Info}}
+\index{get\+Char\+Attack\+Info@{get\+Char\+Attack\+Info}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Char\+Attack\+Info()}{getCharAttackInfo()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Warrior.\+get\+Char\+Attack\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the char attack info screen texture. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a7c89d9a1dc648b556b7e57cdcdbf2930}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a4b5e10506a23aff7acb02896e4762da7}{}\label{class_model_1_1_unit_module_1_1_warrior_a4b5e10506a23aff7acb02896e4762da7} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Char\+Info@{get\+Char\+Info}}
+\index{get\+Char\+Info@{get\+Char\+Info}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Char\+Info()}{getCharInfo()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Warrior.\+get\+Char\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the char info screen texture. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a4e2aeae552d85c8938e609729bcd1a44}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_ad075c71e62a88cc0cd5f93c9600ac952}{}\label{class_model_1_1_unit_module_1_1_warrior_ad075c71e62a88cc0cd5f93c9600ac952} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Class@{get\+Class}}
+\index{get\+Class@{get\+Class}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Class()}{getClass()}}
+{\footnotesize\ttfamily \hyperlink{namespace_model_1_1_unit_module_aba9769f408747bf38d0d8adca8f68c98}{Unit\+Type} Model.\+Unit\+Module.\+Warrior.\+get\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the unit\textquotesingle{}s class. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a84dbb2982a68ec530e53662d747da9fa}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_ab6a358a386cb1a55b619b8517b084ef7}{}\label{class_model_1_1_unit_module_1_1_warrior_ab6a358a386cb1a55b619b8517b084ef7} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Current\+Frame@{get\+Current\+Frame}}
+\index{get\+Current\+Frame@{get\+Current\+Frame}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Current\+Frame()}{getCurrentFrame()}}
+{\footnotesize\ttfamily Rectangle Model.\+Unit\+Module.\+Warrior.\+get\+Current\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns the current sprite frame in animation sequence. The rectangle starts at current\+Frame $\ast$ 32, where 32 is the sprite sheet offset between frames, and is 32 high and wide. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Assumes that each sprite frame is 32pixels wide. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_accb79e396c6066707f2d11f63e3fdd99}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a881ad4fa5437c4353abd62a56d0ab37d}{}\label{class_model_1_1_unit_module_1_1_warrior_a881ad4fa5437c4353abd62a56d0ab37d} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Equipable\+Weapons@{get\+Equipable\+Weapons}}
+\index{get\+Equipable\+Weapons@{get\+Equipable\+Weapons}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Equipable\+Weapons()}{getEquipableWeapons()}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} \mbox{[}$\,$\mbox{]} Model.\+Unit\+Module.\+Warrior.\+get\+Equipable\+Weapons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the list weapons the unit can equip (T\+O\+DO). 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a7b64e60f28d516a5fb4e28a9b7cd8eec}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a4a2706ae17e29c3c22c30b057786e63f}{}\label{class_model_1_1_unit_module_1_1_warrior_a4a2706ae17e29c3c22c30b057786e63f} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Health\+Bar@{get\+Health\+Bar}}
+\index{get\+Health\+Bar@{get\+Health\+Bar}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Health\+Bar()}{getHealthBar()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Warrior.\+get\+Health\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the healthbar texture. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a5be18da3857bb22525feb89dd49b76b1}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a1f8dded5d374af5e7e2f68a6977a19c3}{}\label{class_model_1_1_unit_module_1_1_warrior_a1f8dded5d374af5e7e2f68a6977a19c3} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Max\+Hp@{get\+Max\+Hp}}
+\index{get\+Max\+Hp@{get\+Max\+Hp}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Max\+Hp()}{getMaxHp()}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+get\+Max\+Hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the character\textquotesingle{}s max HP. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_adee907637c0ce8487149ae4549fb4cf1}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a2c9d4bae73598731bd6378add6a377e7}{}\label{class_model_1_1_unit_module_1_1_warrior_a2c9d4bae73598731bd6378add6a377e7} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Movability@{get\+Movability}}
+\index{get\+Movability@{get\+Movability}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Movability()}{getMovability()}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+get\+Movability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the unit\textquotesingle{}s movability range on grid (number of spaces the unit can move in one turn). ~\newline
+{\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative movement will be treated as 0 in path finding algorithm. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a670aae31f46980c871774352f5fe3a3f}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_afb4b568eb1d84ec9adca68e8ca8c79b4}{}\label{class_model_1_1_unit_module_1_1_warrior_afb4b568eb1d84ec9adca68e8ca8c79b4} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Sprite\+Image@{get\+Sprite\+Image}}
+\index{get\+Sprite\+Image@{get\+Sprite\+Image}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Sprite\+Image()}{getSpriteImage()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Warrior.\+get\+Sprite\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the sprite image of the unit. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a797013e0463ea2e8c9ae8171f7d305f0}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_ad058a6586b28d7d23075e557a99712aa}{}\label{class_model_1_1_unit_module_1_1_warrior_ad058a6586b28d7d23075e557a99712aa} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!get\+Stats@{get\+Stats}}
+\index{get\+Stats@{get\+Stats}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{get\+Stats()}{getStats()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Model.\+Unit\+Module.\+Warrior.\+get\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns all stats as an array, where the index in array corresponds to stats in this order\+: ~\newline
+ Level, Strength, Int, Skill, Speed, Def, Res. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a32890c6e0bf19a58dde71cc4240576a8}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a6727d75c6005f0d8e72d64ad302e4fec}{}\label{class_model_1_1_unit_module_1_1_warrior_a6727d75c6005f0d8e72d64ad302e4fec} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!is\+Button\+Active@{is\+Button\+Active}}
+\index{is\+Button\+Active@{is\+Button\+Active}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{is\+Button\+Active()}{isButtonActive()}}
+{\footnotesize\ttfamily bool Model.\+Unit\+Module.\+Warrior.\+is\+Button\+Active (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type}}]{button\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method takes in the button\+Type specified, and checks if that button is currently active by calling the getter in button. 
+\begin{DoxyParams}{Parameters}
+{\em button\+Type} & The buttontype that was clicked. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a3931ef1523507e7261411dc79ee4e4af}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_ac988bd449f7f88fd8108278107cdba77}{}\label{class_model_1_1_unit_module_1_1_warrior_ac988bd449f7f88fd8108278107cdba77} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!set\+Button\+Coordinates@{set\+Button\+Coordinates}}
+\index{set\+Button\+Coordinates@{set\+Button\+Coordinates}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{set\+Button\+Coordinates()}{setButtonCoordinates()}}
+{\footnotesize\ttfamily void Model.\+Unit\+Module.\+Warrior.\+set\+Button\+Coordinates (\begin{DoxyParamCaption}\item[{Vector2}]{pixel\+Coordinates }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the coordinates of menu buttons. One for loop will position the main Drop Down menu (potentailly containing attack, move, item and wait directly 32 pixels to the right of unit (so the tile to right of unit) , and for each active button, increment it downwards by 32 pixels (height of each button). The second for loop is similiar and is for the inventory menu buttons, except it starts 160 pixels offsetted to right (to the right of the main drop down menu). 
+\begin{DoxyParams}{Parameters}
+{\em pixel\+Coordinates} & The pixel coordinate of the button. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_ad48776b3bd231bf80d2eec87b7498302}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a3a55c013bad5ebd5f6e4402fc8b1f887}{}\label{class_model_1_1_unit_module_1_1_warrior_a3a55c013bad5ebd5f6e4402fc8b1f887} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!set\+Initial\+Stats@{set\+Initial\+Stats}}
+\index{set\+Initial\+Stats@{set\+Initial\+Stats}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{set\+Initial\+Stats()}{setInitialStats()}}
+{\footnotesize\ttfamily void Model.\+Unit\+Module.\+Warrior.\+set\+Initial\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the initial unit stats before modifiers. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a3b67c1b9e929a9f7d4191de20996220a}{Model.\+Unit\+Module.\+Unit}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_model_1_1_unit_module_1_1_warrior_a3529dbe19047ce3959f02aa28a9aa578}{}\label{class_model_1_1_unit_module_1_1_warrior_a3529dbe19047ce3959f02aa28a9aa578} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Alive@{Alive}}
+\index{Alive@{Alive}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Alive}{Alive}}
+{\footnotesize\ttfamily bool Model.\+Unit\+Module.\+Warrior.\+Alive\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns whether or not unit is alive. \hypertarget{class_model_1_1_unit_module_1_1_warrior_a3f55509bf1b16090b81dce4b3be23f05}{}\label{class_model_1_1_unit_module_1_1_warrior_a3f55509bf1b16090b81dce4b3be23f05} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!current\+Frame@{current\+Frame}}
+\index{current\+Frame@{current\+Frame}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{current\+Frame}{currentFrame}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+current\+Frame\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets and sets current frame the sprite is on. \hypertarget{class_model_1_1_unit_module_1_1_warrior_a497f0b65d1e1159a57636f4ae279fa86}{}\label{class_model_1_1_unit_module_1_1_warrior_a497f0b65d1e1159a57636f4ae279fa86} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Def@{Def}}
+\index{Def@{Def}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Def}{Def}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Def\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Defense. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative defense will result in an attacker doing more damage than their attack. \hypertarget{class_model_1_1_unit_module_1_1_warrior_aa99d785534eabc453977f56cd207aea6}{}\label{class_model_1_1_unit_module_1_1_warrior_aa99d785534eabc453977f56cd207aea6} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!equipped\+Weapon@{equipped\+Weapon}}
+\index{equipped\+Weapon@{equipped\+Weapon}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{equipped\+Weapon}{equippedWeapon}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} Model.\+Unit\+Module.\+Warrior.\+equipped\+Weapon\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets and sets the unit is currently equipping. \hypertarget{class_model_1_1_unit_module_1_1_warrior_af8c7aa90b8bbd046bea9d400d9f479d2}{}\label{class_model_1_1_unit_module_1_1_warrior_af8c7aa90b8bbd046bea9d400d9f479d2} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Hp@{Hp}}
+\index{Hp@{Hp}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Hp}{Hp}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Hp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and get a unit\textquotesingle{}s HP. Should HP fall under 0, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}\textquotesingle{}s Alive Boolean should change to false. \hypertarget{class_model_1_1_unit_module_1_1_warrior_ae739f9a2f57a2c8788337c55677b778c}{}\label{class_model_1_1_unit_module_1_1_warrior_ae739f9a2f57a2c8788337c55677b778c} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Int@{Int}}
+\index{Int@{Int}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Int}{Int}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Int\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the new intelligence value. ~\newline
+ Gets the effective intelligence -\/$>$ \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} intelligence + weapon intelligence ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative strength will be treated as 0 in damage calculation, as damage dealt can not be negative. \hypertarget{class_model_1_1_unit_module_1_1_warrior_a178c1a9edf70bbea02f655ef5bae6c2a}{}\label{class_model_1_1_unit_module_1_1_warrior_a178c1a9edf70bbea02f655ef5bae6c2a} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Level@{Level}}
+\index{Level@{Level}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Level}{Level}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Level\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Level. Currently does not have any use. \hypertarget{class_model_1_1_unit_module_1_1_warrior_a98c38047e2e0c9cca83d36d06d61da83}{}\label{class_model_1_1_unit_module_1_1_warrior_a98c38047e2e0c9cca83d36d06d61da83} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Pixel\+Coordinates@{Pixel\+Coordinates}}
+\index{Pixel\+Coordinates@{Pixel\+Coordinates}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Pixel\+Coordinates}{PixelCoordinates}}
+{\footnotesize\ttfamily Vector2 Model.\+Unit\+Module.\+Warrior.\+Pixel\+Coordinates\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Returns the pixel coordinate of the unit. ~\newline
+ sets the pixel coordinate, and also sets Position (which is the tile location of that coordinate). ~\newline
+{\bfseries Exceptions\+:} ~\newline
+ -\/\+Dead units will still have a position, but won\textquotesingle{}t impact the rest of the game. \hypertarget{class_model_1_1_unit_module_1_1_warrior_ad740dd04bc1b284e66e0f01a9597bb83}{}\label{class_model_1_1_unit_module_1_1_warrior_ad740dd04bc1b284e66e0f01a9597bb83} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Position@{Position}}
+\index{Position@{Position}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily Tuple$<$int, int$>$ Model.\+Unit\+Module.\+Warrior.\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets and sets unit\textquotesingle{}s position by tile. The set also updates pixel\+Coordinate\textquotesingle{}s location by making that vector equivalent to position$\ast$32 (since each tile is 32x32). ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Dead units will still have a position, but won\textquotesingle{}t impact the rest of the game. \hypertarget{class_model_1_1_unit_module_1_1_warrior_ab785b88f81227bef086caa537e725887}{}\label{class_model_1_1_unit_module_1_1_warrior_ab785b88f81227bef086caa537e725887} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Res@{Res}}
+\index{Res@{Res}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Res}{Res}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Res\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Resistance. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative resistance will result in an attacker doing more damage than their intelligence. \hypertarget{class_model_1_1_unit_module_1_1_warrior_a4a3abc882f238c8e781b4cd61cdf7452}{}\label{class_model_1_1_unit_module_1_1_warrior_a4a3abc882f238c8e781b4cd61cdf7452} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Skill@{Skill}}
+\index{Skill@{Skill}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Skill}{Skill}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Skill\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the new skill value. ~\newline
+ Gets the effective skill -\/$>$ \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} skill + weapon skill ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative skill will not result in an error, but will most likely result in a 0\% hit and crit rate. \hypertarget{class_model_1_1_unit_module_1_1_warrior_a3ed930a9ff5f32dfd418d5e5a9744dd1}{}\label{class_model_1_1_unit_module_1_1_warrior_a3ed930a9ff5f32dfd418d5e5a9744dd1} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Speed@{Speed}}
+\index{Speed@{Speed}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Speed}{Speed}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Speed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Speed. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative skill will not result in an error as speed is only used for checking double attack boolean, which is binary. \hypertarget{class_model_1_1_unit_module_1_1_warrior_a61bcdb9427a17cd9bab664d8001b45a6}{}\label{class_model_1_1_unit_module_1_1_warrior_a61bcdb9427a17cd9bab664d8001b45a6} 
+\index{Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}!Str@{Str}}
+\index{Str@{Str}!Model\+::\+Unit\+Module\+::\+Warrior@{Model\+::\+Unit\+Module\+::\+Warrior}}
+\subsubsection{\texorpdfstring{Str}{Str}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Warrior.\+Str\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the new strength value. ~\newline
+ Gets the effective strength -\/$>$ \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} strength + weapon strength ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative strength will be treated as 0 in damage calculation, as damage dealt can not be negative. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Warrior.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{class_view_1_1_animation}{}\section{View.\+Animation Class Reference}
+\label{class_view_1_1_animation}\index{View.\+Animation@{View.\+Animation}}
+
+
+Static class containing all animation methods  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_view_1_1_animation_aac990350f0970496abd40f47618d657d}{attack\+Animation} (Direction direction, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static void \hyperlink{class_view_1_1_animation_a008dc7bbb7014aca9c1284613b25f356}{animate\+Unit\+Position} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit, \hyperlink{class_model_1_1_map_module_1_1_node}{Node} node)
+\item 
+static void \hyperlink{class_view_1_1_animation_a1b3724548dfd54526a24c8ed4706ee05}{animate} (Direction direction, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Static class containing all animation methods 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_view_1_1_animation_a1b3724548dfd54526a24c8ed4706ee05}{}\label{class_view_1_1_animation_a1b3724548dfd54526a24c8ed4706ee05} 
+\index{View\+::\+Animation@{View\+::\+Animation}!animate@{animate}}
+\index{animate@{animate}!View\+::\+Animation@{View\+::\+Animation}}
+\subsubsection{\texorpdfstring{animate()}{animate()}}
+{\footnotesize\ttfamily static void View.\+Animation.\+animate (\begin{DoxyParamCaption}\item[{Direction}]{direction,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Animate sprite to \char`\"{}walk\char`\"{} in the specified direction. This is done by cycling through 3 frames. For each direction, there is a frame with right foot forward, one with both at neutral, and one with left forward. The \char`\"{}walking\char`\"{} animation is done by cycling through the 3 frames. ~\newline
+{\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The unit passed in must be alive, otherwise nothing will be shown to screen.
+\item This function will not function properly if a direction other then Up, Down, Left or Right is given. 
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction the unit is moving in. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_view_1_1_animation_a008dc7bbb7014aca9c1284613b25f356}{}\label{class_view_1_1_animation_a008dc7bbb7014aca9c1284613b25f356} 
+\index{View\+::\+Animation@{View\+::\+Animation}!animate\+Unit\+Position@{animate\+Unit\+Position}}
+\index{animate\+Unit\+Position@{animate\+Unit\+Position}!View\+::\+Animation@{View\+::\+Animation}}
+\subsubsection{\texorpdfstring{animate\+Unit\+Position()}{animateUnitPosition()}}
+{\footnotesize\ttfamily static void View.\+Animation.\+animate\+Unit\+Position (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit,  }\item[{\hyperlink{class_model_1_1_map_module_1_1_node}{Node}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Animates unit movement from current unit location to future unit location. Unit moves through the inbetween nodes obtained from pathing algorith by first moving horizontally, then vertically. For horizontally, the unit will move right if the future position is greater in the x direction, otherwise it will move left. For vertical, the unit will move down if future y position is greater then current, otherwise it will move up. animate is called to animate the walking from node to node, and the direction parameter in that call is determined by which direction the unit is moving. A tracker is kept for walking sounds, which counts up by 1 each time and plays a walking sound everytime it reaches 5. ~\newline
+ {\bfseries Exception\+:} ~\newline
+
+\begin{DoxyItemize}
+\item Thie function will only execute if the original and new location are different, otherwise nothing will happen.
+\item The function assumes that the the path between original location and new location is valid. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph of the game map. \\
+\hline
+{\em unit} & The unit to be animated. \\
+\hline
+{\em node} & The node to move to. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_view_1_1_animation_aac990350f0970496abd40f47618d657d}{}\label{class_view_1_1_animation_aac990350f0970496abd40f47618d657d} 
+\index{View\+::\+Animation@{View\+::\+Animation}!attack\+Animation@{attack\+Animation}}
+\index{attack\+Animation@{attack\+Animation}!View\+::\+Animation@{View\+::\+Animation}}
+\subsubsection{\texorpdfstring{attack\+Animation()}{attackAnimation()}}
+{\footnotesize\ttfamily static void View.\+Animation.\+attack\+Animation (\begin{DoxyParamCaption}\item[{Direction}]{direction,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Animates attack of unit in specified direction. The animation consists of moving 10 pixels towards that direction, then moving back to original location. Upon execution, game\+State is\+Animating is set to true, and false after it is finished. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The unit passed in must be alive, otherwise nothing will be shown to screen.
+\item This function will not function properly if a direction other then Up, Down, Left or Right is given. 
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction of the attack -\/ it can be Up, Down, Left, or Right. \\
+\hline
+{\em unit} & The unit to be animated. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Animation.\+cs\end{DoxyCompactItemize}

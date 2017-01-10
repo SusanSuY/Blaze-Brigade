@@ -1,0 +1,87 @@
+\hypertarget{namespace_model}{}\section{Model Namespace Reference}
+\label{namespace_model}\index{Model@{Model}}
+
+
+The model in M\+VC. These classes contain the structure of the game, and will be controlled by \hyperlink{namespace_controller}{Controller}, and displayed in \hyperlink{namespace_view}{View}.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_model_1_1_map_module}{Map\+Module}
+\begin{DoxyCompactList}\small\item\em The Map Module, containing all classes related to setting up the working game map. \end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_model_1_1_unit_module}{Unit\+Module}
+\begin{DoxyCompactList}\small\item\em The module containing all unit related classes and interface. \end{DoxyCompactList}\item 
+namespace \hyperlink{namespace_model_1_1_weapon_module}{Weapon\+Module}
+\begin{DoxyCompactList}\small\item\em The module containing all weapon related classes and interfaces. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_model_1_1_button}{Button}
+\begin{DoxyCompactList}\small\item\em Buttons for the drop down menu buttons when selecting units. \end{DoxyCompactList}\item 
+class \hyperlink{class_model_1_1_game_state}{Game\+State}
+\begin{DoxyCompactList}\small\item\em This class holds states in the scope of the entire gameplay. \end{DoxyCompactList}\item 
+class \hyperlink{class_model_1_1_player}{Player}
+\begin{DoxyCompactList}\small\item\em Represents a \hyperlink{class_model_1_1_player}{Player} in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type} \{ \newline
+{\bfseries Attack}, 
+{\bfseries Attack\+Confirm}, 
+{\bfseries Move}, 
+{\bfseries Items}, 
+\newline
+{\bfseries Wait}, 
+{\bfseries Inventory1}, 
+{\bfseries Inventory2}, 
+{\bfseries Inventory3}, 
+\newline
+{\bfseries Inventory4}
+ \}
+\item 
+enum \hyperlink{namespace_model_a37db30f781c99ca4eb226b512958bded}{Game\+Menu\+State} \{ \newline
+{\bfseries Main\+Menu}, 
+{\bfseries How\+To\+Play}, 
+{\bfseries How\+To\+Play2}, 
+{\bfseries How\+To\+Play3}, 
+\newline
+{\bfseries Playing}
+ \}
+\item 
+enum \hyperlink{namespace_model_abc9786019e8deab9844b28c3d9c58f86}{Turn\+State} \{ \newline
+{\bfseries Wait}, 
+{\bfseries Attack\+Menu}, 
+{\bfseries Attack}, 
+{\bfseries Move}, 
+\newline
+{\bfseries Items}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The model in M\+VC. These classes contain the structure of the game, and will be controlled by \hyperlink{namespace_controller}{Controller}, and displayed in \hyperlink{namespace_view}{View}. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{}\label{namespace_model_ac76b3489c9d704f49912608bd36cd0e7} 
+\index{Model@{Model}!Button\+Type@{Button\+Type}}
+\index{Button\+Type@{Button\+Type}!Model@{Model}}
+\subsubsection{\texorpdfstring{Button\+Type}{ButtonType}}
+{\footnotesize\ttfamily enum \hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Model.\+Button\+Type}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enumerated list for the possible button types. \hypertarget{namespace_model_a37db30f781c99ca4eb226b512958bded}{}\label{namespace_model_a37db30f781c99ca4eb226b512958bded} 
+\index{Model@{Model}!Game\+Menu\+State@{Game\+Menu\+State}}
+\index{Game\+Menu\+State@{Game\+Menu\+State}!Model@{Model}}
+\subsubsection{\texorpdfstring{Game\+Menu\+State}{GameMenuState}}
+{\footnotesize\ttfamily enum \hyperlink{namespace_model_a37db30f781c99ca4eb226b512958bded}{Model.\+Game\+Menu\+State}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enumerated list for different possible Game States. \hypertarget{namespace_model_abc9786019e8deab9844b28c3d9c58f86}{}\label{namespace_model_abc9786019e8deab9844b28c3d9c58f86} 
+\index{Model@{Model}!Turn\+State@{Turn\+State}}
+\index{Turn\+State@{Turn\+State}!Model@{Model}}
+\subsubsection{\texorpdfstring{Turn\+State}{TurnState}}
+{\footnotesize\ttfamily enum \hyperlink{namespace_model_abc9786019e8deab9844b28c3d9c58f86}{Model.\+Turn\+State}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enumerated list for what the current turn state is (per unit). 

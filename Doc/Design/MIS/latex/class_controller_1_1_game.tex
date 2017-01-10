@@ -1,0 +1,206 @@
+\hypertarget{class_controller_1_1_game}{}\section{Controller.\+Game Class Reference}
+\label{class_controller_1_1_game}\index{Controller.\+Game@{Controller.\+Game}}
+
+
+Main \hyperlink{namespace_controller}{Controller} for game  
+
+
+Inheritance diagram for Controller.\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_controller_1_1_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_controller_1_1_game_a93f1824d202daf7132b24039b97eaa7a}{Game} ()
+\item 
+Sound\+Effect \hyperlink{class_controller_1_1_game_ab177e0ab61ac7144e08b20c6835c2c7c}{get\+Sounds} (string choice)
+\item 
+Sound\+Effect\+Instance \hyperlink{class_controller_1_1_game_a2bc0cb0de0a3bb75b54c27b482870ca0}{get\+Song} (string choice)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_controller_1_1_game_aa3a270df3da66d794d8607e029bf9608}{Initialize} ()
+\item 
+override void \hyperlink{class_controller_1_1_game_a05c5bf033337a7f5130735e218772770}{Load\+Content} ()
+\item 
+override void \hyperlink{class_controller_1_1_game_a57f4f23e2ca97a9ed820aab106a2ebe3}{Update} (Game\+Time game\+Time)
+\item 
+override void \hyperlink{class_controller_1_1_game_a243addf184836c81e6a4f793b0ba0a9f}{Draw} (Game\+Time game\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_controller_1_1_game_a53f51c3ad8d59f44f8ab6aee59c0fbec}{}\label{class_controller_1_1_game_a53f51c3ad8d59f44f8ab6aee59c0fbec} 
+static \hyperlink{class_controller_1_1_game}{Game} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main \hyperlink{namespace_controller}{Controller} for game 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_controller_1_1_game_a93f1824d202daf7132b24039b97eaa7a}{}\label{class_controller_1_1_game_a93f1824d202daf7132b24039b97eaa7a} 
+\index{Controller\+::\+Game@{Controller\+::\+Game}!Game@{Game}}
+\index{Game@{Game}!Controller\+::\+Game@{Controller\+::\+Game}}
+\subsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Controller.\+Game.\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the game. Sets Instance to the current game along with initializing X\+NA features such as Graphics\+Device\+Manager, Height, Width, Content Loader, and the different menu screens. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_controller_1_1_game_a243addf184836c81e6a4f793b0ba0a9f}{}\label{class_controller_1_1_game_a243addf184836c81e6a4f793b0ba0a9f} 
+\index{Controller\+::\+Game@{Controller\+::\+Game}!Draw@{Draw}}
+\index{Draw@{Draw}!Controller\+::\+Game@{Controller\+::\+Game}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Controller.\+Game.\+Draw (\begin{DoxyParamCaption}\item[{Game\+Time}]{game\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Draws the game as it updates at 60\+F\+PS. ~\newline
+~\newline
+ {\bfseries Draw} {\bfseries Components} {\bfseries that} {\bfseries move} {\bfseries with} \+: $\ast$\+Note\+: Many draw methods although called here will not perform any action should the conditions to draw it not be met.
+\begin{DoxyItemize}
+\item Start sprite\+Batch.\+begin, pass in camera transform matrix.
+\item Draws background texture. ~\newline
+
+\item Draws all units for both players. ~\newline
+
+\item Draws damage popup. ~\newline
+
+\item If a unit is currently selected and is\+Animating is false\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item draw highlightable nodes. ~\newline
+
+\item draw drop\+Down\+Menu if drop\+Down\+Menu\+Open is true. ~\newline
+
+\item Draws inventory drop down menu if inventory\+Open is true. ~\newline
+
+\end{DoxyEnumerate}
+\item redraws unit to be darker at game\+Over (method won\textquotesingle{}t redraw unless game is over). ~\newline
+
+\item Draws end turn confirmation button. ~\newline
+ {\bfseries Draw} {\bfseries Components} {\bfseries that} {\bfseries are} {\bfseries fixed} {\bfseries to} \textbackslash{} screen\+: $\ast$\+Note\+: Many draw methods although called here will not perform any action should the conditions to draw it not be met.
+\item If a unit is currently selectedand if attack\+Confirm is true, draw attack\+Confirm texture. ~\newline
+
+\item If enemy unit is selected, draw enemy unit info. ~\newline
+
+\item If turn\+Transition is true, draw the correct turn transition image. ~\newline
+
+\item If it is not game over, draw the label for the current player\textquotesingle{}s turn. ~\newline
+
+\item If it is game over, draw the game over overlay image and buttons. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em game\+Time} & The current \hyperlink{class_controller_1_1_game}{Game} Time. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_a2bc0cb0de0a3bb75b54c27b482870ca0}{}\label{class_controller_1_1_game_a2bc0cb0de0a3bb75b54c27b482870ca0} 
+\index{Controller\+::\+Game@{Controller\+::\+Game}!get\+Song@{get\+Song}}
+\index{get\+Song@{get\+Song}!Controller\+::\+Game@{Controller\+::\+Game}}
+\subsubsection{\texorpdfstring{get\+Song()}{getSong()}}
+{\footnotesize\ttfamily Sound\+Effect\+Instance Controller.\+Game.\+get\+Song (\begin{DoxyParamCaption}\item[{string}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method takes in a string, and returns the song corresponding to the string input. The songs returned are Menu, Map, and game\+Over\+Song. \hypertarget{class_controller_1_1_game_ab177e0ab61ac7144e08b20c6835c2c7c}{}\label{class_controller_1_1_game_ab177e0ab61ac7144e08b20c6835c2c7c} 
+\index{Controller\+::\+Game@{Controller\+::\+Game}!get\+Sounds@{get\+Sounds}}
+\index{get\+Sounds@{get\+Sounds}!Controller\+::\+Game@{Controller\+::\+Game}}
+\subsubsection{\texorpdfstring{get\+Sounds()}{getSounds()}}
+{\footnotesize\ttfamily Sound\+Effect Controller.\+Game.\+get\+Sounds (\begin{DoxyParamCaption}\item[{string}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method takes in a string, and returns the correct sound effect corresponding to the string input. The sounds returned are Sword, Bow, and Fire. \hypertarget{class_controller_1_1_game_aa3a270df3da66d794d8607e029bf9608}{}\label{class_controller_1_1_game_aa3a270df3da66d794d8607e029bf9608} 
+\index{Controller\+::\+Game@{Controller\+::\+Game}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Controller\+::\+Game@{Controller\+::\+Game}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Controller.\+Game.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Initializes the game. The \hyperlink{class_controller_1_1_game}{Game} screen is invisible until the Menu screen is closed. \hypertarget{class_controller_1_1_game_a05c5bf033337a7f5130735e218772770}{}\label{class_controller_1_1_game_a05c5bf033337a7f5130735e218772770} 
+\index{Controller\+::\+Game@{Controller\+::\+Game}!Load\+Content@{Load\+Content}}
+\index{Load\+Content@{Load\+Content}!Controller\+::\+Game@{Controller\+::\+Game}}
+\subsubsection{\texorpdfstring{Load\+Content()}{LoadContent()}}
+{\footnotesize\ttfamily override void Controller.\+Game.\+Load\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+This method Loads all G\+UI and Map Textures, fonts, and Sound\+Effect Wav files. An instance is created for the wave files that are a song, then is\+Looped is set to true. Volume for the songs are also adjusted to half the original value. The method will then also call initialize\+Game() to set up the rest of the game. \hypertarget{class_controller_1_1_game_a57f4f23e2ca97a9ed820aab106a2ebe3}{}\label{class_controller_1_1_game_a57f4f23e2ca97a9ed820aab106a2ebe3} 
+\index{Controller\+::\+Game@{Controller\+::\+Game}!Update@{Update}}
+\index{Update@{Update}!Controller\+::\+Game@{Controller\+::\+Game}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily override void Controller.\+Game.\+Update (\begin{DoxyParamCaption}\item[{Game\+Time}]{game\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Updates game in real time at 60 times per second. ~\newline
+~\newline
+ {\bfseries Update} {\bfseries Components\+:} 
+\begin{DoxyItemize}
+\item Checks if player clicks exit on the exit window ~\newline
+
+\item Calls \hyperlink{class_controller_1_1_mouse_handler}{Mouse\+Handler} to update mouse position if game is running ~\newline
+
+\item A switch case is used to update the game depending on what current \hyperlink{class_controller_1_1_game}{Game} State is. ~\newline
+
+\item During \hyperlink{class_controller_1_1_game}{Game} State Main Menu\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Checks if start game button is clicked. In which case the main menu is closed, Menu Song is stopped, Map song is played, main game is set to visible, and \hyperlink{class_controller_1_1_game}{Game} State is set to Playing. ~\newline
+
+\item Checks if get instruction button is clicked. In which case the game\+State is switched to How\+To\+Play and instruction screen pops up. ~\newline
+
+\item Checks if Exit \hyperlink{class_controller_1_1_game}{Game} is clicked, in which case the game closes. ~\newline
+
+\end{DoxyEnumerate}
+\item During \hyperlink{class_controller_1_1_game}{Game} State How\+To\+Play\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Checks if next button is clicked. In such case, change game state to How\+To\+Play2, set the 2nd instruction screen to show, and close the current window. ~\newline
+
+\item Checks if back button is clicked. In such case, change game state to Main\+Menu, set the Main Menu to show, and close the current window. ~\newline
+
+\item Checks if Exit \hyperlink{class_controller_1_1_game}{Game} is clicked, in which case the game closes. ~\newline
+
+\end{DoxyEnumerate}
+\item During \hyperlink{class_controller_1_1_game}{Game} State How\+To\+Play2\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Checks if next button is clicked. In such case, change game state to How\+To\+Play3, set the 2nd instruction screen to show, and close the current window. ~\newline
+
+\item Checks if back button is clicked. In such case, change game state to How\+To\+Play1, set the 2nd instruction screen to show, and close the current window. ~\newline
+
+\item Checks if Exit \hyperlink{class_controller_1_1_game}{Game} is clicked, in which case the game closes. ~\newline
+
+\end{DoxyEnumerate}
+\item During \hyperlink{class_controller_1_1_game}{Game} State How\+To\+Play3\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Checks if back button is clicked. In such case, change game state to How\+To\+Play2, set the 2nd instruction screen to show, and close the current window. ~\newline
+
+\item Checks if Exit \hyperlink{class_controller_1_1_game}{Game} is clicked, in which case the game closes. ~\newline
+
+\end{DoxyEnumerate}
+\item During \hyperlink{class_controller_1_1_game}{Game} State Playing\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Loads the map texture ~\newline
+
+\item If \hyperlink{class_controller_1_1_game_function}{Game\+Function} is\+Turn\+Over is true, switch the current player and other player, set turn transition to true, and reset the camera to the new current player\textquotesingle{}s turn. ~\newline
+
+\item If transition turn is true, set it to false after 1.\+5 seconds. ~\newline
+
+\item If current\+Player\+Damage\+Pop\+Up is true, set it to false after 2.\+5 seconds. ~\newline
+
+\item If enemy\+Player\+Damage\+Pop\+Up is true, set it to false after 2.\+5 seconds. ~\newline
+
+\item Loops over all player1 and 2\textquotesingle{}s units, and removes the ones that are dead. If either player has no units left, is\+Game\+Over is set to true, and Song changes from map theme to \hyperlink{class_controller_1_1_game}{Game} over theme. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em game\+Time} & The current \hyperlink{class_controller_1_1_game}{Game} Time. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{class_controller_1_1_mouse_handler}{}\section{Controller.\+Mouse\+Handler Class Reference}
+\label{class_controller_1_1_mouse_handler}\index{Controller.\+Mouse\+Handler@{Controller.\+Mouse\+Handler}}
+
+
+Handles all user mouse input.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_controller_1_1_mouse_handler_a50940e57cc30125442c3783f8da9ab6e}{update\+Mouse} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{class_view_1_1_camera}{Camera} camera)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles all user mouse input. 
+
+This class performs appropriate actions in response to user mouse input by updating the \hyperlink{namespace_model}{Model}. ~\newline
+It does so by calling \hyperlink{class_controller_1_1_game_function}{Game\+Function} (which is also in the \hyperlink{namespace_controller}{Controller}) to update the \hyperlink{namespace_model}{Model} (state of the game) in reaction to user input. Additionally, it updates Game\+State (in the \hyperlink{namespace_model}{Model}) in order to reflect an update in the game\textquotesingle{}s current status based upon specific conditions in addition to mouse input. ~\newline
+All of the mouse handling is done within one function, the \hyperlink{class_controller_1_1_mouse_handler_a50940e57cc30125442c3783f8da9ab6e}{update\+Mouse()} function, as mouse handling only consists of checking conditionals to perform calls to the \hyperlink{class_controller_1_1_game_function}{Game\+Function} (which performs further actions) or an update in the Game\+State. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_controller_1_1_mouse_handler_a50940e57cc30125442c3783f8da9ab6e}{}\label{class_controller_1_1_mouse_handler_a50940e57cc30125442c3783f8da9ab6e} 
+\index{Controller\+::\+Mouse\+Handler@{Controller\+::\+Mouse\+Handler}!update\+Mouse@{update\+Mouse}}
+\index{update\+Mouse@{update\+Mouse}!Controller\+::\+Mouse\+Handler@{Controller\+::\+Mouse\+Handler}}
+\subsubsection{\texorpdfstring{update\+Mouse()}{updateMouse()}}
+{\footnotesize\ttfamily static void Controller.\+Mouse\+Handler.\+update\+Mouse (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{class_view_1_1_camera}{Camera}}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Performs appropriate actions in response to mouse input and current state of the game. These actions include updating the Game\+State and calling the \hyperlink{class_controller_1_1_game_function}{Game\+Function} to perform further actions. ~\newline
+~\newline
+ {\bfseries Mouse} {\bfseries Handling} {\bfseries Actions\+:} 
+\begin{DoxyItemize}
+\item No reaction to mouse input if the game currently has an animation on the screen (condition checked using Game\+State.\+is\+Animating). ~\newline
+
+\item No reaction if mouse clicks occur outside of the game window (invalid mouse click coordinates). ~\newline
+
+\item Scrolling of map corresponding to the position of the mouse relative to the window. Scrolling occurs through calling \hyperlink{class_controller_1_1_game_function}{Game\+Function}\textquotesingle{}s scroll\+Map(). ~\newline
+
+\item If any unit is selected and a right-\/click occurs, deselect it. ~\newline
+
+\item If no unit is selected and a right-\/click occurs, display the \textquotesingle{}End Turn\textquotesingle{} button. ~\newline
+
+\item If \textquotesingle{}End Turn\textquotesingle{} button is displayed and a left-\/click occurs on it, call \hyperlink{class_controller_1_1_game_function}{Game\+Function}\textquotesingle{}s end\+Turn() to end the current player\textquotesingle{}s turn. ~\newline
+
+\item If screen currently displays \textquotesingle{}\hyperlink{class_controller_1_1_game}{Game} Over\textquotesingle{}, check if a left-\/click occurs on the \textquotesingle{}Exit \hyperlink{class_controller_1_1_game}{Game}\textquotesingle{} button. If so, set Game\+State\textquotesingle{}s exit\+Game\+Clicked to true. ~\newline
+
+\item If an enemy unit is selected and a left-\/click occurs, deselect it. ~\newline
+
+\item If a playable unit is selected and a left-\/click occurs\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item Check if the click occured on a menu button; if so, update Game\+State\textquotesingle{}s Turn\+State. ~\newline
+
+\item Check if the click occured on a valid moveable node (by checking if \hyperlink{class_controller_1_1_game_function}{Game\+Function}\textquotesingle{}s path\+Finder() function does not return null) and if Game\+State\textquotesingle{}s Turn\+State is currently Move. If so, call \hyperlink{class_controller_1_1_game_function}{Game\+Function}\textquotesingle{}s update\+Unit\+Position() to move the unit. Else, deselect the unit. ~\newline
+
+\item Check if the click occured on an enemy unit within attack range (by using \hyperlink{class_controller_1_1_game_function}{Game\+Function}\textquotesingle{}s is\+Enemy\+Unit\+In\+Range()) and if Game\+State\textquotesingle{}s Turn\+State is currently Attack. If so, prompt the Attack Confirm (by updating Game\+State\textquotesingle{}s attack\+Confirm\+Open) and set Game\+State\textquotesingle{}s unit\+To\+Attack. Else, deselect the unit. ~\newline
+
+\end{DoxyEnumerate}
+\item If no unit is selected and a left-\/click occurs, check if the user clicked on a unit. If the user clicked on a playable unit, set Game\+State\textquotesingle{}s selected\+Unit. If the user clicked on an enemy unit, set Game\+State\textquotesingle{}s selected\+Enemy\+Unit. Else, do nothing. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & The Graph representing the current game map (see Graph class). Requires the graph in order to verify conditions that may lead to a change in the \hyperlink{namespace_model}{Model}. \\
+\hline
+{\em camera} & The camera of the game. Requires the camera in order to scroll the map upon satisfactory circumstances (see Mouse Handling Actions bullet 3). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mouse\+Handler.\+cs\end{DoxyCompactItemize}

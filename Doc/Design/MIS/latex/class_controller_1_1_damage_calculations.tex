@@ -1,0 +1,109 @@
+\hypertarget{class_controller_1_1_damage_calculations}{}\section{Controller.\+Damage\+Calculations Class Reference}
+\label{class_controller_1_1_damage_calculations}\index{Controller.\+Damage\+Calculations@{Controller.\+Damage\+Calculations}}
+
+
+This class calculates all damage related calculations  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_controller_1_1_damage_calculations_acdba16963fcb012c9ca44635e98b2e08}{get\+Damage\+Dealt} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} attacker, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} defender, bool phys\+Or\+Magic)
+\item 
+static int \hyperlink{class_controller_1_1_damage_calculations_ae499eeb9d40af6df4309bccbe5d20f5c}{get\+Hit\+Rate} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} attacker, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} defender)
+\item 
+static int \hyperlink{class_controller_1_1_damage_calculations_a82f0d57d7fa391dc3fe6cd88b790321d}{get\+Crit\+Rate} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} attacker, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} defender)
+\item 
+static int \hyperlink{class_controller_1_1_damage_calculations_a5696e76782491cae7790a824c686d3a6}{get\+Hit\+Count} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} attacker, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} defender)
+\item 
+static int \hyperlink{class_controller_1_1_damage_calculations_a70890de40fb7272141934e19a631d9d6}{final\+Damage} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} attacker, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} defender, bool phys\+Or\+Magic)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class calculates all damage related calculations 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_controller_1_1_damage_calculations_a70890de40fb7272141934e19a631d9d6}{}\label{class_controller_1_1_damage_calculations_a70890de40fb7272141934e19a631d9d6} 
+\index{Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}!final\+Damage@{final\+Damage}}
+\index{final\+Damage@{final\+Damage}!Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}}
+\subsubsection{\texorpdfstring{final\+Damage()}{finalDamage()}}
+{\footnotesize\ttfamily static int Controller.\+Damage\+Calculations.\+final\+Damage (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{attacker,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{defender,  }\item[{bool}]{phys\+Or\+Magic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method factors in damage dealt, hit rate, crit rate, and number of attacks (as in how above functions were calculated) to calculate actual damage dealt. Hit and crit is factored in by creating a random number between 0-\/100, and see if that random number is within the range of the crit or hit rate. If it is, then the unit hits with the attack and/or crits. ~\newline
+If an attack misses, damage dealt is 0, otherwise damage is dealt normally. ~\newline
+If an attack crits, damage dealt is x2 regular normal damage. ~\newline
+If num\+Of\+Attacks is 1, damage is dealt once. Else if 2, damage is dealt twice. 
+\begin{DoxyParams}{Parameters}
+{\em attacker} & The unit performing the attack. \\
+\hline
+{\em defender} & The unit defending against the attack. \\
+\hline
+{\em phys\+Or\+Magic} & The boolean that tells the controller if it\textquotesingle{}s physical or magical damage to be calculated. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_controller_1_1_damage_calculations_a82f0d57d7fa391dc3fe6cd88b790321d}{}\label{class_controller_1_1_damage_calculations_a82f0d57d7fa391dc3fe6cd88b790321d} 
+\index{Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}!get\+Crit\+Rate@{get\+Crit\+Rate}}
+\index{get\+Crit\+Rate@{get\+Crit\+Rate}!Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}}
+\subsubsection{\texorpdfstring{get\+Crit\+Rate()}{getCritRate()}}
+{\footnotesize\ttfamily static int Controller.\+Damage\+Calculations.\+get\+Crit\+Rate (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{attacker,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{defender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method takes in the 2 units, and returns the crit rate as a percentage out of 100 by taking into account both unit\textquotesingle{}s skill. ~\newline
+This calculation is found according to the equation \mbox{[}((attacker\+Skill/10) -\/ (defender\+Skill/10) +1) $\ast$0.1\mbox{]} $\ast$100. ~\newline
+A negative hitrate will be changed to 0. 
+\begin{DoxyParams}{Parameters}
+{\em attacker} & The unit performing the attack. \\
+\hline
+{\em defender} & The unit defending against the attack. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_controller_1_1_damage_calculations_acdba16963fcb012c9ca44635e98b2e08}{}\label{class_controller_1_1_damage_calculations_acdba16963fcb012c9ca44635e98b2e08} 
+\index{Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}!get\+Damage\+Dealt@{get\+Damage\+Dealt}}
+\index{get\+Damage\+Dealt@{get\+Damage\+Dealt}!Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}}
+\subsubsection{\texorpdfstring{get\+Damage\+Dealt()}{getDamageDealt()}}
+{\footnotesize\ttfamily static int Controller.\+Damage\+Calculations.\+get\+Damage\+Dealt (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{attacker,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{defender,  }\item[{bool}]{phys\+Or\+Magic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method takes in the 2 units, and a boolean on whether attack is physical (false). Damage is then calculated by taking attacker\textquotesingle{}s Str/int, and defender\textquotesingle{}s def/res (where str-\/def is for physical, and int-\/res is for magic). If the defending stat is higher, final damage is 0 as an attack cannot heal. 
+\begin{DoxyParams}{Parameters}
+{\em attacker} & The unit performing the attack. \\
+\hline
+{\em defender} & The unit defending against the attack. \\
+\hline
+{\em phys\+Or\+Magic} & Boolean that tells the controller if it\textquotesingle{}s physical or magical damage to be calculated. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_controller_1_1_damage_calculations_a5696e76782491cae7790a824c686d3a6}{}\label{class_controller_1_1_damage_calculations_a5696e76782491cae7790a824c686d3a6} 
+\index{Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}!get\+Hit\+Count@{get\+Hit\+Count}}
+\index{get\+Hit\+Count@{get\+Hit\+Count}!Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}}
+\subsubsection{\texorpdfstring{get\+Hit\+Count()}{getHitCount()}}
+{\footnotesize\ttfamily static int Controller.\+Damage\+Calculations.\+get\+Hit\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{attacker,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{defender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method takes in the 2 units, and determines how many attacks the attacker makes by factoring in both unit\textquotesingle{}s relative speed. If one unit\textquotesingle{}s speed is 4 or more higher then the other unit, hit\+Count will return 2. 
+\begin{DoxyParams}{Parameters}
+{\em attacker} & The unit performing the attack. \\
+\hline
+{\em defender} & The unit defending against the attack. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_controller_1_1_damage_calculations_ae499eeb9d40af6df4309bccbe5d20f5c}{}\label{class_controller_1_1_damage_calculations_ae499eeb9d40af6df4309bccbe5d20f5c} 
+\index{Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}!get\+Hit\+Rate@{get\+Hit\+Rate}}
+\index{get\+Hit\+Rate@{get\+Hit\+Rate}!Controller\+::\+Damage\+Calculations@{Controller\+::\+Damage\+Calculations}}
+\subsubsection{\texorpdfstring{get\+Hit\+Rate()}{getHitRate()}}
+{\footnotesize\ttfamily static int Controller.\+Damage\+Calculations.\+get\+Hit\+Rate (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{attacker,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{defender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method takes in the 2 units, and returns the hit rate as a percentage out of 100 by taking into account both unit\textquotesingle{}s skill. ~\newline
+This calculation is found according to the equation \mbox{[}((attacker\+Skill/10) -\/ (defender\+Skill/10) +1) $\ast$0.8\mbox{]} $\ast$100. ~\newline
+A negative hitrate will be changed to 0. 
+\begin{DoxyParams}{Parameters}
+{\em attacker} & The unit performing the attack. \\
+\hline
+{\em defender} & The unit defending against the attack. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Damage\+Calculations.\+cs\end{DoxyCompactItemize}

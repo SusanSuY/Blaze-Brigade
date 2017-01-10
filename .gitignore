@@ -1,0 +1,6 @@
+src/.vs/*
+src/Blaze-Brigade/Blaze_Brigade/bin/x86/Debug/*
+src/Blaze-Brigade/Blaze_Brigade/obj/x86/Debug/*
+src/Blaze-Brigade/Blaze_BrigadeContent/obj/x86/Debug/*
+src/BlazeBrigadeTest/obj/Debug/*
+src/BlazeBrigadeTest/bin/Debug/*

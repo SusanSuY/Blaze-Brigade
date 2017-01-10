@@ -1,0 +1,402 @@
+\hypertarget{class_model_1_1_unit_module_1_1_archer}{}\section{Model.\+Unit\+Module.\+Archer Class Reference}
+\label{class_model_1_1_unit_module_1_1_archer}\index{Model.\+Unit\+Module.\+Archer@{Model.\+Unit\+Module.\+Archer}}
+
+
+The \hyperlink{class_model_1_1_unit_module_1_1_archer}{Archer} model class, extends \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}. This unit has a high skill and speed, and excels in dealing accurate ranged, high critical, physical attacks, but suffers from overall defense against physical attacks.  
+
+
+Inheritance diagram for Model.\+Unit\+Module.\+Archer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_model_1_1_unit_module_1_1_archer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_unit_module_1_1_archer_acb9f7b98dd16e29be30ee2fd97ce0cbc}{Archer} (Texture2D sprite\+Image, \hyperlink{class_model_1_1_button}{Button}\mbox{[}$\,$\mbox{]} unit\+Buttons, Texture2D char\+Info, Texture2D char\+Attack\+Info, Vector2 coordinates, Texture2D health\+Bar)
+\item 
+void \hyperlink{class_model_1_1_unit_module_1_1_archer_acd305143313040a061b7482039c7a9b6}{set\+Initial\+Stats} ()
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_a54970d1557f24e41507c5bd056ac1f03}{get\+Movability} ()
+\item 
+int \mbox{[}$\,$\mbox{]} \hyperlink{class_model_1_1_unit_module_1_1_archer_a1b339759429e0a031aadf2b3e2505e66}{get\+Stats} ()
+\item 
+\hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} \mbox{[}$\,$\mbox{]} \hyperlink{class_model_1_1_unit_module_1_1_archer_a470c428226089a8872e1bc3901388196}{get\+Equipable\+Weapons} ()
+\item 
+\hyperlink{namespace_model_1_1_unit_module_aba9769f408747bf38d0d8adca8f68c98}{Unit\+Type} \hyperlink{class_model_1_1_unit_module_1_1_archer_a2211d99610a907939dac87cb75c3afb1}{get\+Class} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_archer_a2a400bdeef5aaaa34ffe6428ecaaf2c2}{get\+Sprite\+Image} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_archer_a6890f21c7dd51b1e22fed4047906f85f}{get\+Button\+Image} (\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type} button\+Type)
+\item 
+bool \hyperlink{class_model_1_1_unit_module_1_1_archer_ae3a17a1d3f60e9e35e0d25c45158a8eb}{is\+Button\+Active} (\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type} button\+Type)
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_archer_acfcb3e900ee60c0bd9ed800efc9abcac}{get\+Char\+Info} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_archer_aafb7e46f581d1710a16d054dfef03ddf}{get\+Char\+Attack\+Info} ()
+\item 
+\hyperlink{class_model_1_1_button}{Button} \mbox{[}$\,$\mbox{]} \hyperlink{class_model_1_1_unit_module_1_1_archer_a8306cd02babf69626ce85bed7e76d089}{get\+Buttons} ()
+\item 
+\hyperlink{class_model_1_1_button}{Button} \hyperlink{class_model_1_1_unit_module_1_1_archer_af4d544ecd34e57d071a129fb7d0f155d}{get\+Button\+Type} (\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type} button\+Type)
+\item 
+void \hyperlink{class_model_1_1_unit_module_1_1_archer_ad1e9c182bc11a0ea83134421a24c7987}{set\+Button\+Coordinates} (Vector2 pixel\+Coordinates)
+\item 
+Rectangle \hyperlink{class_model_1_1_unit_module_1_1_archer_ac116699a7276c0549d2be5c3998d8813}{get\+Current\+Frame} ()
+\item 
+Texture2D \hyperlink{class_model_1_1_unit_module_1_1_archer_a113518d26ecdbf45aca30fed1f884b3b}{get\+Health\+Bar} ()
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_abbb5c6501863bea35613df66a094b490}{get\+Max\+Hp} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_model_1_1_unit_module_1_1_archer_a20bece941fa5cf234326fb10d09f92e0}{Alive}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_ae944f41f10572d4a183229726950eeec}{Speed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_a6b001252ea85b654e1c85fa47efd9d7b}{Def}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_ae930922325e02ed61ff2be93d8ee24b0}{Res}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_a8f0956dcf4b5053754652649e72655e2}{Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} \hyperlink{class_model_1_1_unit_module_1_1_archer_aff2e126518d4eb4e64a06ac44542fefe}{equipped\+Weapon}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_adfb64d60ccce91e614bdbf834feff655}{current\+Frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_a4dd2b6dcabc11e4d5fcfa0856a9f85aa}{Str}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_ae003038905be807ec42d56ac979b1369}{Int}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_ad2b77a7ad32761658101c22051c35f7e}{Skill}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_unit_module_1_1_archer_aa98508c9166b0d5661952efc2577e2f7}{Hp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Tuple$<$ int, int $>$ \hyperlink{class_model_1_1_unit_module_1_1_archer_a0038f1b30e38e431dee388f6fdf8b6d7}{Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Vector2 \hyperlink{class_model_1_1_unit_module_1_1_archer_abe69c6c957abd5c25c7c52576faa015c}{Pixel\+Coordinates}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_model_1_1_unit_module_1_1_archer}{Archer} model class, extends \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}. This unit has a high skill and speed, and excels in dealing accurate ranged, high critical, physical attacks, but suffers from overall defense against physical attacks. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_unit_module_1_1_archer_acb9f7b98dd16e29be30ee2fd97ce0cbc}{}\label{class_model_1_1_unit_module_1_1_archer_acb9f7b98dd16e29be30ee2fd97ce0cbc} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Archer@{Archer}}
+\index{Archer@{Archer}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Archer()}{Archer()}}
+{\footnotesize\ttfamily Model.\+Unit\+Module.\+Archer.\+Archer (\begin{DoxyParamCaption}\item[{Texture2D}]{sprite\+Image,  }\item[{\hyperlink{class_model_1_1_button}{Button} \mbox{[}$\,$\mbox{]}}]{unit\+Buttons,  }\item[{Texture2D}]{char\+Info,  }\item[{Texture2D}]{char\+Attack\+Info,  }\item[{Vector2}]{coordinates,  }\item[{Texture2D}]{health\+Bar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The constructor for \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_unit_module_1_1_archer}{Archer}. Stores all relevent data in model. 
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Image} & The character sprite texture. \\
+\hline
+{\em unit\+Buttons} & The Texture2D Array containing all the different textures for each button. \\
+\hline
+{\em char\+Info} & The character info popup texture. \\
+\hline
+{\em char\+Attack\+Info} & The character attack menu popup texture. \\
+\hline
+{\em coordinates} & The unit\textquotesingle{}s current vector coordinate on screen. \\
+\hline
+{\em player} & The player of which the unit belongs to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a6890f21c7dd51b1e22fed4047906f85f}{}\label{class_model_1_1_unit_module_1_1_archer_a6890f21c7dd51b1e22fed4047906f85f} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Button\+Image@{get\+Button\+Image}}
+\index{get\+Button\+Image@{get\+Button\+Image}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Button\+Image()}{getButtonImage()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Archer.\+get\+Button\+Image (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type}}]{button\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method returns the texture associated with the buntton\+Type passed in, by going through a switch case and matching it. 
+\begin{DoxyParams}{Parameters}
+{\em button\+Type} & The buttontype that was clicked. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_ac8e47a3f8d13fe8a719f962a3ee9ee46}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a8306cd02babf69626ce85bed7e76d089}{}\label{class_model_1_1_unit_module_1_1_archer_a8306cd02babf69626ce85bed7e76d089} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Buttons@{get\+Buttons}}
+\index{get\+Buttons@{get\+Buttons}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Buttons()}{getButtons()}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_button}{Button} \mbox{[}$\,$\mbox{]} Model.\+Unit\+Module.\+Archer.\+get\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the dropdown menu buttons of the unit. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a5256d2141e9c59e0454e47ac65246bda}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_af4d544ecd34e57d071a129fb7d0f155d}{}\label{class_model_1_1_unit_module_1_1_archer_af4d544ecd34e57d071a129fb7d0f155d} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Button\+Type@{get\+Button\+Type}}
+\index{get\+Button\+Type@{get\+Button\+Type}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Button\+Type()}{getButtonType()}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_button}{Button} Model.\+Unit\+Module.\+Archer.\+get\+Button\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type}}]{button\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method takes in the button\+Type enum, then returns the object associated with that enum. 
+\begin{DoxyParams}{Parameters}
+{\em button\+Type} & The button to return (Move, Attack, Item, Wait, and attack confirm). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a6e9528d09bca7702fe99cc95135ede36}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_aafb7e46f581d1710a16d054dfef03ddf}{}\label{class_model_1_1_unit_module_1_1_archer_aafb7e46f581d1710a16d054dfef03ddf} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Char\+Attack\+Info@{get\+Char\+Attack\+Info}}
+\index{get\+Char\+Attack\+Info@{get\+Char\+Attack\+Info}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Char\+Attack\+Info()}{getCharAttackInfo()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Archer.\+get\+Char\+Attack\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the char attack info screen texture. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a7c89d9a1dc648b556b7e57cdcdbf2930}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_acfcb3e900ee60c0bd9ed800efc9abcac}{}\label{class_model_1_1_unit_module_1_1_archer_acfcb3e900ee60c0bd9ed800efc9abcac} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Char\+Info@{get\+Char\+Info}}
+\index{get\+Char\+Info@{get\+Char\+Info}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Char\+Info()}{getCharInfo()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Archer.\+get\+Char\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the char info screen texture. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a4e2aeae552d85c8938e609729bcd1a44}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a2211d99610a907939dac87cb75c3afb1}{}\label{class_model_1_1_unit_module_1_1_archer_a2211d99610a907939dac87cb75c3afb1} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Class@{get\+Class}}
+\index{get\+Class@{get\+Class}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Class()}{getClass()}}
+{\footnotesize\ttfamily \hyperlink{namespace_model_1_1_unit_module_aba9769f408747bf38d0d8adca8f68c98}{Unit\+Type} Model.\+Unit\+Module.\+Archer.\+get\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the unit\textquotesingle{}s class. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a84dbb2982a68ec530e53662d747da9fa}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_ac116699a7276c0549d2be5c3998d8813}{}\label{class_model_1_1_unit_module_1_1_archer_ac116699a7276c0549d2be5c3998d8813} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Current\+Frame@{get\+Current\+Frame}}
+\index{get\+Current\+Frame@{get\+Current\+Frame}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Current\+Frame()}{getCurrentFrame()}}
+{\footnotesize\ttfamily Rectangle Model.\+Unit\+Module.\+Archer.\+get\+Current\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns the current sprite frame in animation sequence. The rectangle starts at current\+Frame $\ast$ 32, where 32 is the sprite sheet offset between frames, and is 32 high and wide. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Assumes that each sprite frame is 32pixels wide. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_accb79e396c6066707f2d11f63e3fdd99}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a470c428226089a8872e1bc3901388196}{}\label{class_model_1_1_unit_module_1_1_archer_a470c428226089a8872e1bc3901388196} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Equipable\+Weapons@{get\+Equipable\+Weapons}}
+\index{get\+Equipable\+Weapons@{get\+Equipable\+Weapons}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Equipable\+Weapons()}{getEquipableWeapons()}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} \mbox{[}$\,$\mbox{]} Model.\+Unit\+Module.\+Archer.\+get\+Equipable\+Weapons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the list weapons the unit can equip (T\+O\+DO). 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a7b64e60f28d516a5fb4e28a9b7cd8eec}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a113518d26ecdbf45aca30fed1f884b3b}{}\label{class_model_1_1_unit_module_1_1_archer_a113518d26ecdbf45aca30fed1f884b3b} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Health\+Bar@{get\+Health\+Bar}}
+\index{get\+Health\+Bar@{get\+Health\+Bar}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Health\+Bar()}{getHealthBar()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Archer.\+get\+Health\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the healthbar texture. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a5be18da3857bb22525feb89dd49b76b1}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_abbb5c6501863bea35613df66a094b490}{}\label{class_model_1_1_unit_module_1_1_archer_abbb5c6501863bea35613df66a094b490} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Max\+Hp@{get\+Max\+Hp}}
+\index{get\+Max\+Hp@{get\+Max\+Hp}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Max\+Hp()}{getMaxHp()}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+get\+Max\+Hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the character\textquotesingle{}s max HP. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_adee907637c0ce8487149ae4549fb4cf1}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a54970d1557f24e41507c5bd056ac1f03}{}\label{class_model_1_1_unit_module_1_1_archer_a54970d1557f24e41507c5bd056ac1f03} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Movability@{get\+Movability}}
+\index{get\+Movability@{get\+Movability}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Movability()}{getMovability()}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+get\+Movability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the unit\textquotesingle{}s movability range on grid (number of spaces the unit can move in one turn). ~\newline
+{\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative movement will be treated as 0 in path finding algorithm. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a670aae31f46980c871774352f5fe3a3f}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a2a400bdeef5aaaa34ffe6428ecaaf2c2}{}\label{class_model_1_1_unit_module_1_1_archer_a2a400bdeef5aaaa34ffe6428ecaaf2c2} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Sprite\+Image@{get\+Sprite\+Image}}
+\index{get\+Sprite\+Image@{get\+Sprite\+Image}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Sprite\+Image()}{getSpriteImage()}}
+{\footnotesize\ttfamily Texture2D Model.\+Unit\+Module.\+Archer.\+get\+Sprite\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the sprite image of the unit. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a797013e0463ea2e8c9ae8171f7d305f0}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a1b339759429e0a031aadf2b3e2505e66}{}\label{class_model_1_1_unit_module_1_1_archer_a1b339759429e0a031aadf2b3e2505e66} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!get\+Stats@{get\+Stats}}
+\index{get\+Stats@{get\+Stats}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{get\+Stats()}{getStats()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Model.\+Unit\+Module.\+Archer.\+get\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns all stats as an array, where the index in array corresponds to stats in this order\+: ~\newline
+ Level, Strength, Int, Skill, Speed, Def, Res. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a32890c6e0bf19a58dde71cc4240576a8}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_ae3a17a1d3f60e9e35e0d25c45158a8eb}{}\label{class_model_1_1_unit_module_1_1_archer_ae3a17a1d3f60e9e35e0d25c45158a8eb} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!is\+Button\+Active@{is\+Button\+Active}}
+\index{is\+Button\+Active@{is\+Button\+Active}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{is\+Button\+Active()}{isButtonActive()}}
+{\footnotesize\ttfamily bool Model.\+Unit\+Module.\+Archer.\+is\+Button\+Active (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_model_ac76b3489c9d704f49912608bd36cd0e7}{Button\+Type}}]{button\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method takes in the button\+Type specified, and checks if that button is currently active by calling the getter in button. 
+\begin{DoxyParams}{Parameters}
+{\em button\+Type} & The buttontype that was clicked. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a3931ef1523507e7261411dc79ee4e4af}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_ad1e9c182bc11a0ea83134421a24c7987}{}\label{class_model_1_1_unit_module_1_1_archer_ad1e9c182bc11a0ea83134421a24c7987} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!set\+Button\+Coordinates@{set\+Button\+Coordinates}}
+\index{set\+Button\+Coordinates@{set\+Button\+Coordinates}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{set\+Button\+Coordinates()}{setButtonCoordinates()}}
+{\footnotesize\ttfamily void Model.\+Unit\+Module.\+Archer.\+set\+Button\+Coordinates (\begin{DoxyParamCaption}\item[{Vector2}]{pixel\+Coordinates }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the coordinates of menu buttons. One for loop will position the main Drop Down menu (potentailly containing attack, move, item and wait directly 32 pixels to the right of unit (so the tile to right of unit) , and for each active button, increment it downwards by 32 pixels (height of each button). The second for loop is similiar and is for the inventory menu buttons, except it starts 160 pixels offsetted to right (to the right of the main drop down menu). 
+\begin{DoxyParams}{Parameters}
+{\em pixel\+Coordinates} & The pixel coordinate of the button. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_ad48776b3bd231bf80d2eec87b7498302}{Model.\+Unit\+Module.\+Unit}.
+
+\hypertarget{class_model_1_1_unit_module_1_1_archer_acd305143313040a061b7482039c7a9b6}{}\label{class_model_1_1_unit_module_1_1_archer_acd305143313040a061b7482039c7a9b6} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!set\+Initial\+Stats@{set\+Initial\+Stats}}
+\index{set\+Initial\+Stats@{set\+Initial\+Stats}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{set\+Initial\+Stats()}{setInitialStats()}}
+{\footnotesize\ttfamily void Model.\+Unit\+Module.\+Archer.\+set\+Initial\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the initial unit stats before modifiers. 
+
+Implements \hyperlink{interface_model_1_1_unit_module_1_1_unit_a3b67c1b9e929a9f7d4191de20996220a}{Model.\+Unit\+Module.\+Unit}.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_model_1_1_unit_module_1_1_archer_a20bece941fa5cf234326fb10d09f92e0}{}\label{class_model_1_1_unit_module_1_1_archer_a20bece941fa5cf234326fb10d09f92e0} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Alive@{Alive}}
+\index{Alive@{Alive}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Alive}{Alive}}
+{\footnotesize\ttfamily bool Model.\+Unit\+Module.\+Archer.\+Alive\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns whether or not unit is alive. \hypertarget{class_model_1_1_unit_module_1_1_archer_adfb64d60ccce91e614bdbf834feff655}{}\label{class_model_1_1_unit_module_1_1_archer_adfb64d60ccce91e614bdbf834feff655} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!current\+Frame@{current\+Frame}}
+\index{current\+Frame@{current\+Frame}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{current\+Frame}{currentFrame}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+current\+Frame\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets and sets current frame the sprite is on. \hypertarget{class_model_1_1_unit_module_1_1_archer_a6b001252ea85b654e1c85fa47efd9d7b}{}\label{class_model_1_1_unit_module_1_1_archer_a6b001252ea85b654e1c85fa47efd9d7b} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Def@{Def}}
+\index{Def@{Def}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Def}{Def}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Def\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Defense. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative defense will result in an attacker doing more damage than their attack. \hypertarget{class_model_1_1_unit_module_1_1_archer_aff2e126518d4eb4e64a06ac44542fefe}{}\label{class_model_1_1_unit_module_1_1_archer_aff2e126518d4eb4e64a06ac44542fefe} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!equipped\+Weapon@{equipped\+Weapon}}
+\index{equipped\+Weapon@{equipped\+Weapon}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{equipped\+Weapon}{equippedWeapon}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_weapon_module_1_1_weapon}{Weapon} Model.\+Unit\+Module.\+Archer.\+equipped\+Weapon\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets and sets the unit is currently equipping. \hypertarget{class_model_1_1_unit_module_1_1_archer_aa98508c9166b0d5661952efc2577e2f7}{}\label{class_model_1_1_unit_module_1_1_archer_aa98508c9166b0d5661952efc2577e2f7} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Hp@{Hp}}
+\index{Hp@{Hp}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Hp}{Hp}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Hp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and get a unit\textquotesingle{}s HP. Should HP fall under 0, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}\textquotesingle{}s Alive Boolean should change to false. \hypertarget{class_model_1_1_unit_module_1_1_archer_ae003038905be807ec42d56ac979b1369}{}\label{class_model_1_1_unit_module_1_1_archer_ae003038905be807ec42d56ac979b1369} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Int@{Int}}
+\index{Int@{Int}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Int}{Int}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Int\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the new intelligence value. ~\newline
+ Gets the effective intelligence -\/$>$ \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} intelligence + weapon intelligence ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative strength will be treated as 0 in damage calculation, as damage dealt can not be negative. \hypertarget{class_model_1_1_unit_module_1_1_archer_a8f0956dcf4b5053754652649e72655e2}{}\label{class_model_1_1_unit_module_1_1_archer_a8f0956dcf4b5053754652649e72655e2} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Level@{Level}}
+\index{Level@{Level}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Level}{Level}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Level\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Level. Currently does not have any use. \hypertarget{class_model_1_1_unit_module_1_1_archer_abe69c6c957abd5c25c7c52576faa015c}{}\label{class_model_1_1_unit_module_1_1_archer_abe69c6c957abd5c25c7c52576faa015c} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Pixel\+Coordinates@{Pixel\+Coordinates}}
+\index{Pixel\+Coordinates@{Pixel\+Coordinates}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Pixel\+Coordinates}{PixelCoordinates}}
+{\footnotesize\ttfamily Vector2 Model.\+Unit\+Module.\+Archer.\+Pixel\+Coordinates\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Returns the pixel coordinate of the unit. ~\newline
+ sets the pixel coordinate, and also sets Position (which is the tile location of that coordinate). ~\newline
+{\bfseries Exceptions\+:} ~\newline
+ -\/\+Dead units will still have a position, but won\textquotesingle{}t impact the rest of the game. \hypertarget{class_model_1_1_unit_module_1_1_archer_a0038f1b30e38e431dee388f6fdf8b6d7}{}\label{class_model_1_1_unit_module_1_1_archer_a0038f1b30e38e431dee388f6fdf8b6d7} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Position@{Position}}
+\index{Position@{Position}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily Tuple$<$int, int$>$ Model.\+Unit\+Module.\+Archer.\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets and sets unit\textquotesingle{}s position by tile. The set also updates pixel\+Coordinate\textquotesingle{}s location by making that vector equivalent to position$\ast$32 (since each tile is 32x32). ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Dead units will still have a position, but won\textquotesingle{}t impact the rest of the game. \hypertarget{class_model_1_1_unit_module_1_1_archer_ae930922325e02ed61ff2be93d8ee24b0}{}\label{class_model_1_1_unit_module_1_1_archer_ae930922325e02ed61ff2be93d8ee24b0} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Res@{Res}}
+\index{Res@{Res}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Res}{Res}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Res\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Resistance. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative resistance will result in an attacker doing more damage than their intelligence. \hypertarget{class_model_1_1_unit_module_1_1_archer_ad2b77a7ad32761658101c22051c35f7e}{}\label{class_model_1_1_unit_module_1_1_archer_ad2b77a7ad32761658101c22051c35f7e} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Skill@{Skill}}
+\index{Skill@{Skill}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Skill}{Skill}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Skill\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the new skill value. ~\newline
+ Gets the effective skill -\/$>$ \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} skill + weapon skill ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative skill will not result in an error, but will most likely result in a 0\% hit and crit rate. \hypertarget{class_model_1_1_unit_module_1_1_archer_ae944f41f10572d4a183229726950eeec}{}\label{class_model_1_1_unit_module_1_1_archer_ae944f41f10572d4a183229726950eeec} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Speed@{Speed}}
+\index{Speed@{Speed}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Speed}{Speed}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Speed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and returns a unit\textquotesingle{}s Speed. ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative skill will not result in an error as speed is only used for checking double attack boolean, which is binary. \hypertarget{class_model_1_1_unit_module_1_1_archer_a4dd2b6dcabc11e4d5fcfa0856a9f85aa}{}\label{class_model_1_1_unit_module_1_1_archer_a4dd2b6dcabc11e4d5fcfa0856a9f85aa} 
+\index{Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}!Str@{Str}}
+\index{Str@{Str}!Model\+::\+Unit\+Module\+::\+Archer@{Model\+::\+Unit\+Module\+::\+Archer}}
+\subsubsection{\texorpdfstring{Str}{Str}}
+{\footnotesize\ttfamily int Model.\+Unit\+Module.\+Archer.\+Str\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the new strength value. ~\newline
+ Gets the effective strength -\/$>$ \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} strength + weapon strength ~\newline
+ {\bfseries Exceptions\+:} ~\newline
+ -\/\+Negative strength will be treated as 0 in damage calculation, as damage dealt can not be negative. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Archer.\+cs\end{DoxyCompactItemize}

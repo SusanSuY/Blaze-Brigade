@@ -1,0 +1,431 @@
+\hypertarget{class_controller_1_1_game_function}{}\section{Controller.\+Game\+Function Class Reference}
+\label{class_controller_1_1_game_function}\index{Controller.\+Game\+Function@{Controller.\+Game\+Function}}
+
+
+Contains functions that update the \hyperlink{namespace_model}{Model}.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_controller_1_1_game_function_a0e573edb9537563b1ef6a854739c5517}{is\+Enemy\+Unit\+In\+Range} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} enemy\+Unit)
+\item 
+static void \hyperlink{class_controller_1_1_game_function_acb3bb5d76c1fb5a794e228da98c39009}{start\+Turn} (\hyperlink{class_model_1_1_player}{Player} player, \hyperlink{class_view_1_1_camera}{Camera} camera)
+\item 
+static bool \hyperlink{class_controller_1_1_game_function_ac23bfd530d3a087da49065fce84821ab}{has\+Unit\+Finished\+Actions} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static bool \hyperlink{class_controller_1_1_game_function_ad685bf2e60bc063664f47ac2cc1fc385}{is\+Turn\+Over} ()
+\item 
+static bool \hyperlink{class_controller_1_1_game_function_a0696007a9d80f8e6ae9b28b3a3ba4b43}{is\+Game\+Over} ()
+\item 
+static bool \hyperlink{class_controller_1_1_game_function_a0878926921f4745c61645234142819ff}{is\+Node\+Attackable} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit, int unitX, int unitY, \hyperlink{class_model_1_1_map_module_1_1_node}{Node} attack\+Node)
+\item 
+static Linked\+List$<$ \hyperlink{class_model_1_1_map_module_1_1_node}{Node} $>$ \hyperlink{class_controller_1_1_game_function_a9910af0161e502a272fa6fbc025d6a93}{set\+Movable\+Nodes} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static Linked\+List$<$ \hyperlink{class_model_1_1_map_module_1_1_node}{Node} $>$ \hyperlink{class_controller_1_1_game_function_ad6e9b27c164633455ec7433d3b7b6f50}{get\+Attackable\+Nodes} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static Linked\+List$<$ \hyperlink{class_model_1_1_map_module_1_1_node}{Node} $>$ \hyperlink{class_controller_1_1_game_function_a6b9f4cc1fad812ac925b242d0debe4a5}{get\+Attack\+Range\+After\+Moving} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static Linked\+List$<$ \hyperlink{class_model_1_1_map_module_1_1_node}{Node} $>$ \hyperlink{class_controller_1_1_game_function_a4d9123c98fec7919087096f35838acc8}{path\+Finder} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit, \hyperlink{class_model_1_1_map_module_1_1_node}{Node} start, \hyperlink{class_model_1_1_map_module_1_1_node}{Node} end)
+\item 
+static void \hyperlink{class_controller_1_1_game_function_a5d44bd8d957c6546f3ecd857433cde25}{remove\+Unit} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, \hyperlink{class_model_1_1_player}{Player} player, \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static void \hyperlink{class_controller_1_1_game_function_afc2f3baed432319b1e7bfc5dae69b634}{deselect\+Unit} ()
+\item 
+static \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_controller_1_1_game_function_a35acdb9a83b042e26aab920de8b6f25d}{get\+Unit\+On\+Node\+Clicked} (\hyperlink{class_model_1_1_map_module_1_1_node}{Node} clicked\+Node, Vector2 position\+Clicked, \hyperlink{class_model_1_1_player}{Player} player)
+\item 
+static void \hyperlink{class_controller_1_1_game_function_a57eb3ddf64ac935212f80b2c82fa59df}{update\+Unit\+Position} (\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph, Linked\+List$<$ \hyperlink{class_model_1_1_map_module_1_1_node}{Node} $>$ path)
+\item 
+static void \hyperlink{class_controller_1_1_game_function_aae8d3490bc9fd6d22c3bf342fa80a7f1}{end\+Turn} (\hyperlink{class_view_1_1_camera}{Camera} camera)
+\item 
+static void \hyperlink{class_controller_1_1_game_function_a1510910fe1fc1d946712da7f72ee7da1}{button\+Action} (\hyperlink{class_model_1_1_button}{Button} button, \hyperlink{class_model_1_1_map_module_1_1_graph}{Graph} graph)
+\item 
+static bool \hyperlink{class_controller_1_1_game_function_a4f53c0a0edffecda9dea3fc3cd22b43e}{is\+Magical\+Attack} (\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} unit)
+\item 
+static \hyperlink{class_model_1_1_button}{Button} \hyperlink{class_controller_1_1_game_function_ae76737ddf87cf0ca533ac317da7c5ef3}{get\+Menu\+Button\+Clicked} (Vector2 mouse\+Coordinates, \hyperlink{class_view_1_1_camera}{Camera} camera)
+\item 
+static void \hyperlink{class_controller_1_1_game_function_a96148c53d564690b5cd207281fc5c0ef}{scroll\+Map} (\hyperlink{class_view_1_1_camera}{Camera} camera, int mouseX, int mouseY)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains functions that update the \hyperlink{namespace_model}{Model}. 
+
+This class holds useable functions in the scope of the entire gameplay. Such functions include updates to the \hyperlink{namespace_model}{Model}. This is done through updating of the Game\+State or parameters passed into a function. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_controller_1_1_game_function_a1510910fe1fc1d946712da7f72ee7da1}{}\label{class_controller_1_1_game_function_a1510910fe1fc1d946712da7f72ee7da1} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!button\+Action@{button\+Action}}
+\index{button\+Action@{button\+Action}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{button\+Action()}{buttonAction()}}
+{\footnotesize\ttfamily static void Controller.\+Game\+Function.\+button\+Action (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_button}{Button}}]{button,  }\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Updates the \hyperlink{namespace_model}{Model} in correspondence to unit menu button clicks. It does so by updating Game\+State\textquotesingle{}s Turn\+State to the button that was clicked. ~\newline
+ In addition, specific actions for each button include\+:
+\begin{DoxyItemize}
+\item If Attack is clicked, updates Game\+State\textquotesingle{}s drop\+Down\+Menu\+Open and attack\+Select.
+\item If Attack\+Confirm is clicked, updates the unit\textquotesingle{}s Active button states, unit stats (including damage to HP), as well as several Game\+State variables.
+\item If Move is clicked, updates Game\+State\textquotesingle{}s drop\+Down\+Menu\+Open.
+\item If Items is clicked, updates Game\+State\textquotesingle{}s inventory\+Oppen.
+\item If Wait is clicked, deselects the unit and updates the Wait button\textquotesingle{}s Active status.
+\item If any of the items in the inventory are clicked, causes the unit to equip the item and update the Game\+State\textquotesingle{}s inventory\+Open. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\item The function does not handle non-\/null parameters.
+\item The function assumes that the Game\+State\textquotesingle{}s selected\+Unit is non-\/null, else changes made by this function will cause other functions to behave incorrectly. 
+\begin{DoxyParams}{Parameters}
+{\em button} & Button that was clicked. \\
+\hline
+{\em graph} & Graph of the map. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_afc2f3baed432319b1e7bfc5dae69b634}{}\label{class_controller_1_1_game_function_afc2f3baed432319b1e7bfc5dae69b634} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!deselect\+Unit@{deselect\+Unit}}
+\index{deselect\+Unit@{deselect\+Unit}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{deselect\+Unit()}{deselectUnit()}}
+{\footnotesize\ttfamily static void Controller.\+Game\+Function.\+deselect\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Deselects any selected unit. The function does so by updating the Game\+State\textquotesingle{}s selected\+Unit and selected\+Enemy\+Unit. It also sets the Game\+State\textquotesingle{}s Turn\+State, unit\+To\+Attack, attack\+Confirm\+Open, drop\+Down\+Menu\+Open, attack\+Select, and inventory\+Open as a secondary effect. ~\newline
+~\newline
+\hypertarget{class_controller_1_1_game_function_aae8d3490bc9fd6d22c3bf342fa80a7f1}{}\label{class_controller_1_1_game_function_aae8d3490bc9fd6d22c3bf342fa80a7f1} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!end\+Turn@{end\+Turn}}
+\index{end\+Turn@{end\+Turn}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{end\+Turn()}{endTurn()}}
+{\footnotesize\ttfamily static void Controller.\+Game\+Function.\+end\+Turn (\begin{DoxyParamCaption}\item[{\hyperlink{class_view_1_1_camera}{Camera}}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Ends the current player\textquotesingle{}s turn and starts the enemy player\textquotesingle{}s turn. It does so by updating the Game\+State\textquotesingle{}s current\+Player and enemy\+Player. It also calls \hyperlink{class_controller_1_1_game_function_acb3bb5d76c1fb5a794e228da98c39009}{start\+Turn()} and updates the Game\+State\textquotesingle{}s end\+Turn\+Button and transition\+Turn to activate the animation of turn transitioning. 
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera of the game. Used to call start\+Turn after performing all actions to end the current turn. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_controller_1_1_game_function_ad6e9b27c164633455ec7433d3b7b6f50}{}\label{class_controller_1_1_game_function_ad6e9b27c164633455ec7433d3b7b6f50} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!get\+Attackable\+Nodes@{get\+Attackable\+Nodes}}
+\index{get\+Attackable\+Nodes@{get\+Attackable\+Nodes}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{get\+Attackable\+Nodes()}{getAttackableNodes()}}
+{\footnotesize\ttfamily static Linked\+List$<$\hyperlink{class_model_1_1_map_module_1_1_node}{Node}$>$ Controller.\+Game\+Function.\+get\+Attackable\+Nodes (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a Linked\+List of Node that the specified unit can perform an attack on. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that the unit has not yet moved, else the function does not behave correctly.
+\item The function requires that the graph be initialized with nodes corresponding to the map of the game, and does not behave correctly otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & Graph representing the current game map. \\
+\hline
+{\em unit} & Specfied unit. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a6b9f4cc1fad812ac925b242d0debe4a5}{}\label{class_controller_1_1_game_function_a6b9f4cc1fad812ac925b242d0debe4a5} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!get\+Attack\+Range\+After\+Moving@{get\+Attack\+Range\+After\+Moving}}
+\index{get\+Attack\+Range\+After\+Moving@{get\+Attack\+Range\+After\+Moving}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{get\+Attack\+Range\+After\+Moving()}{getAttackRangeAfterMoving()}}
+{\footnotesize\ttfamily static Linked\+List$<$\hyperlink{class_model_1_1_map_module_1_1_node}{Node}$>$ Controller.\+Game\+Function.\+get\+Attack\+Range\+After\+Moving (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a boolean value indicating whether or not the specified enemy unit is within attack range of the specified unit. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that the unit has already moved, else the function does not behave correctly.
+\item The function requires that the graph be initialized with nodes corresponding to the map of the game, and does not behave correctly otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & Graph representing the current game map. \\
+\hline
+{\em Specified} & unit. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_ae76737ddf87cf0ca533ac317da7c5ef3}{}\label{class_controller_1_1_game_function_ae76737ddf87cf0ca533ac317da7c5ef3} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!get\+Menu\+Button\+Clicked@{get\+Menu\+Button\+Clicked}}
+\index{get\+Menu\+Button\+Clicked@{get\+Menu\+Button\+Clicked}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{get\+Menu\+Button\+Clicked()}{getMenuButtonClicked()}}
+{\footnotesize\ttfamily static \hyperlink{class_model_1_1_button}{Button} Controller.\+Game\+Function.\+get\+Menu\+Button\+Clicked (\begin{DoxyParamCaption}\item[{Vector2}]{mouse\+Coordinates,  }\item[{\hyperlink{class_view_1_1_camera}{Camera}}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns the menu button that was clicked; if no menu button was clicked, returns null. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that mouse\+Coordinates be valid coordinates within the game window, else the function does not perform as expected. 
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Coordinates} & Coordinates of the mouse click. \\
+\hline
+{\em camera} & The camera of the game. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a35acdb9a83b042e26aab920de8b6f25d}{}\label{class_controller_1_1_game_function_a35acdb9a83b042e26aab920de8b6f25d} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!get\+Unit\+On\+Node\+Clicked@{get\+Unit\+On\+Node\+Clicked}}
+\index{get\+Unit\+On\+Node\+Clicked@{get\+Unit\+On\+Node\+Clicked}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{get\+Unit\+On\+Node\+Clicked()}{getUnitOnNodeClicked()}}
+{\footnotesize\ttfamily static \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} Controller.\+Game\+Function.\+get\+Unit\+On\+Node\+Clicked (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_node}{Node}}]{clicked\+Node,  }\item[{Vector2}]{position\+Clicked,  }\item[{\hyperlink{class_model_1_1_player}{Player}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+If an unit exists where user clicked (that belongs to player), return it; else, return null. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that the clicked\+Node be a valid node in the game.
+\item The function requires that the position\+Clicked be a valid coordinate on the game map.
+\item The function requires that the player be a valid player in the current game. 
+\begin{DoxyParams}{Parameters}
+{\em clicked\+Node} & Node where user has clicked. \\
+\hline
+{\em position\+Clicked} & position (by node) of where the user has clicked. \\
+\hline
+{\em player} & Player that is currently moving. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_ac23bfd530d3a087da49065fce84821ab}{}\label{class_controller_1_1_game_function_ac23bfd530d3a087da49065fce84821ab} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!has\+Unit\+Finished\+Actions@{has\+Unit\+Finished\+Actions}}
+\index{has\+Unit\+Finished\+Actions@{has\+Unit\+Finished\+Actions}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{has\+Unit\+Finished\+Actions()}{hasUnitFinishedActions()}}
+{\footnotesize\ttfamily static bool Controller.\+Game\+Function.\+has\+Unit\+Finished\+Actions (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a boolean value indicating whether or not the specified unit can perform actions. It does so by checking if the unit\textquotesingle{}s Attack\+Confirm or Wait button is no longer Active. If so, then the unit can no longer perform actions. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not support null parameters.
+\item The function requires that the unit has an Attack\+Confirm and Wait button, and does not behave correctly if these buttons are not available. 
+\begin{DoxyParams}{Parameters}
+{\em unit} & Specified unit. Assumes unit is non-\/null and has an Attack\+Confirm and Wait button. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a0e573edb9537563b1ef6a854739c5517}{}\label{class_controller_1_1_game_function_a0e573edb9537563b1ef6a854739c5517} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!is\+Enemy\+Unit\+In\+Range@{is\+Enemy\+Unit\+In\+Range}}
+\index{is\+Enemy\+Unit\+In\+Range@{is\+Enemy\+Unit\+In\+Range}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{is\+Enemy\+Unit\+In\+Range()}{isEnemyUnitInRange()}}
+{\footnotesize\ttfamily static bool Controller.\+Game\+Function.\+is\+Enemy\+Unit\+In\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{enemy\+Unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a boolean value indicating whether or not the specified enemy unit is within attack range of the specified unit. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not check whether or not the units specified are actually on opposing sides, and simply assumes so.
+\item The function currently does not support null parameters, and requires that the parameters be non-\/null in order to operate correctly.
+\item The function assumes that both units specified have positions, and that the graph is made up of nodes. It also assumes that the positions of both units are valid positions on the graph. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & Graph representing the current game map. Required in order to determine which Node the units occupy and to give context on the range of the units. \\
+\hline
+{\em unit} & Specified playable unit. Assume unit is non-\/null and has a position that is valid on the graph. \\
+\hline
+{\em enemy\+Unit} & Specified enemy unit that holds interest in whether or not it is within attack range. Assume enemy\+Unit is non-\/null and has a position that is valid on the graph. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a0696007a9d80f8e6ae9b28b3a3ba4b43}{}\label{class_controller_1_1_game_function_a0696007a9d80f8e6ae9b28b3a3ba4b43} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!is\+Game\+Over@{is\+Game\+Over}}
+\index{is\+Game\+Over@{is\+Game\+Over}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{is\+Game\+Over()}{isGameOver()}}
+{\footnotesize\ttfamily static bool Controller.\+Game\+Function.\+is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a boolean value indicating whether or not the game is over, based off win conditions. These conditions include whether or not one of the players in the game has any live units left. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function requires that Player1 and Player2 stored in Game\+State are non-\/null.
+\item The function assumes that the two players stored in Game\+State are both different objects. 
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a4f53c0a0edffecda9dea3fc3cd22b43e}{}\label{class_controller_1_1_game_function_a4f53c0a0edffecda9dea3fc3cd22b43e} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!is\+Magical\+Attack@{is\+Magical\+Attack}}
+\index{is\+Magical\+Attack@{is\+Magical\+Attack}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{is\+Magical\+Attack()}{isMagicalAttack()}}
+{\footnotesize\ttfamily static bool Controller.\+Game\+Function.\+is\+Magical\+Attack (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a boolean value indicating whether or not the unit performed a magical attack. This value is dependent on the unit\textquotesingle{}s Unit\+Type. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters, else the behaviour of the function will not be correct. 
+\begin{DoxyParams}{Parameters}
+{\em unit} & Unit to check. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a0878926921f4745c61645234142819ff}{}\label{class_controller_1_1_game_function_a0878926921f4745c61645234142819ff} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!is\+Node\+Attackable@{is\+Node\+Attackable}}
+\index{is\+Node\+Attackable@{is\+Node\+Attackable}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{is\+Node\+Attackable()}{isNodeAttackable()}}
+{\footnotesize\ttfamily static bool Controller.\+Game\+Function.\+is\+Node\+Attackable (\begin{DoxyParamCaption}\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit,  }\item[{int}]{unitX,  }\item[{int}]{unitY,  }\item[{\hyperlink{class_model_1_1_map_module_1_1_node}{Node}}]{attack\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a boolean value indicating whether or not a specified node is attackable based on the unit\textquotesingle{}s equipped weapon\textquotesingle{}s range. ~\newline
+ It does so by first check that the specified node is not an obstacle, then checks that the attack\+Node is within range. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that the unit have an equipped weapon with a range, and does not behave correctly otherwise.
+\item The function requires that the attack\+Node have a position on the game\textquotesingle{}s graph, and does not behave correctly otherwise.
+\item The function assumes that unitX and unitY are correspondant to the unit\textquotesingle{}s current or prospective position, and does not behave correctly otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em unit} & Unit to be checked for attackable nodes. \\
+\hline
+{\em unitX} & The x coordinate of the unit (by nodes). \\
+\hline
+{\em unitY} & The y coordinate of the unit (by nodes). \\
+\hline
+{\em attack\+Node} & The specified attack node. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_ad685bf2e60bc063664f47ac2cc1fc385}{}\label{class_controller_1_1_game_function_ad685bf2e60bc063664f47ac2cc1fc385} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!is\+Turn\+Over@{is\+Turn\+Over}}
+\index{is\+Turn\+Over@{is\+Turn\+Over}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{is\+Turn\+Over()}{isTurnOver()}}
+{\footnotesize\ttfamily static bool Controller.\+Game\+Function.\+is\+Turn\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a boolean value indicating whether or not the current turn is over. It does so by checking if each unit in the current turn\textquotesingle{}s player has already performed all actions. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function assumes that the current player has live units left in the game, and does not behave properly if this is not the case. 
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a4d9123c98fec7919087096f35838acc8}{}\label{class_controller_1_1_game_function_a4d9123c98fec7919087096f35838acc8} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!path\+Finder@{path\+Finder}}
+\index{path\+Finder@{path\+Finder}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{path\+Finder()}{pathFinder()}}
+{\footnotesize\ttfamily static Linked\+List$<$\hyperlink{class_model_1_1_map_module_1_1_node}{Node}$>$ Controller.\+Game\+Function.\+path\+Finder (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit,  }\item[{\hyperlink{class_model_1_1_map_module_1_1_node}{Node}}]{start,  }\item[{\hyperlink{class_model_1_1_map_module_1_1_node}{Node}}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a Linked\+List of Node representing the path from the start node to the end node, with a maximum number of moves corresponding to the unit\textquotesingle{}s movability. If no such path is valid, return null. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that the graph be initialized with nodes corresponding to the map of the game, and does not behave correctly otherwise.
+\item The function requires that the unit have a movabiliy value, else the function cannot function correctly.
+\item The function requires that both the start and end Node are valid nodes on the Graph, else the function will not behave correctly. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & Graph representing the current game map. \\
+\hline
+{\em unit} & Unit to move. \\
+\hline
+{\em start} & Start Node of the path. \\
+\hline
+{\em end} & End Node of the path \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a5d44bd8d957c6546f3ecd857433cde25}{}\label{class_controller_1_1_game_function_a5d44bd8d957c6546f3ecd857433cde25} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!remove\+Unit@{remove\+Unit}}
+\index{remove\+Unit@{remove\+Unit}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{remove\+Unit()}{removeUnit()}}
+{\footnotesize\ttfamily static void Controller.\+Game\+Function.\+remove\+Unit (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{class_model_1_1_player}{Player}}]{player,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Removes the specified unit from the game. It does so by removing the unit from the Player player\textquotesingle{}s list of owned\+Units. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that the graph be initialized with nodes corresponding to the map of the game, and does not behave correctly otherwise.
+\item The function requires that the unit have a position, else the function cannot execute.
+\item The function does perform the specified action if the specified unit does not previously belong in the player\textquotesingle{}s list of owned\+Units. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & Graph representing the current game map. \\
+\hline
+{\em player} & The player that owns the unit to be removed. \\
+\hline
+{\em unit} & unit to remove from the game. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a96148c53d564690b5cd207281fc5c0ef}{}\label{class_controller_1_1_game_function_a96148c53d564690b5cd207281fc5c0ef} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!scroll\+Map@{scroll\+Map}}
+\index{scroll\+Map@{scroll\+Map}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{scroll\+Map()}{scrollMap()}}
+{\footnotesize\ttfamily static void Controller.\+Game\+Function.\+scroll\+Map (\begin{DoxyParamCaption}\item[{\hyperlink{class_view_1_1_camera}{Camera}}]{camera,  }\item[{int}]{mouseX,  }\item[{int}]{mouseY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Enables scrolling of the map based on mouse position. The map scrolls in the direction of the mouse position if the mouse position is at the edge/outside of the window and if the scrolling direction has not yet reached the end of the map. 
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera of the game. \\
+\hline
+{\em mouseX} & x-\/coordinate of the mouse position. \\
+\hline
+{\em mouseY} & y-\/coordinate of the mouse position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_controller_1_1_game_function_a9910af0161e502a272fa6fbc025d6a93}{}\label{class_controller_1_1_game_function_a9910af0161e502a272fa6fbc025d6a93} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!set\+Movable\+Nodes@{set\+Movable\+Nodes}}
+\index{set\+Movable\+Nodes@{set\+Movable\+Nodes}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{set\+Movable\+Nodes()}{setMovableNodes()}}
+{\footnotesize\ttfamily static Linked\+List$<$\hyperlink{class_model_1_1_map_module_1_1_node}{Node}$>$ Controller.\+Game\+Function.\+set\+Movable\+Nodes (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a Linked\+List of Node that the unit can move onto. ~\newline
+ It does so by iterating through all nodes on the graph and checking if a path exists from the unit\textquotesingle{}s current position to that node. If a path exists (\hyperlink{class_controller_1_1_game_function_a4d9123c98fec7919087096f35838acc8}{path\+Finder()} does not return null), then it adds that node to the Linked\+List of moveable nodes. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null values.
+\item The function requires that the specified unit has a valid position on the graph, and does not behave correctly otherwise.
+\item The function requires that the graph be initialized with nodes corresponding to the map of the game, and does not behave correctly otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & Graph representing the current game map. \\
+\hline
+{\em Specified} & unit. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_acb3bb5d76c1fb5a794e228da98c39009}{}\label{class_controller_1_1_game_function_acb3bb5d76c1fb5a794e228da98c39009} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!start\+Turn@{start\+Turn}}
+\index{start\+Turn@{start\+Turn}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{start\+Turn()}{startTurn()}}
+{\footnotesize\ttfamily static void Controller.\+Game\+Function.\+start\+Turn (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_player}{Player}}]{player,  }\item[{\hyperlink{class_view_1_1_camera}{Camera}}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Must be called upon the start of a new turn. Resets all of the player\textquotesingle{}s units\textquotesingle{} menu actions (by setting each unit\textquotesingle{}s buttons to Active) and sets up game states. It does so by setting \hyperlink{class_controller_1_1_game}{Game} State\textquotesingle{}s selected\+Unit, unit\+To\+Attack, drop\+Down\+Menu\+Open, attack\+Confirm\+Open, and before\+Move. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not support non-\/null values and assumes that each unit owned by the player has menu buttons. 
+\begin{DoxyParams}{Parameters}
+{\em player} & Player of the new turn. Assume player is a valid player within the current game and is non-\/null. \\
+\hline
+{\em camera} & The camera of the game. Used to set the camera to show a unit in the current player\textquotesingle{}s turn. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_controller_1_1_game_function_a57eb3ddf64ac935212f80b2c82fa59df}{}\label{class_controller_1_1_game_function_a57eb3ddf64ac935212f80b2c82fa59df} 
+\index{Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}!update\+Unit\+Position@{update\+Unit\+Position}}
+\index{update\+Unit\+Position@{update\+Unit\+Position}!Controller\+::\+Game\+Function@{Controller\+::\+Game\+Function}}
+\subsubsection{\texorpdfstring{update\+Unit\+Position()}{updateUnitPosition()}}
+{\footnotesize\ttfamily static void Controller.\+Game\+Function.\+update\+Unit\+Position (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_graph}{Graph}}]{graph,  }\item[{Linked\+List$<$ \hyperlink{class_model_1_1_map_module_1_1_node}{Node} $>$}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Moves the selected unit\textquotesingle{}s position to the clicked position. ~\newline
+ Note that the function also sets Game\+State\textquotesingle{}s is\+Animating during the movement animation. ~\newline
+~\newline
+ {\bfseries Exceptions\+:} ~\newline
+
+\begin{DoxyItemize}
+\item The function does not handle non-\/null parameters.
+\item The function requires that the graph be initialized with nodes corresponding to the map of the game, and does not behave correctly otherwise.
+\item The function requires that the path consist of valid nodes on the graph. 
+\begin{DoxyParams}{Parameters}
+{\em graph} & Graph representing the current game map. \\
+\hline
+{\em path} & Path to move the unit along. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Function.\+cs\end{DoxyCompactItemize}

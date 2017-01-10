@@ -1,0 +1,103 @@
+\hypertarget{class_model_1_1_map_module_1_1_node}{}\section{Model.\+Map\+Module.\+Node Class Reference}
+\label{class_model_1_1_map_module_1_1_node}\index{Model.\+Map\+Module.\+Node@{Model.\+Map\+Module.\+Node}}
+
+
+Structure that represents a tile on the game map grid.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_map_module_1_1_node_a519d0765e3b91e7e19c1aa0db44696d9}{Node} (int x, int y)
+\item 
+Vector2 \hyperlink{class_model_1_1_map_module_1_1_node_ac584afe840f0eccf88221ba551b47e3a}{get\+Position} ()
+\item 
+int \hyperlink{class_model_1_1_map_module_1_1_node_aafda1d229261c9bb17d16bf3f33f8362}{get\+PositionX} ()
+\item 
+int \hyperlink{class_model_1_1_map_module_1_1_node_a6c0463ae7d2efde9eab77d67b520bce4}{get\+PositionY} ()
+\item 
+bool \hyperlink{class_model_1_1_map_module_1_1_node_a1f48521054f542a83331e7d35b1340bb}{is\+Occupied} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_model_1_1_map_module_1_1_node_a73c035dbce10c987f99e1d99a8abf928}{movability\+Obstruction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \hyperlink{class_model_1_1_map_module_1_1_node_adebdc4bf4bee0c34caadc3d8cc9e1d35}{is\+Obstacle}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_map_module_1_1_node_a0998a1b014ec056f419e0510ec8c0e26}{unit\+On\+Node}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure that represents a tile on the game map grid. 
+
+Programmatical representation of a tile on the map grid. Holds information pertaining to the tile. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_map_module_1_1_node_a519d0765e3b91e7e19c1aa0db44696d9}{}\label{class_model_1_1_map_module_1_1_node_a519d0765e3b91e7e19c1aa0db44696d9} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Model.\+Map\+Module.\+Node.\+Node (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a node at position x,y, with default set to not being an obstacle or movability\+Obstruction. 
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of the node on the graph (by node). \\
+\hline
+{\em y} & Y position of the node on the graph (by node). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_map_module_1_1_node_ac584afe840f0eccf88221ba551b47e3a}{}\label{class_model_1_1_map_module_1_1_node_ac584afe840f0eccf88221ba551b47e3a} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily Vector2 Model.\+Map\+Module.\+Node.\+get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Vector position of the node on the graph. \hypertarget{class_model_1_1_map_module_1_1_node_aafda1d229261c9bb17d16bf3f33f8362}{}\label{class_model_1_1_map_module_1_1_node_aafda1d229261c9bb17d16bf3f33f8362} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!get\+PositionX@{get\+PositionX}}
+\index{get\+PositionX@{get\+PositionX}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Position\+X()}{getPositionX()}}
+{\footnotesize\ttfamily int Model.\+Map\+Module.\+Node.\+get\+PositionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the X position of the node on the graph. \hypertarget{class_model_1_1_map_module_1_1_node_a6c0463ae7d2efde9eab77d67b520bce4}{}\label{class_model_1_1_map_module_1_1_node_a6c0463ae7d2efde9eab77d67b520bce4} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!get\+PositionY@{get\+PositionY}}
+\index{get\+PositionY@{get\+PositionY}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{get\+Position\+Y()}{getPositionY()}}
+{\footnotesize\ttfamily int Model.\+Map\+Module.\+Node.\+get\+PositionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Y position of the node on the graph. \hypertarget{class_model_1_1_map_module_1_1_node_a1f48521054f542a83331e7d35b1340bb}{}\label{class_model_1_1_map_module_1_1_node_a1f48521054f542a83331e7d35b1340bb} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!is\+Occupied@{is\+Occupied}}
+\index{is\+Occupied@{is\+Occupied}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{is\+Occupied()}{isOccupied()}}
+{\footnotesize\ttfamily bool Model.\+Map\+Module.\+Node.\+is\+Occupied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Indicates whether the node is occupied by a unit. 
+
+\subsection{Property Documentation}
+\hypertarget{class_model_1_1_map_module_1_1_node_adebdc4bf4bee0c34caadc3d8cc9e1d35}{}\label{class_model_1_1_map_module_1_1_node_adebdc4bf4bee0c34caadc3d8cc9e1d35} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!is\+Obstacle@{is\+Obstacle}}
+\index{is\+Obstacle@{is\+Obstacle}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{is\+Obstacle}{isObstacle}}
+{\footnotesize\ttfamily bool Model.\+Map\+Module.\+Node.\+is\+Obstacle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Indicates whether a unit can stand inside the tile. \hypertarget{class_model_1_1_map_module_1_1_node_a73c035dbce10c987f99e1d99a8abf928}{}\label{class_model_1_1_map_module_1_1_node_a73c035dbce10c987f99e1d99a8abf928} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!movability\+Obstruction@{movability\+Obstruction}}
+\index{movability\+Obstruction@{movability\+Obstruction}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{movability\+Obstruction}{movabilityObstruction}}
+{\footnotesize\ttfamily int Model.\+Map\+Module.\+Node.\+movability\+Obstruction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Index for hindrance of the movability of a unit. The higher the index, the less a unit can move through the tile. Set to 0 by default (no hindrance). \hypertarget{class_model_1_1_map_module_1_1_node_a0998a1b014ec056f419e0510ec8c0e26}{}\label{class_model_1_1_map_module_1_1_node_a0998a1b014ec056f419e0510ec8c0e26} 
+\index{Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}!unit\+On\+Node@{unit\+On\+Node}}
+\index{unit\+On\+Node@{unit\+On\+Node}!Model\+::\+Map\+Module\+::\+Node@{Model\+::\+Map\+Module\+::\+Node}}
+\subsubsection{\texorpdfstring{unit\+On\+Node}{unitOnNode}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} Model.\+Map\+Module.\+Node.\+unit\+On\+Node\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets and sets the unit that is on the node. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Node.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,248 @@
+\hypertarget{class_model_1_1_game_state}{}\section{Model.\+Game\+State Class Reference}
+\label{class_model_1_1_game_state}\index{Model.\+Game\+State@{Model.\+Game\+State}}
+
+
+This class holds states in the scope of the entire gameplay.  
+
+
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_model_1_1_game_state_a4ca2649ffbcf39f72b5373889fc87137}{}\label{class_model_1_1_game_state_a4ca2649ffbcf39f72b5373889fc87137} 
+static readonly int {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT} = 640
+\item 
+\hypertarget{class_model_1_1_game_state_ad3b13fdcad1e5b05176da2f3d554fa20}{}\label{class_model_1_1_game_state_ad3b13fdcad1e5b05176da2f3d554fa20} 
+static readonly int {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH} = 960
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_model_1_1_player}{Player} \hyperlink{class_model_1_1_game_state_a37fe1921acaf4d972606d49d2365105e}{Player1}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{class_model_1_1_player}{Player} \hyperlink{class_model_1_1_game_state_a50fe57205063e9f0549fb2514d6430c4}{Player2}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_game_state_ab163d599e6e1f46c470d0835d8053ad9}{selected\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_game_state_a8f709018e2b8d3b31dd89a3bee2f279c}{selected\+Enemy\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_game_state_af352baaca46aaf95b984980ca55693ed}{unit\+To\+Attack}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{class_model_1_1_player}{Player} \hyperlink{class_model_1_1_game_state_aa541a7b45ea55484db8a3357d8e680de}{current\+Player}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{class_model_1_1_player}{Player} \hyperlink{class_model_1_1_game_state_ae276234c4a6b2b182b13f125abb61ba3}{enemy\+Player}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_a6e723d6c3b99e1c235c6d214ee17929a}{drop\+Down\+Menu\+Open}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_ab5781c1403edc30064ae2a8cbaad4c4c}{attack\+Confirm\+Open}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_a6bad6fb7894df05450a002190dd37f89}{attack\+Select}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_ae8b8bcd9dbbed13dc893c5c4319e7435}{inventory\+Open}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_ae55aa686aaf5841657344fdc178c92d5}{end\+Turn\+Button}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_af546cfa01e29773b5260cd6bfe8132b7}{before\+Move}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_ac8c6a53641aafa5d57a9dff8f958a904}{is\+Animating}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_a2274be2a54b2c7b70b81213a07804b75}{game\+Over}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_a0ee0eff828bc31ce69967d7ef04588b8}{exit\+Game\+Clicked}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static Vector2 \hyperlink{class_model_1_1_game_state_ae092b0d0e2c881a590e5798fd39d7798}{end\+Turn\+Button\+Location}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_a1c674970c8810751fe7e478b3cb790d4}{transition\+Turn}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{namespace_model_abc9786019e8deab9844b28c3d9c58f86}{Turn\+State} \hyperlink{class_model_1_1_game_state_a07052b158febe5c1f05a6b8bc3426775}{Turn\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_a1c8543e79d3bb6fdfb705b0428d98bce}{current\+Player\+Damage\+Popup}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static String \hyperlink{class_model_1_1_game_state_a829479b1c3cf8a4019a38c09990f2b7d}{Current\+Player\+Damage\+Dealt}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_game_state_a1bacc8a1b6e6959dea52d8a6cf7aa831}{last\+Attacking\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \hyperlink{class_model_1_1_game_state_af42c3aff2e08038bbc07d696f36fdd4b}{enemy\+Player\+Damage\+Popup}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static String \hyperlink{class_model_1_1_game_state_a32226ed0679f9e47a0e7ed4cb2ed1009}{Enemy\+Player\+Damage\+Dealt}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} \hyperlink{class_model_1_1_game_state_a129d00c79e3a48b00089ef2d98605810}{last\+Defending\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static Linked\+List$<$ \hyperlink{class_model_1_1_map_module_1_1_node}{Node} $>$ \hyperlink{class_model_1_1_game_state_aa2e325332a755c971d36c7c388d136d2}{moveable\+Nodes}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static int \hyperlink{class_model_1_1_game_state_a87cc1bbbd0fef930a435e4ac2d941bfd}{winning\+Player}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class holds states in the scope of the entire gameplay. 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_model_1_1_game_state_ab5781c1403edc30064ae2a8cbaad4c4c}{}\label{class_model_1_1_game_state_ab5781c1403edc30064ae2a8cbaad4c4c} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!attack\+Confirm\+Open@{attack\+Confirm\+Open}}
+\index{attack\+Confirm\+Open@{attack\+Confirm\+Open}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{attack\+Confirm\+Open}{attackConfirmOpen}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+attack\+Confirm\+Open\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether attack\+Confirm menu should be open. \hypertarget{class_model_1_1_game_state_a6bad6fb7894df05450a002190dd37f89}{}\label{class_model_1_1_game_state_a6bad6fb7894df05450a002190dd37f89} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!attack\+Select@{attack\+Select}}
+\index{attack\+Select@{attack\+Select}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{attack\+Select}{attackSelect}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+attack\+Select\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether player is currently selecting unit to attack. \hypertarget{class_model_1_1_game_state_af546cfa01e29773b5260cd6bfe8132b7}{}\label{class_model_1_1_game_state_af546cfa01e29773b5260cd6bfe8132b7} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!before\+Move@{before\+Move}}
+\index{before\+Move@{before\+Move}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{before\+Move}{beforeMove}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+before\+Move\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets if a unit has moved yet or not. before\+M\+Ove is true before unit moves, false after it moves. Used to determine what tiles are highlighted. \hypertarget{class_model_1_1_game_state_aa541a7b45ea55484db8a3357d8e680de}{}\label{class_model_1_1_game_state_aa541a7b45ea55484db8a3357d8e680de} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!current\+Player@{current\+Player}}
+\index{current\+Player@{current\+Player}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{current\+Player}{currentPlayer}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_player}{Player} Model.\+Game\+State.\+current\+Player\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the current player. \hypertarget{class_model_1_1_game_state_a829479b1c3cf8a4019a38c09990f2b7d}{}\label{class_model_1_1_game_state_a829479b1c3cf8a4019a38c09990f2b7d} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!Current\+Player\+Damage\+Dealt@{Current\+Player\+Damage\+Dealt}}
+\index{Current\+Player\+Damage\+Dealt@{Current\+Player\+Damage\+Dealt}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Current\+Player\+Damage\+Dealt}{CurrentPlayerDamageDealt}}
+{\footnotesize\ttfamily String Model.\+Game\+State.\+Current\+Player\+Damage\+Dealt\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the current player\textquotesingle{}s last attack as a string. For setting, an int is taken in, and parsed to String. If the damage dealt is 0, the String stored is changed to \char`\"{}\+Miss\char`\"{}. \hypertarget{class_model_1_1_game_state_a1c8543e79d3bb6fdfb705b0428d98bce}{}\label{class_model_1_1_game_state_a1c8543e79d3bb6fdfb705b0428d98bce} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!current\+Player\+Damage\+Popup@{current\+Player\+Damage\+Popup}}
+\index{current\+Player\+Damage\+Popup@{current\+Player\+Damage\+Popup}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{current\+Player\+Damage\+Popup}{currentPlayerDamagePopup}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+current\+Player\+Damage\+Popup\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether damage dealt number pops up for current player. \hypertarget{class_model_1_1_game_state_a6e723d6c3b99e1c235c6d214ee17929a}{}\label{class_model_1_1_game_state_a6e723d6c3b99e1c235c6d214ee17929a} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!drop\+Down\+Menu\+Open@{drop\+Down\+Menu\+Open}}
+\index{drop\+Down\+Menu\+Open@{drop\+Down\+Menu\+Open}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{drop\+Down\+Menu\+Open}{dropDownMenuOpen}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+drop\+Down\+Menu\+Open\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether drop down menu should be open. \hypertarget{class_model_1_1_game_state_ae55aa686aaf5841657344fdc178c92d5}{}\label{class_model_1_1_game_state_ae55aa686aaf5841657344fdc178c92d5} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!end\+Turn\+Button@{end\+Turn\+Button}}
+\index{end\+Turn\+Button@{end\+Turn\+Button}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{end\+Turn\+Button}{endTurnButton}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+end\+Turn\+Button\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether end turn button is active. \hypertarget{class_model_1_1_game_state_ae092b0d0e2c881a590e5798fd39d7798}{}\label{class_model_1_1_game_state_ae092b0d0e2c881a590e5798fd39d7798} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!end\+Turn\+Button\+Location@{end\+Turn\+Button\+Location}}
+\index{end\+Turn\+Button\+Location@{end\+Turn\+Button\+Location}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{end\+Turn\+Button\+Location}{endTurnButtonLocation}}
+{\footnotesize\ttfamily Vector2 Model.\+Game\+State.\+end\+Turn\+Button\+Location\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets end turn button position. \hypertarget{class_model_1_1_game_state_ae276234c4a6b2b182b13f125abb61ba3}{}\label{class_model_1_1_game_state_ae276234c4a6b2b182b13f125abb61ba3} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!enemy\+Player@{enemy\+Player}}
+\index{enemy\+Player@{enemy\+Player}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{enemy\+Player}{enemyPlayer}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_player}{Player} Model.\+Game\+State.\+enemy\+Player\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the enemy player. \hypertarget{class_model_1_1_game_state_a32226ed0679f9e47a0e7ed4cb2ed1009}{}\label{class_model_1_1_game_state_a32226ed0679f9e47a0e7ed4cb2ed1009} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!Enemy\+Player\+Damage\+Dealt@{Enemy\+Player\+Damage\+Dealt}}
+\index{Enemy\+Player\+Damage\+Dealt@{Enemy\+Player\+Damage\+Dealt}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Enemy\+Player\+Damage\+Dealt}{EnemyPlayerDamageDealt}}
+{\footnotesize\ttfamily String Model.\+Game\+State.\+Enemy\+Player\+Damage\+Dealt\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Gets the enemy unit\textquotesingle{}s last defending attack as a string. For setting, an int is taken in, and parsed to String. If the damage dealt is 0, the String stored is changed to \char`\"{}\+Miss\char`\"{}. \hypertarget{class_model_1_1_game_state_af42c3aff2e08038bbc07d696f36fdd4b}{}\label{class_model_1_1_game_state_af42c3aff2e08038bbc07d696f36fdd4b} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!enemy\+Player\+Damage\+Popup@{enemy\+Player\+Damage\+Popup}}
+\index{enemy\+Player\+Damage\+Popup@{enemy\+Player\+Damage\+Popup}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{enemy\+Player\+Damage\+Popup}{enemyPlayerDamagePopup}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+enemy\+Player\+Damage\+Popup\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether damage dealt number pops up for enemy player. \hypertarget{class_model_1_1_game_state_a0ee0eff828bc31ce69967d7ef04588b8}{}\label{class_model_1_1_game_state_a0ee0eff828bc31ce69967d7ef04588b8} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!exit\+Game\+Clicked@{exit\+Game\+Clicked}}
+\index{exit\+Game\+Clicked@{exit\+Game\+Clicked}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{exit\+Game\+Clicked}{exitGameClicked}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+exit\+Game\+Clicked\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets if game should exit. \hypertarget{class_model_1_1_game_state_a2274be2a54b2c7b70b81213a07804b75}{}\label{class_model_1_1_game_state_a2274be2a54b2c7b70b81213a07804b75} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!game\+Over@{game\+Over}}
+\index{game\+Over@{game\+Over}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{game\+Over}{gameOver}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+game\+Over\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether game is over. \hypertarget{class_model_1_1_game_state_ae8b8bcd9dbbed13dc893c5c4319e7435}{}\label{class_model_1_1_game_state_ae8b8bcd9dbbed13dc893c5c4319e7435} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!inventory\+Open@{inventory\+Open}}
+\index{inventory\+Open@{inventory\+Open}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{inventory\+Open}{inventoryOpen}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+inventory\+Open\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether inventory menu should be open. \hypertarget{class_model_1_1_game_state_ac8c6a53641aafa5d57a9dff8f958a904}{}\label{class_model_1_1_game_state_ac8c6a53641aafa5d57a9dff8f958a904} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!is\+Animating@{is\+Animating}}
+\index{is\+Animating@{is\+Animating}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{is\+Animating}{isAnimating}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+is\+Animating\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets whether an animation sequence is currently on screen. \hypertarget{class_model_1_1_game_state_a1bacc8a1b6e6959dea52d8a6cf7aa831}{}\label{class_model_1_1_game_state_a1bacc8a1b6e6959dea52d8a6cf7aa831} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!last\+Attacking\+Unit@{last\+Attacking\+Unit}}
+\index{last\+Attacking\+Unit@{last\+Attacking\+Unit}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{last\+Attacking\+Unit}{lastAttackingUnit}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} Model.\+Game\+State.\+last\+Attacking\+Unit\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the current unit controlled in a 2nd location, for printing damage popup A\+F\+T\+ER selected\+Unit has been updated, since damage Popup should appear for a few seconds after action has finished. \hypertarget{class_model_1_1_game_state_a129d00c79e3a48b00089ef2d98605810}{}\label{class_model_1_1_game_state_a129d00c79e3a48b00089ef2d98605810} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!last\+Defending\+Unit@{last\+Defending\+Unit}}
+\index{last\+Defending\+Unit@{last\+Defending\+Unit}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{last\+Defending\+Unit}{lastDefendingUnit}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} Model.\+Game\+State.\+last\+Defending\+Unit\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the current unit controlled in a 2nd location, for printing damage popup A\+F\+T\+ER unit\+To\+Attack has been updated, since damage Popup should appear for a few seconds after action has finished. \hypertarget{class_model_1_1_game_state_aa2e325332a755c971d36c7c388d136d2}{}\label{class_model_1_1_game_state_aa2e325332a755c971d36c7c388d136d2} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!moveable\+Nodes@{moveable\+Nodes}}
+\index{moveable\+Nodes@{moveable\+Nodes}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{moveable\+Nodes}{moveableNodes}}
+{\footnotesize\ttfamily Linked\+List$<$\hyperlink{class_model_1_1_map_module_1_1_node}{Node}$>$ Model.\+Game\+State.\+moveable\+Nodes\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets movable nodes that can be retrieved without calling path finding. \hypertarget{class_model_1_1_game_state_a37fe1921acaf4d972606d49d2365105e}{}\label{class_model_1_1_game_state_a37fe1921acaf4d972606d49d2365105e} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!Player1@{Player1}}
+\index{Player1@{Player1}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Player1}{Player1}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_player}{Player} Model.\+Game\+State.\+Player1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets player 1 (blue team). \hypertarget{class_model_1_1_game_state_a50fe57205063e9f0549fb2514d6430c4}{}\label{class_model_1_1_game_state_a50fe57205063e9f0549fb2514d6430c4} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!Player2@{Player2}}
+\index{Player2@{Player2}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Player2}{Player2}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_player}{Player} Model.\+Game\+State.\+Player2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets player 2 (red team). \hypertarget{class_model_1_1_game_state_a8f709018e2b8d3b31dd89a3bee2f279c}{}\label{class_model_1_1_game_state_a8f709018e2b8d3b31dd89a3bee2f279c} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!selected\+Enemy\+Unit@{selected\+Enemy\+Unit}}
+\index{selected\+Enemy\+Unit@{selected\+Enemy\+Unit}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{selected\+Enemy\+Unit}{selectedEnemyUnit}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} Model.\+Game\+State.\+selected\+Enemy\+Unit\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the selected enemy unit. \hypertarget{class_model_1_1_game_state_ab163d599e6e1f46c470d0835d8053ad9}{}\label{class_model_1_1_game_state_ab163d599e6e1f46c470d0835d8053ad9} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!selected\+Unit@{selected\+Unit}}
+\index{selected\+Unit@{selected\+Unit}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{selected\+Unit}{selectedUnit}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} Model.\+Game\+State.\+selected\+Unit\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets a unit. \hypertarget{class_model_1_1_game_state_a1c674970c8810751fe7e478b3cb790d4}{}\label{class_model_1_1_game_state_a1c674970c8810751fe7e478b3cb790d4} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!transition\+Turn@{transition\+Turn}}
+\index{transition\+Turn@{transition\+Turn}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{transition\+Turn}{transitionTurn}}
+{\footnotesize\ttfamily bool Model.\+Game\+State.\+transition\+Turn\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+sets and gets whether it is currently transitioning turns. \hypertarget{class_model_1_1_game_state_a07052b158febe5c1f05a6b8bc3426775}{}\label{class_model_1_1_game_state_a07052b158febe5c1f05a6b8bc3426775} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!Turn\+State@{Turn\+State}}
+\index{Turn\+State@{Turn\+State}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Turn\+State}{TurnState}}
+{\footnotesize\ttfamily \hyperlink{namespace_model_abc9786019e8deab9844b28c3d9c58f86}{Turn\+State} Model.\+Game\+State.\+Turn\+State\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the current Turn\+State of the selected unit. \hypertarget{class_model_1_1_game_state_af352baaca46aaf95b984980ca55693ed}{}\label{class_model_1_1_game_state_af352baaca46aaf95b984980ca55693ed} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!unit\+To\+Attack@{unit\+To\+Attack}}
+\index{unit\+To\+Attack@{unit\+To\+Attack}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{unit\+To\+Attack}{unitToAttack}}
+{\footnotesize\ttfamily \hyperlink{interface_model_1_1_unit_module_1_1_unit}{Unit} Model.\+Game\+State.\+unit\+To\+Attack\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the unit to attack. \hypertarget{class_model_1_1_game_state_a87cc1bbbd0fef930a435e4ac2d941bfd}{}\label{class_model_1_1_game_state_a87cc1bbbd0fef930a435e4ac2d941bfd} 
+\index{Model\+::\+Game\+State@{Model\+::\+Game\+State}!winning\+Player@{winning\+Player}}
+\index{winning\+Player@{winning\+Player}!Model\+::\+Game\+State@{Model\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{winning\+Player}{winningPlayer}}
+{\footnotesize\ttfamily int Model.\+Game\+State.\+winning\+Player\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+Sets and gets the winning player. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+State.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,129 @@
+\hypertarget{class_model_1_1_map_module_1_1_graph}{}\section{Model.\+Map\+Module.\+Graph Class Reference}
+\label{class_model_1_1_map_module_1_1_graph}\index{Model.\+Map\+Module.\+Graph@{Model.\+Map\+Module.\+Graph}}
+
+
+Structure that represents the game map.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_1_1_map_module_1_1_graph_a544b5d4f0e27b124634bb2e53de3ce66}{Graph} (int x, int y)
+\item 
+\hyperlink{class_model_1_1_map_module_1_1_node}{Node} \hyperlink{class_model_1_1_map_module_1_1_graph_a49b627a9b9d37d7e5c2f0f456192ad4c}{get\+Node} (int x, int y)
+\item 
+\hyperlink{class_model_1_1_map_module_1_1_node}{Node} \hyperlink{class_model_1_1_map_module_1_1_graph_ade10e8a4ae9111f8b0d7ba29c97537c5}{get\+Node} (Vector2 pixel\+Coordinates)
+\item 
+\hyperlink{class_model_1_1_map_module_1_1_node}{Node} \hyperlink{class_model_1_1_map_module_1_1_graph_a4fa5605aa0de03db00c63308defe2a2d}{get\+Node} (Tuple$<$ int, int $>$ position)
+\item 
+void \hyperlink{class_model_1_1_map_module_1_1_graph_ada45d04c626638fa7e7d69f3f15b31a9}{set\+Node} (\hyperlink{class_model_1_1_map_module_1_1_node}{Node} node, int x, int y)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_model_1_1_map_module_1_1_graph_a949cc2946985a51788e917d1a697d6e9}{Number\+Of\+Nodes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_map_module_1_1_graph_a62c540735318014678e4adb153ee8c2e}{Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \hyperlink{class_model_1_1_map_module_1_1_graph_ae86adb2a7093762d93b02f7768194ee5}{Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure that represents the game map. 
+
+Programmatical representation of the map grid. Composed of Nodes that represent each tile on the grid. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_model_1_1_map_module_1_1_graph_a544b5d4f0e27b124634bb2e53de3ce66}{}\label{class_model_1_1_map_module_1_1_graph_a544b5d4f0e27b124634bb2e53de3ce66} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Model.\+Map\+Module.\+Graph.\+Graph (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a graph for each tile in the game, using the passed in parameter Width and Height 
+\begin{DoxyParams}{Parameters}
+{\em x} & Width of the graph. \\
+\hline
+{\em y} & Height of the graph. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_model_1_1_map_module_1_1_graph_a49b627a9b9d37d7e5c2f0f456192ad4c}{}\label{class_model_1_1_map_module_1_1_graph_a49b627a9b9d37d7e5c2f0f456192ad4c} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{get\+Node()}{getNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_map_module_1_1_node}{Node} Model.\+Map\+Module.\+Graph.\+get\+Node (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the node on the graph at the specified position (by nodes). 
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of the node (by nodes). \\
+\hline
+{\em y} & Y position of the node (by nodes). \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_map_module_1_1_graph_ade10e8a4ae9111f8b0d7ba29c97537c5}{}\label{class_model_1_1_map_module_1_1_graph_ade10e8a4ae9111f8b0d7ba29c97537c5} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{get\+Node()}{getNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_map_module_1_1_node}{Node} Model.\+Map\+Module.\+Graph.\+get\+Node (\begin{DoxyParamCaption}\item[{Vector2}]{pixel\+Coordinates }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the node on the graph at the specified position (by pixel coordinates). 
+\begin{DoxyParams}{Parameters}
+{\em pixel\+Coordinates} & Pixel coordinates of the node, which contains the X coordinate and Y coordinate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_map_module_1_1_graph_a4fa5605aa0de03db00c63308defe2a2d}{}\label{class_model_1_1_map_module_1_1_graph_a4fa5605aa0de03db00c63308defe2a2d} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{get\+Node()}{getNode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{class_model_1_1_map_module_1_1_node}{Node} Model.\+Map\+Module.\+Graph.\+get\+Node (\begin{DoxyParamCaption}\item[{Tuple$<$ int, int $>$}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the node on the graph at the specified position (by nodes). 
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of the node, which contains the X position and Y position (by nodes). \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_model_1_1_map_module_1_1_graph_ada45d04c626638fa7e7d69f3f15b31a9}{}\label{class_model_1_1_map_module_1_1_graph_ada45d04c626638fa7e7d69f3f15b31a9} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!set\+Node@{set\+Node}}
+\index{set\+Node@{set\+Node}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{set\+Node()}{setNode()}}
+{\footnotesize\ttfamily void Model.\+Map\+Module.\+Graph.\+set\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_model_1_1_map_module_1_1_node}{Node}}]{node,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the node at the specified position on the graph to the specified node. 
+\begin{DoxyParams}{Parameters}
+{\em node} & \hyperlink{class_model_1_1_map_module_1_1_node}{Node} to set. \\
+\hline
+{\em x} & X position of the node (by nodes). \\
+\hline
+{\em y} & Y position of the node (by nodes). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_model_1_1_map_module_1_1_graph_ae86adb2a7093762d93b02f7768194ee5}{}\label{class_model_1_1_map_module_1_1_graph_ae86adb2a7093762d93b02f7768194ee5} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!Height@{Height}}
+\index{Height@{Height}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily int Model.\+Map\+Module.\+Graph.\+Height\hspace{0.3cm}{\ttfamily [get]}}
+
+Returns the height of the graph (by number of nodes). \hypertarget{class_model_1_1_map_module_1_1_graph_a949cc2946985a51788e917d1a697d6e9}{}\label{class_model_1_1_map_module_1_1_graph_a949cc2946985a51788e917d1a697d6e9} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!Number\+Of\+Nodes@{Number\+Of\+Nodes}}
+\index{Number\+Of\+Nodes@{Number\+Of\+Nodes}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{Number\+Of\+Nodes}{NumberOfNodes}}
+{\footnotesize\ttfamily int Model.\+Map\+Module.\+Graph.\+Number\+Of\+Nodes\hspace{0.3cm}{\ttfamily [get]}}
+
+Returns the total number of nodes in the graph. \hypertarget{class_model_1_1_map_module_1_1_graph_a62c540735318014678e4adb153ee8c2e}{}\label{class_model_1_1_map_module_1_1_graph_a62c540735318014678e4adb153ee8c2e} 
+\index{Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}!Width@{Width}}
+\index{Width@{Width}!Model\+::\+Map\+Module\+::\+Graph@{Model\+::\+Map\+Module\+::\+Graph}}
+\subsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily int Model.\+Map\+Module.\+Graph.\+Width\hspace{0.3cm}{\ttfamily [get]}}
+
+Returns the width of the graph (by number of nodes). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+cs\end{DoxyCompactItemize}
