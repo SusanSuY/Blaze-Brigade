@@ -8,6 +8,7 @@ Much more detailed documentation on the game can be found in the Documentation f
 
 ## Team
 **Team Name:** 007 (Double o' seven)
+
 **Team Members:** Jeremy Klotz, Asad Mansoor, Thien Trandinh, Susan Yuen
 
 ## Repository Navigation Guide
@@ -18,14 +19,14 @@ The folders and files for this project are as follows:
 - **src**: Code for the project.
 
 ## Installation Guide
-###### Running the Final Release Executable
+### Running the Final Release Executable
 To run the executable, navigate to `Application Files -> Blaze_Brigade_Final_Release -> run Blaze_Brigade.exe`.
 
 **Note:** If the executable does not run, try turning off your anti-virus.
 
 **Note:** The game currently only supports Windows OS.
 
-###### Running the Game From Development
+### Running the Game From Development
 To run the project for development, the following programs need to be installed:
 - Visual Studio 2015
 - XNA Game Studio (modded to support Visual Studio 2015): https://mxa.codeplex.com/releases/view/618279
